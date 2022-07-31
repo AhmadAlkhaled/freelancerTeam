@@ -1,0 +1,28 @@
+{
+  "name": "maps-meet",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start:dev": "concurrently \" nodemon ./Backend/server.js \" \"parcel watch ./client/src/index.html --public-url ./static/ \"  ",
+    "build": "parcel build ./client/src/index.html --public-url ./static/ ",
+    "start": "  node ./Backend/server.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmadAlkhaled/maps-meet.git"
+  },
+  "author": "maps",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmadAlkhaled/maps-meet/issues"
+  },
+  "homepage": "https://github.com/AhmadAlkhaled/maps-meet#readme",
+  "dependencies": {
+    "concurrently": "^7.0.0",
+    "express": "^4.17.3",
+    "parcel": "^2.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.2"
+  }
+}

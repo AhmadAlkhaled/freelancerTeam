@@ -1,3 +1,4 @@
+
 import React from 'react';
 import About from './Pages/about/About';
 const App = (params) => {
@@ -5,6 +6,7 @@ const App = (params) => {
         <div className="App" >
              
              <About />
+
         </div>
     )
 }

@@ -1,8 +1,9 @@
+import { Home } from '../src/Pages/Home/Home'
 
 const App = (params) => {
     return(
         <div className="App" >
-             test App 
+             {/* <Home/> */}
         </div>
     )
 }

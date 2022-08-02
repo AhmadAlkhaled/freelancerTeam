@@ -1,6 +1,7 @@
 .about {
     width: 100%;
     height: 100%;
+    overflow: hidden;
     font-family: 'Montserrat',sans-serif;
     // background-color: antiquewhite;
     .about-section {
@@ -10,10 +11,33 @@
         justify-content: center;
         align-items: center;
         color: aliceblue;
-        background-color: #404146;
+        background-image: url('../../imgs/about-img.jpeg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
         .about-text {
             // border: 1px solid red;
-            width: 600px;
+            width: 80%;
+            height: 60%;
+            padding: 15px;
+            backdrop-filter: blur(4px);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1000px;
+            text-align: center;
+            // border: 1px solid red;
+            h1 {
+                text-shadow: 0px 0px 7px rgb(68, 68, 68) ;
+                font-weight: bolder;
+                font-size: 50px;
+            }
+            p, h4 {
+                text-shadow: 0px 0px 7px rgb(81, 81, 81) ;
+                font-weight: bolder;
+            }
         }
     }
     .out-mission {
@@ -95,19 +119,26 @@
     }
     .service-section {
         width: 100%;
-        // height: 500px;
+        //  height: 500px;
         margin-bottom: 80px;
         margin-top: 60px;
         display: flex;
         // border: 1px solid red;
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
+
            flex-direction: column;
         }
         .service-img {
             width: 50%;
-            height: 100%;
-            @media (max-width: 600px) {
+            height: auto;
+            background-image: url('https://www.cursorsystems.de/wp-content/uploads/2022/01/shutterstock_791606392-edited-1024x768.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-color: #2EC0FF;
+            @media (max-width: 700px) {
                 width: 100%;
+                height: 500px;
              }
             img {
                 width: 100%;
@@ -122,46 +153,64 @@
           align-items: center;
           flex-direction: column;
           gap: 20px;
-        //   padding: 60px;
+          padding-top: 40px;
           
           background-color: #F3F6F6;
-          @media (max-width: 600px) {
+          @media (max-width: 700px) {
             width: 100%;
+            
          }
-          .title {
+          .title-1 {
             width: 70%;
             text-align: left;
+            @media (max-width: 700px) {
+                text-align: center;
+                 
+              }
           }
           .service-divs {
-            width: 80%;
+            width:100%;
             padding: 20px;
             display: flex;
             flex-direction: column;
             // border: 1px solid red;
             .service-box {
                 width: 100%;
-                // display: flex;
-                // justify-content: space-between;
-                // align-items: center;
-                text-align: left;
                 padding: 8px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: left;
+                flex-wrap: wrap;
                 border-radius: 5px;
                 margin: 2px 0px 2px 0px;
                 position: relative;
                 background-color: #FFFFFF;
                 // border: 1px solid green;
+                .title {
+                    padding-left: 10px;
+                    width: 90%;
+                }
                 i {
                     color: rgb(117, 116, 116);
-                    position: absolute;
-                    right: 5px;
-                    top: 14px;
+                    font-size: 22px;
+                    cursor: pointer;
+                    transition: all 0.7s linear;
                 }
-                .hiden-box {
-                    width: 100%;
-                    // border: 1px solid red;
+                .description {
+                    overflow: hidden;
+                    color: #4e5050;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    background-color: #F3F6F6;
+                    height: 0;
+                    margin: 0;
+                    transition: all 1s;
+                    
                 }
                 p {
                     margin: 0;
+                    
                 }
                
             }
@@ -196,7 +245,13 @@
                     b {
                         font-size: 80px;
                         color: #2EC0FF;
+                        .increment {
+                            display: inline;
+                            margin-right: -20px;
+                            // background-color: #404146;
+                        }
                     }
+                    
                 }
                
             }

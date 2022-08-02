@@ -7,7 +7,7 @@ const App = (params) => {
              
              {/* <About /> */}
              <Home />
-
+           
         </div>
     )
 }

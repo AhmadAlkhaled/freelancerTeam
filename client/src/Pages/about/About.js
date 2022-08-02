@@ -1,9 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.scss';
+import NumberCounter from 'number-counter';
 import StartProject from '../../Components/start/Start';
+import Footer from '../../Components/Footer/Footer'
 const About = () => {
 
-   const [click, setClick] = useState(false)
+   const [click, setClick] = useState(true)
+   const [scroll, setScroll] = useState(false)
+//    console.log(count);
+   const serviceDes = (e) => {
+      
+    const p = e.target.parentElement.children[2]
+    const icon = e.target.parentElement.children[1]
+        if(click){
+            p.style.height = '100px'
+            p.style.padding = '10px'
+            setClick(false)
+            icon.style.transform = 'rotate( 180deg)'
+        }
+        else {
+            p.style.height = '0'
+            setClick(true)
+            p.style.padding = '0'
+            icon.style.transform = 'rotate( 0deg)'
+        }
+   }
+
+  window.addEventListener('scroll',()=> {
+    if(window.scrollY > 3100){
+      setScroll(true)
+    }
+    else{
+        setScroll(false)
+    }
+   });
+   
 
   return (
     <div className="about">
@@ -104,11 +135,11 @@ const About = () => {
 
         <div className="service-section">
             <div className="service-img">
-               <img src="https://www.cursorsystems.de/wp-content/uploads/2022/01/shutterstock_791606392-edited-1024x768.jpg" alt="" />
+               {/* <img src="" alt="" /> */}
             </div>
 
             <div className="service-text">
-                <div className="title">
+                <div className="title-1">
                 <h1>Why Choose Us?</h1>
                 <p>
                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
@@ -117,42 +148,62 @@ const About = () => {
 
                 <div className="service-divs">
                     <div className="service-box">
-                        <p>Best Quality Designs</p>
-                        <i className="fas fa-plus-circle"
-                        onClick={() => {setClick(!click)}}
+                        <p className="title">Best Quality Designs</p>
+                        <i className="fas fa-angle-down"
+                        onClick={(e) => {serviceDes(e)}}
                         ></i>
-                        {
-                            click ? 
-                             <div className="hiden-box">
-                                <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
-                                </p>
-                             </div>
-                             :
-                             null
-                        }
                        
+                            <p className='description'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
+                            </p>
+
                     </div>
                     
                     <div className="service-box">
-                        <p>24x7 Live Support</p>
-                        <i className="fas fa-plus-circle"></i>
+                        <p className="title">24x7 Live Support</p>
+                        <i className="fas fa-angle-down"
+                        onClick={(e) => {serviceDes(e)}}
+                        ></i>
+                        <p className='description'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
+                            </p>
                     </div>
                     <div className="service-box">
-                        <p>Result Oriented Projects</p>
-                        <i className="fas fa-plus-circle"></i>
+                        <p className="title">Result Oriented Projects</p>
+                        <i className="fas fa-angle-down"
+                        onClick={(e) => {serviceDes(e)}}
+                        ></i>
+                        <p className='description'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
+                            </p>
                     </div>
                     <div className="service-box">
-                        <p>Award Winning Support Team</p>
-                        <i className="fas fa-plus-circle"></i>
+                        <p className="title">Award Winning Support Team</p>
+                        <i className="fas fa-angle-down"
+                           onClick={(e) => {serviceDes(e)}}
+                           ></i>
+                           <p className='description'>
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
+                               </p>
                     </div>
                     <div className="service-box">
-                        <p>Best ROI Techniques</p>
-                        <i className="fas fa-plus-circle"></i>
+                        <p className="title">Best ROI Techniques</p>
+                        <i className="fas fa-angle-down"
+                        onClick={(e) => {serviceDes(e)}}
+                        ></i>
+                        <p className='description'>
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
+                               </p>
+                        
                     </div>
                     <div className="service-box">
-                        <p>Experienced Professionals</p>
-                        <i className="fas fa-plus-circle"></i>
+                        <p className="title">Experienced Professionals</p>
+                        <i className="fas fa-angle-down"
+                        onClick={(e) => {serviceDes(e)}}
+                        ></i>
+                         <p className='description'>
+                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
+                               </p>
                     </div>
                 </div>
             </div>
@@ -166,21 +217,30 @@ const About = () => {
 
             <div className="info-numbers">
                 <div className="number">
-                    <p> <b>87</b> Satisfied Clients </p>
+                    <p> <b>
+                    { scroll ? <NumberCounter end={87} delay={3} className="increment" /> : 0}
+                        </b> Satisfied Clients </p>
                 </div>
                 <div className="number">
-                    <p> <b>150</b> Projects Completed </p>
+                    <p> <b>
+                    { scroll ? <NumberCounter end={150} delay={3} className="increment" /> : 0}
+                        </b> Projects Completed </p>
                 </div>
                 <div className="number">
-                    <p> <b>28</b> Accolades Earned </p>
+                    <p> <b>
+                    { scroll ? <NumberCounter end={25} delay={3} className="increment" /> : 0}
+                        </b> Accolades Earned </p>
                 </div>
                 <div className="number">
-                    <p> <b>56K+</b> Lines of Code </p>
+                    <p> <b>
+                    { scroll ? <NumberCounter end={52} delay={3} className="increment" /> : 0}
+                        K+</b> Lines of Code </p>
                 </div>
             </div>
         </div>
 
        <StartProject />
+       <Footer />
     </div>
   )
 }

@@ -2,7 +2,7 @@ import './Home.scss'
 import StartProject from '../../Components/start/Start'
 import img1 from '../../imgs/res1.png'
 import img2 from '../../imgs/res2.png'
-
+import Footer from '../../Components/Footer/Footer'
 const Home = () => { 
     
     return (
@@ -137,6 +137,7 @@ const Home = () => {
                                 </div>
                         </div>
                         <StartProject/>
+                        <Footer />
             </div>     
         </div>
     )

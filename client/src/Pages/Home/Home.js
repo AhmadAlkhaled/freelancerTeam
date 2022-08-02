@@ -2,15 +2,19 @@ import './Home.scss'
 import StartProject from '../../Components/start/Start'
 import img1 from '../../imgs/res1.png'
 import img2 from '../../imgs/res2.png'
+import { Nav } from '../../Components/Nav/Nav'
 
 const Home = () => { 
     
     return (
+        
         <div className="home">
-
+            
                 <div className="background">
-                    
+                
                     <div className="opacity">
+                        
+                    <Nav/>
                         <div className="alltexts">
                             <p className="text1"> Fast & Secure Web-Apps & Websites </p>
                             <p className="text2"> Create Amazing Business Websites </p>

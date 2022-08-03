@@ -19,14 +19,12 @@ const Home = (props) => {
 
                         <div className="opacity">
                             
-                        {/* <Nav/> */}
+                      
                             <div className="alltexts">
                                 <p className="text1"> Fast & Secure Web-Apps & Websites </p>
                                 <p className="text2"> Create Amazing Business Websites </p>
                                 <p className="text3"> Talk to us, we will find a suitable solution! </p>
-                                <br/>
-                                <br/>
-                                <br/>
+                                <br/><br/><br/>
                                 <button>GET STARTED</button>
                             </div>
                         </div>
@@ -116,36 +114,40 @@ const Home = (props) => {
                             <p className="suction4Subject">That's what our satisfied customers say</p>
                             <br/>
                             
-                            
-
-
-                            
 
                             <div className="slider">
+
                                 <input type="radio" name="slider" title="slide1" defaultChecked="checked" className="slider__nav" />
                                 <input type="radio" name="slider" title="slide2" className="slider__nav" />
                                 <input type="radio" name="slider" title="slide3" className="slider__nav" />
                                 <input type="radio" name="slider" title="slide4" className="slider__nav" />
+
                                 <div className="slider__inner">
+                                    
                                     <div className="slider__contents">
-                                        
                                     <h2 className="slider__caption">John Doe</h2>
                                     <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
                                     </div>
+
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Susan Smith</h2>
                                     <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
                                     </div>
+
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Anna Johnson</h2>
                                     <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
                                     </div>
+
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Mariah Benchos</h2>
                                     <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
                                     </div>
+
                                 </div>
-                                </div>
+
+                            </div>
+
                         </div>
                         <StartProject/>
             </div>     

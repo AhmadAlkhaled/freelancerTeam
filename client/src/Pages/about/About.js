@@ -10,42 +10,34 @@ const About = (props) => {
    const [scroll, setScroll] = useState(false)
 //    console.log(count);
    const serviceDes = (e) => {
-      
     const p = e.target.parentElement.children[2]
     const icon = e.target.parentElement.children[1]
         if(click){
             p.style.height = '100px'
-            p.style.padding = '10px'
+            p.style.paddingTop = '10px'
             setClick(false)
             icon.style.transform = 'rotate( 180deg)'
         }
         else {
             p.style.height = '0'
             setClick(true)
-            p.style.padding = '0'
+            p.style.paddingTop = '0px'
             icon.style.transform = 'rotate( 0deg)'
         }
    }
-
-//   window.addEventListener('scroll',()=> {
-//     if(window.scrollY > 3100){
-//       setScroll(true)
-//     }
-//     else{
-//         setScroll(false)
-//     }
-//    });
-   
-   window.addEventListener('scroll', ()=>{
-
-    if( document.body.scrollTop > 3100 || document.documentElement.scrollTop > 3100 )
+ 
+window.addEventListener('scroll', ()=>
     {
-        console.log('fffff');
-        setScroll(true)
-    }else{
-        setScroll(false)
-    }
-});
+        if( document.documentElement.scrollTop > 3100 && window.innerWidth < 700 )
+        {
+            setScroll(true);
+        }
+
+        if( document.documentElement.scrollTop > 1800 && window.innerWidth > 700 )
+        {
+            setScroll(true);
+        }
+    });
    
 
   return (
@@ -235,22 +227,22 @@ const About = (props) => {
             <div className="info-numbers">
                 <div className="number">
                     <p> <b>
-                    { scroll ? <NumberCounter end={87} delay={3} className="increment" /> : 0}
+                    { scroll ? <NumberCounter end={87} delay={2} className="increment" /> : 0}
                         </b> Satisfied Clients </p>
                 </div>
                 <div className="number">
                     <p> <b>
-                    { scroll ? <NumberCounter end={150} delay={3} className="increment" /> : 0}
+                    { scroll ? <NumberCounter end={150} delay={2} className="increment" /> : 0}
                         </b> Projects Completed </p>
                 </div>
                 <div className="number">
                     <p> <b>
-                    { scroll ? <NumberCounter end={25} delay={3} className="increment" /> : 0}
+                    { scroll ? <NumberCounter end={25} delay={2} className="increment" /> : 0}
                         </b> Accolades Earned </p>
                 </div>
                 <div className="number">
                     <p> <b>
-                    { scroll ? <NumberCounter end={52} delay={3} className="increment" /> : 0}
+                    { scroll ? <NumberCounter end={52} delay={2}  className="increment" /> : 0}
                         K+</b> Lines of Code </p>
                 </div>
             </div>

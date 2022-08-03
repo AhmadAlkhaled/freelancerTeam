@@ -206,7 +206,7 @@
                     color: rgb(117, 116, 116);
                     font-size: 22px;
                     cursor: pointer;
-                    transition: all 0.7s linear;
+                    transition: all 0.5s  linear;
                 }
                 .description {
                     overflow: hidden;
@@ -216,7 +216,8 @@
                     background-color: #F3F6F6;
                     height: 0;
                     margin: 0;
-                    transition: all 1s;
+                    padding: 0 10px;
+                    transition: all 0.5s  ;
                     
                 }
                 p {
@@ -259,7 +260,6 @@
                         .increment {
                             display: inline;
                             margin-right: -20px;
-                            // background-color: #404146;
                         }
                     }
                     

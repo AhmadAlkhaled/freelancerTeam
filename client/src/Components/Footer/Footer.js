@@ -1,5 +1,6 @@
 import './Footer.scss';
 import Logo from './Orange Digital Code Logo Template.png';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => { 
     
@@ -8,7 +9,15 @@ const Footer = () => {
             <div className="boxes">
                 <div className='box-1'>
                     <div className="logo-box">
-                        <img src={Logo} alt="" />
+
+                        <a href='#logo'
+                            onClick={()=>{
+                                
+                                if(window.location.href != 'http://localhost:3000/' ){
+                                    window.open('/','_self')
+                                }
+                            }}
+                        ><img src={Logo} alt="Logo"/></a>
                     </div>
                     
                     <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit. Ut <br/> elit tellus, luctus nec <br/> ullamcorper mattis, pulvinar <br /> dapibus leo.</p>

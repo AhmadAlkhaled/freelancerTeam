@@ -2,20 +2,19 @@ import Logo from '../../imgs/logo.png'
 import './Nav.scss'
 import React,  { useState, useEffect } from 'react'
 import {motion} from 'framer-motion' 
+import { NavLink } from 'react-router-dom';
 
-const Nav = () => { 
+const Nav = (props) => { 
     
     const [hamburger, setHamburger] = useState (true);
     const [mobileMode, setMobileMode] = useState (true);
-    const [hamburgerAnimation, setHamburgerAnimation] = useState (false);
+    
 
     const windowSize = ()=>{
         if(window.innerWidth < 700){
-            
             setMobileMode(false)
         }
         else{
-            
             setMobileMode(true)
         }
     }
@@ -26,30 +25,32 @@ const Nav = () => {
 
     useEffect (() => {
         windowSize();
-        const closeNav = document.querySelector('.App')
-        closeNav.addEventListener('click', () =>{
-            setHamburgerAnimation(false);
-        })
-
+        
     },[])
 
     return (
-        <div className="nav">
-            <div className="logo">
-                <img src={Logo}/>
+        <div className="nav"
+        onClick={() =>{
+            props.setHamburgerAnimation(false)
+        }}
+        >
+            <div className="logo" id="logo">
+                <NavLink to='/'><img src={Logo} alt="Logo"/></NavLink>
             </div>
 
             {
                 hamburger ?
                 <motion.div className={mobileMode ? 'navList' : 'nav_mobile' }
                 initial={{height:'0px'}}
-                animate={{height: hamburgerAnimation ? '580px' : '0px'}}
+                animate={{height: props.hamburgerAnimation ? '580px' : '0px'}}
                 transition={{duration:0.6}}
-                
-                
+                onClick={(e) =>{
+                    props.setHamburgerAnimation(false)
+                    e.stopPropagation();
+                }}
                 >
-                <a href='#'>Home</a>
-                <a href='#'>About</a>
+                <a href='/'>Home</a>
+                <NavLink to='/About'>About</NavLink>
                 <a href='#'>Contact</a>
 
                 </motion.div>
@@ -58,8 +59,9 @@ const Nav = () => {
             }
             
             <div className="hamburgerNav"
-                onClick={()=>{
-                    setHamburgerAnimation( !hamburgerAnimation );
+                onClick={(e)=>{
+                    props.setHamburgerAnimation( !props.hamburgerAnimation );
+                    e.stopPropagation();
                 }}
 
             ><i class="fas fa-bars"></i></div>

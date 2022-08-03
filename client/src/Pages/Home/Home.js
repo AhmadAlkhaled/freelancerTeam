@@ -3,31 +3,34 @@ import StartProject from '../../Components/start/Start'
 import img1 from '../../imgs/res1.png'
 import img2 from '../../imgs/res2.png'
 
-import { Nav } from '../../Components/Nav/Nav'
-
-
-import Footer from '../../Components/Footer/Footer'
-
-const Home = () => { 
+const Home = (props) => { 
     
     return (
         
-        <div className="home">
+        <div className="home"
+            onClick={(e) =>{
+                props.setHamburgerAnimation(false)
+                e.stopPropagation();
+            }}
+        >
             
                 <div className="background">
-                
-                    <div className="opacity">
-                        
-                    <Nav/>
-                        <div className="alltexts">
-                            <p className="text1"> Fast & Secure Web-Apps & Websites </p>
-                            <p className="text2"> Create Amazing Business Websites </p>
-                            <p className="text3"> Talk to us, we will find a suitable solution! </p>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <button>GET STARTED</button>
+                    <div className="background2">
+
+                        <div className="opacity">
+                            
+                        {/* <Nav/> */}
+                            <div className="alltexts">
+                                <p className="text1"> Fast & Secure Web-Apps & Websites </p>
+                                <p className="text2"> Create Amazing Business Websites </p>
+                                <p className="text3"> Talk to us, we will find a suitable solution! </p>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <button>GET STARTED</button>
+                            </div>
                         </div>
+
                     </div>
 
                 <div className="suction2">
@@ -145,7 +148,6 @@ const Home = () => {
                                 </div>
                         </div>
                         <StartProject/>
-                        <Footer />
             </div>     
         </div>
     )

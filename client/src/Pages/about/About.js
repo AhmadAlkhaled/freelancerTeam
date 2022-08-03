@@ -27,14 +27,25 @@ const About = (props) => {
         }
    }
 
-  window.addEventListener('scroll',()=> {
-    if(window.scrollY > 3100){
-      setScroll(true)
-    }
-    else{
+//   window.addEventListener('scroll',()=> {
+//     if(window.scrollY > 3100){
+//       setScroll(true)
+//     }
+//     else{
+//         setScroll(false)
+//     }
+//    });
+   
+   window.addEventListener('scroll', ()=>{
+
+    if( document.body.scrollTop > 3100 || document.documentElement.scrollTop > 3100 )
+    {
+        console.log('fffff');
+        setScroll(true)
+    }else{
         setScroll(false)
     }
-   });
+});
    
 
   return (

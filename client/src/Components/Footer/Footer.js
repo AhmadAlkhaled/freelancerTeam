@@ -31,9 +31,9 @@ const Footer = () => {
                 </div>
                 <div className='box-2'>
                     <h3>Company</h3>
-                    <a href="">Home</a>
+                    <a href="/">Home</a>
                     <br />
-                    <a href="">About</a>
+                    <a href="/About">About</a>
                     <br />
                     <a href="">Contact</a>
                 </div>

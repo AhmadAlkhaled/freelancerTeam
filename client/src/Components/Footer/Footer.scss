@@ -23,6 +23,7 @@ footer {
             @media (max-width: 500px) {
                 width: 100%;
                 padding: 0;
+                text-align: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -40,6 +41,7 @@ footer {
                 // border: 1px solid red;
                 @media (max-width: 500px) {
                     justify-content: center;
+                    // border: 1px solid red;
                 }
                 i {
                     // margin: 0px 0px 0px 20px;
@@ -54,14 +56,19 @@ footer {
                 // justify-content: center;
                 // align-items: center;
                 @media (max-width: 500px) {
+                    width: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    // border: 1px solid red;
                 }
                 img {
                     width: 80%;
                     height: 80%;
-                    
+                    @media (max-width: 500px) {
+                        width: 100%;
+                        // border: 1px solid red;
+                    }
                 }
             }
           }
@@ -96,7 +103,7 @@ footer {
     }
     .box-5 {
         width: 100%;
-        padding: 10px 37px;
+        padding: 10px 20px 20px 37px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

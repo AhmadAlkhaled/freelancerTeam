@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './About.scss';
 import NumberCounter from 'number-counter';
 import StartProject from '../../Components/start/Start';
-import Footer from '../../Components/Footer/Footer'
-const About = () => {
+
+
+const About = (props) => {
 
    const [click, setClick] = useState(true)
    const [scroll, setScroll] = useState(false)
@@ -37,7 +38,12 @@ const About = () => {
    
 
   return (
-    <div className="about">
+    <div className="about"
+        onClick={(e) =>{
+            props.setHamburgerAnimation(false)
+            e.stopPropagation();
+        }}
+    >
 
         <div className="about-section">
             <div className="about-text">
@@ -240,7 +246,7 @@ const About = () => {
         </div>
 
        <StartProject />
-       <Footer />
+
     </div>
   )
 }

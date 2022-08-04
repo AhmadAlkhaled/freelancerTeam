@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './About.scss';
 import NumberCounter from 'number-counter';
 import StartProject from '../../Components/start/Start';
-
+import Ali from '../../imgs/alis photo.jpg';
+import Mustapha from '../../imgs/mustapha.jpeg';
+import Ahmad from '../../imgs/ahmad.png';
 const About = (props) => {
 
    const [click, setClick] = useState(true)
    const [scroll, setScroll] = useState(false)
+   const [border, setBorder] = useState(false)
 
    const serviceDes = (e) => {
     const p = e.target.parentElement.children[2]
@@ -216,6 +219,148 @@ const About = (props) => {
                     { scroll ? <NumberCounter end={52} delay={2}  className="increment" /> : 0}
                     K+</b> <br /> 
                     <p>Lines of Code </p>
+                </div>
+            </div>
+        </div>
+
+        <div className="team-section">
+            <div className="team-text">
+                <h1>OUR TEAM</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pariatur inventore saepe odit aliquam deserunt reprehenderit porro</p>
+                <div className="line">
+                    <div className="subline"></div>
+                </div>
+            </div>
+            <div className="cards-main">
+                <div className="card"
+                    onMouseEnter={() => {
+                        setBorder(true)
+                    }}
+                    onMouseLeave={() => {
+                        setBorder(false)
+                    
+                    }}
+                >
+                    <div className="img-box">
+                       <img src={Ali} alt="" />
+                        </div>
+                        <h2>Ali Osman</h2>
+                        <p>Software & Full stack Developer</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, reiciendis</p>
+                    <div className="icons">
+                        <div className="icon-box"
+                          style={{ 
+                            border: border ? '1px solid white' : '1px solid #2EC0FF',
+                            color: border ? ' white' : ' #2EC0FF'
+                        }}
+                        >
+                           <i className="fab fa-facebook"></i>
+                        </div>
+                        <div className="icon-box"
+                        style={{ 
+                            border: border ? '1px solid white' : '1px solid #2EC0FF',
+                            color: border ? ' white' : ' #2EC0FF'
+                        }}
+                        >
+                           <i className="fab fa-twitter"></i>
+                        </div>
+                        <div className="icon-box"
+                          style={{ 
+                            border: border ? '1px solid white' : '1px solid #2EC0FF',
+                            color: border ? ' white' : ' #2EC0FF'
+                        }}
+                        >
+                             <i className="fab fa-linkedin"></i>
+                        </div>      
+                    </div>
+
+                    
+                </div>
+
+                <div className="card"
+                   onMouseEnter={() => {
+                    setBorder(true)
+                }}
+                onMouseLeave={() => {
+                    setBorder(false)
+                }}
+                >
+                    <div className="img-box">
+                       <img src={Mustapha} alt="" />
+                    </div>
+                       <h2>Mustapha Ibrahim</h2>
+                       <p>Software & Full stack Developer</p>
+                       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, reiciendis</p>
+                    <div className="icons">
+                        <div className="icon-box"
+                            style={{ 
+                                border: border ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border ? ' white' : ' #2EC0FF'
+                            }}
+                        >
+                           <i className="fab fa-facebook"></i>
+                        </div>
+                        <div className="icon-box"
+                            style={{ 
+                                border: border ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border ? ' white' : ' #2EC0FF'
+                            }}
+                        >
+                           <i className="fab fa-twitter"></i>
+                        </div>
+                        <div className="icon-box"
+                            style={{ 
+                                border: border ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border ? ' white' : ' #2EC0FF'
+                            }}
+                        >
+                             <i className="fab fa-linkedin"></i>
+                        </div>      
+                    </div>
+
+                    
+                </div>
+
+                <div className="card"
+                   onMouseEnter={() => {
+                    setBorder(true)
+                }}
+                onMouseLeave={() => {
+                    setBorder(false) 
+                }}
+                >
+                    <div className="img-box">
+                       <img src={Ahmad} alt="" />
+                    </div>
+                       <h2>Ahmad Alkhaled</h2>
+                       <p>Software & Full stack Developer</p>
+                       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, reiciendis</p>
+                    <div className="icons">
+                        <div className="icon-box"
+                            style={{ 
+                                border: border ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border ? ' white' : ' #2EC0FF'
+                            }}
+                        >
+                           <i className="fab fa-facebook"></i>
+                        </div>
+                        <div className="icon-box"
+                            style={{ 
+                                border: border ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border ? ' white' : ' #2EC0FF'
+                            }}
+                        >
+                           <i className="fab fa-twitter"></i>
+                        </div>
+                        <div className="icon-box"
+                           style={{ 
+                            border: border ? '1px solid white' : '1px solid #2EC0FF',
+                            color: border ? ' white' : ' #2EC0FF'
+                        }}
+                       >
+                             <i className="fab fa-linkedin"></i>
+                        </div>      
+                    </div> 
                 </div>
             </div>
         </div>

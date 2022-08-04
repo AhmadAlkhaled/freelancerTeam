@@ -3,12 +3,11 @@ import './About.scss';
 import NumberCounter from 'number-counter';
 import StartProject from '../../Components/start/Start';
 
-
 const About = (props) => {
 
    const [click, setClick] = useState(true)
    const [scroll, setScroll] = useState(false)
-//    console.log(count);
+
    const serviceDes = (e) => {
     const p = e.target.parentElement.children[2]
     const icon = e.target.parentElement.children[1]
@@ -26,7 +25,7 @@ const About = (props) => {
         }
    }
  
-window.addEventListener('scroll', ()=>
+   window.addEventListener('scroll', ()=>
     {
         if( document.documentElement.scrollTop > 3100 && window.innerWidth < 700 )
         {
@@ -53,7 +52,7 @@ window.addEventListener('scroll', ()=>
                 <h1>About Us</h1>
                 <h4>Welcome to The Digital Agency</h4>
                 <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.
                 </p>
            </div>
         </div>
@@ -62,16 +61,16 @@ window.addEventListener('scroll', ()=>
             <div className="missions-card">
                 <div className="card-line"></div>
                 <h2>Who Are We</h2>
-                    <p>
+                <p>
                     Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Ut elit tellus, luctus nec ullam corper mattis, pulvinar. Etiam erat lectus, finibus eget commodo quis, tinci dunt eget leo. Nullam quis vulpu tate orci, ac accum san quam.
-                    </p>
+                </p>
             </div>
             <div className="missions-card">
                 <div className="card-line"></div>
                 <h2>Our Mission</h2>
-                    <p>
-                    Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Ut elit tellus, luctus nec ullam corper mattis, pulvinar. Etiam erat lectus, finibus eget commodo quis, tinci dunt eget leo. Nullam quis vulpu tate orci, ac accum san quam.
-                    </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Ut elit tellus, luctus nec ullam corper mattis, pulvinar. Etiam erat lectus, finibus eget commodo quis, tinci dunt eget leo. Nullam quis vulpu tate orci, ac accum san quam.
+                </p>
             </div>
             <div className="missions-card">
                 <div className="card-line"></div>
@@ -88,71 +87,47 @@ window.addEventListener('scroll', ()=>
         </div>
 
         <div className="process-section">
-        <h1>Our 6-D Process</h1>
-        <div className="cards-main">
-        <div className="process-card">
-                
-                <span>01.</span>
-                <h3>Discover</h3>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
-                </p>
-            </div>
-            <div className="process-card">
-                
-                <span>02.</span>
-                <h3>Define</h3>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
-                </p>
-            </div>
-            <div className="process-card">
-               
-                <span>03.</span>
-                <h3>Design</h3>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
-                </p>
-            </div>
-            <div className="process-card">
-                
-                <span>04.</span>
-                <h3>Develop</h3>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
-                </p>
-            </div>
-            <div className="process-card">
-                
-                <span>05.</span>
-                <h3>Deploy</h3>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
-                </p>
-            </div>
-            <div className="process-card">
-               
-                <span>06.</span>
-                <h3>Deliver</h3>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
-                </p>
-            </div>
-        </div>
-           
+            <h1>Our 6-D Process</h1>
+            <div className="cards-main">
+                <div className="process-card">             
+                    <span>01.</span>
+                    <h3>Discover</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                </div>
+                <div className="process-card">  
+                    <span>02.</span>
+                    <h3>Define</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar. </p>
+                </div>
+                <div className="process-card">             
+                    <span>03.</span>
+                    <h3>Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                </div>
+                <div className="process-card">  
+                    <span>04.</span>
+                    <h3>Develop</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                </div>
+                <div className="process-card">               
+                    <span>05.</span>
+                    <h3>Deploy</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                </div>
+                <div className="process-card">           
+                    <span>06.</span>
+                    <h3>Deliver</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar. </p>
+                </div>
+            </div>   
         </div>
 
         <div className="service-section">
-            <div className="service-img">
-               {/* <img src="" alt="" /> */}
-            </div>
-
-            <div className="service-text">
+            <div className="service-img"></div>
+              <div className="service-text">
                 <div className="title-1">
-                <h1>Why Choose Us?</h1>
-                <p>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.
-                </p>
+                   <h1>Why Choose Us?</h1>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
                 </div>
 
                 <div className="service-divs">
@@ -160,12 +135,8 @@ window.addEventListener('scroll', ()=>
                         <p className="title">Best Quality Designs</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
-                        ></i>
-                       
-                            <p className='description'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
-                            </p>
-
+                        ></i>          
+                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
                     </div>
                     
                     <div className="service-box">
@@ -173,46 +144,39 @@ window.addEventListener('scroll', ()=>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                        <p className='description'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
-                            </p>
+                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
                     </div>
+
                     <div className="service-box">
                         <p className="title">Result Oriented Projects</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                        <p className='description'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
-                            </p>
+                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
                     </div>
+
                     <div className="service-box">
                         <p className="title">Award Winning Support Team</p>
                         <i className="fas fa-angle-down"
-                           onClick={(e) => {serviceDes(e)}}
-                           ></i>
-                           <p className='description'>
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
-                               </p>
+                         onClick={(e) => {serviceDes(e)}}
+                        ></i>
+                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
                     </div>
+
                     <div className="service-box">
                         <p className="title">Best ROI Techniques</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                        <p className='description'>
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
-                               </p>
-                        
+                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>                  
                     </div>
+
                     <div className="service-box">
                         <p className="title">Experienced Professionals</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                         <p className='description'>
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper 
-                               </p>
+                         <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
                     </div>
                 </div>
             </div>
@@ -225,31 +189,37 @@ window.addEventListener('scroll', ()=>
             </div>
 
             <div className="info-numbers">
+
                 <div className="number">
-                    <p> <b>
-                    { scroll ? <NumberCounter end={87} delay={2} className="increment" /> : 0}
-                        </b> Satisfied Clients </p>
+                     <b>
+                        { scroll ? <NumberCounter end={87} delay={2} className="increment" /> : 0}
+                    </b>  
+                    <p className="num-title">Satisfied Clients </p>
                 </div>
+
                 <div className="number">
-                    <p> <b>
-                    { scroll ? <NumberCounter end={150} delay={2} className="increment" /> : 0}
-                        </b> Projects Completed </p>
+                     <b>
+                        { scroll ? <NumberCounter end={150} delay={2} className="increment" /> : 0}
+                    </b> <br /> 
+                    <p className="num-title-2">Projects Completed</p>
                 </div>
+
                 <div className="number">
-                    <p> <b>
-                    { scroll ? <NumberCounter end={25} delay={2} className="increment" /> : 0}
-                        </b> Accolades Earned </p>
+                     <b>
+                        { scroll ? <NumberCounter end={25} delay={2} className="increment" /> : 0}
+                    </b> <br /> 
+                    <p className="num-title">Accolades Earned</p>
                 </div>
+
                 <div className="number">
-                    <p> <b>
+                     <b>
                     { scroll ? <NumberCounter end={52} delay={2}  className="increment" /> : 0}
-                        K+</b> Lines of Code </p>
+                    K+</b> <br /> 
+                    <p>Lines of Code </p>
                 </div>
             </div>
         </div>
-
        <StartProject />
-
     </div>
   )
 }

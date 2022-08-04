@@ -10,16 +10,21 @@ const Contact = () => {
   return (
     <div className='contact'>
         <div className="contact-section-1">
+          
+          <div className="opacity">
             <div className="contact-text">
-                <h1>Contact Us</h1>
-                <h3>Contact for Premium Business Services</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
-            </div>
+                  <h1>Contact Us</h1>
+                  <h3>Contact for Premium Business Services</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
+              </div>
+          </div>
+            
         </div>
 
         <div className="form-section">
             <div className="form-main">
               <div className="left-box">
+
 
                 { 
                   (submit)?
@@ -41,6 +46,20 @@ const Contact = () => {
                     </form>
                 }
                 
+
+                 <form action="">
+                    <h3>Send Us A Message</h3>
+                   <input type="text" placeholder="Name" name="name" />
+                   <br />
+                   <input type="text" placeholder='Email' name="email" />
+                   <br />
+                   <input type="text" placeholder='Subject' name="subject" />
+                   <br />
+                   <textarea id="" cols="30" rows="10" placeholder="Message" name="message"></textarea>
+                   <br />
+                   <button>Send Message</button>
+                 </form>
+
                  <div className="form-text">
                     <h3>Get In Touch</h3>
                     <h5>Address</h5>

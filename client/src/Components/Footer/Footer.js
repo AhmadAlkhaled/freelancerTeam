@@ -35,7 +35,7 @@ const Footer = () => {
                     <br />
                     <a href="/About">About</a>
                     <br />
-                    <a href="">Contact</a>
+                    <a href="/Contact">Contact</a>
                 </div>
                 <div className='box-3'>
                     <h3>Business</h3>

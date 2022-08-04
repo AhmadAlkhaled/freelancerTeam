@@ -10,6 +10,8 @@ const About = (props) => {
    const [click, setClick] = useState(true)
    const [scroll, setScroll] = useState(false)
    const [border, setBorder] = useState(false)
+   const [border1, setBorder1] = useState(false)
+   const [border2, setBorder2] = useState(false)
 
    const serviceDes = (e) => {
     const p = e.target.parentElement.children[2]
@@ -223,7 +225,7 @@ const About = (props) => {
             </div>
         </div>
 
-        <div className="team-section">
+        <div className="team-section" id='team'>
             <div className="team-text">
                 <h1>OUR TEAM</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pariatur inventore saepe odit aliquam deserunt reprehenderit porro</p>
@@ -238,7 +240,6 @@ const About = (props) => {
                     }}
                     onMouseLeave={() => {
                         setBorder(false)
-                    
                     }}
                 >
                     <div className="img-box">
@@ -279,10 +280,10 @@ const About = (props) => {
 
                 <div className="card"
                    onMouseEnter={() => {
-                    setBorder(true)
+                    setBorder1(true)
                 }}
                 onMouseLeave={() => {
-                    setBorder(false)
+                    setBorder1(false)
                 }}
                 >
                     <div className="img-box">
@@ -294,24 +295,24 @@ const About = (props) => {
                     <div className="icons">
                         <div className="icon-box"
                             style={{ 
-                                border: border ? '1px solid white' : '1px solid #2EC0FF',
-                                color: border ? ' white' : ' #2EC0FF'
+                                border: border1 ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border1 ? ' white' : ' #2EC0FF'
                             }}
                         >
                            <i className="fab fa-facebook"></i>
                         </div>
                         <div className="icon-box"
                             style={{ 
-                                border: border ? '1px solid white' : '1px solid #2EC0FF',
-                                color: border ? ' white' : ' #2EC0FF'
+                                border: border1 ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border1 ? ' white' : ' #2EC0FF'
                             }}
                         >
                            <i className="fab fa-twitter"></i>
                         </div>
                         <div className="icon-box"
                             style={{ 
-                                border: border ? '1px solid white' : '1px solid #2EC0FF',
-                                color: border ? ' white' : ' #2EC0FF'
+                                border: border1 ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border1 ? ' white' : ' #2EC0FF'
                             }}
                         >
                              <i className="fab fa-linkedin"></i>
@@ -323,10 +324,10 @@ const About = (props) => {
 
                 <div className="card"
                    onMouseEnter={() => {
-                    setBorder(true)
+                    setBorder2(true)
                 }}
                 onMouseLeave={() => {
-                    setBorder(false) 
+                    setBorder2(false) 
                 }}
                 >
                     <div className="img-box">
@@ -338,24 +339,24 @@ const About = (props) => {
                     <div className="icons">
                         <div className="icon-box"
                             style={{ 
-                                border: border ? '1px solid white' : '1px solid #2EC0FF',
-                                color: border ? ' white' : ' #2EC0FF'
+                                border: border2 ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border2 ? ' white' : ' #2EC0FF'
                             }}
                         >
                            <i className="fab fa-facebook"></i>
                         </div>
                         <div className="icon-box"
                             style={{ 
-                                border: border ? '1px solid white' : '1px solid #2EC0FF',
-                                color: border ? ' white' : ' #2EC0FF'
+                                border: border2 ? '1px solid white' : '1px solid #2EC0FF',
+                                color: border2 ? ' white' : ' #2EC0FF'
                             }}
                         >
                            <i className="fab fa-twitter"></i>
                         </div>
                         <div className="icon-box"
                            style={{ 
-                            border: border ? '1px solid white' : '1px solid #2EC0FF',
-                            color: border ? ' white' : ' #2EC0FF'
+                            border: border2 ? '1px solid white' : '1px solid #2EC0FF',
+                            color: border2 ? ' white' : ' #2EC0FF'
                         }}
                        >
                              <i className="fab fa-linkedin"></i>

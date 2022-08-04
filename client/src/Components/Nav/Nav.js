@@ -51,7 +51,7 @@ const Nav = (props) => {
                 >
                 <a href='/'>Home</a>
                 <NavLink to='/About'>About</NavLink>
-                <a href='#'>Contact</a>
+                <a href='/Contact'>Contact</a>
 
                 </motion.div>
                 :

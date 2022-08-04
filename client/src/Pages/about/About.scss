@@ -284,7 +284,6 @@ $font2: 'Orienta', sans-serif;
         justify-content: center;
         align-items: center;
         margin-bottom: -100px;
-        // background-color: #67aecc;
         .team-text {
             width: 100%;
             max-width: 800px;
@@ -312,7 +311,6 @@ $font2: 'Orienta', sans-serif;
             justify-content: center;
             align-items: center;
             gap: 50px;
-            // background-color: #2EC0FF;
             @media (max-width: 800px) {
                 flex-wrap: wrap;
                 gap: 70px;
@@ -363,7 +361,6 @@ $font2: 'Orienta', sans-serif;
                     align-items: center;
                     gap: 20px;
                     font-size: 18px;
-                    // border: 1px solid red;
                     .icon-box {
                         width: 40px;
                         height: 40px;
@@ -373,7 +370,6 @@ $font2: 'Orienta', sans-serif;
                         justify-content: center;
                         align-items: center;
                         border-radius: 50%;
-                        // border: 2px solid #2EC0FF;
                     }
                 }
             }

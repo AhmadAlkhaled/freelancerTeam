@@ -29,6 +29,8 @@ $font2: 'Orienta', sans-serif;
                 background-color: rgba(0, 0, 0, 0.528);
                 .alltexts{
                     padding:100px;
+                    padding-left: 150px;
+                    padding-top: 150;
                     @media (max-width:700px){
                         padding:150px 0 0 30px;
                     }

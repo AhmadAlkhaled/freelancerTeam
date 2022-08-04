@@ -1,7 +1,12 @@
-import React from 'react';
+import  { useState } from 'react';
 import './Contact.scss';
 import Start from '../../Components/start/Start';
+import axios from 'axios' ;
+
 const Contact = () => {
+
+  const [submit, setsubmit] = useState(false);
+
   return (
     <div className='contact'>
         <div className="contact-section-1">
@@ -19,6 +24,29 @@ const Contact = () => {
         <div className="form-section">
             <div className="form-main">
               <div className="left-box">
+
+
+                { 
+                  (submit)?
+                    <p style={{ width: '60%' , padding : ' 0 20px'  , textAlign: 'center', margin: ' auto 0 '  , textAlign: 'center' 
+                     ,fontSize: '20px' , fontFamily:'Orienta,sans-serif' }} >Thanks for contacting Us ! We will be in touch with you shortly.</p>
+                  :
+                    <form action="/Contact" method="post" onSubmit={()=>{setsubmit(true)}} >
+                      <h3>Send Us A Message</h3>
+                      <input type="text"    placeholder="name" name="name" required />
+                      <br />
+                      <input type="text" placeholder='email' name="email" required/>
+                      <br />
+                      <input type="text" placeholder='subject' name="subject" required/>
+                      <br />
+                      <textarea id="" cols="30" rows="10" placeholder="massage" name="massage" required></textarea>
+                      <br />
+                      <button onClick={()=>{ 
+                      }} >Send Message</button>
+                    </form>
+                }
+                
+
                  <form action="">
                     <h3>Send Us A Message</h3>
                    <input type="text" placeholder="Name" name="name" />
@@ -31,6 +59,7 @@ const Contact = () => {
                    <br />
                    <button>Send Message</button>
                  </form>
+
                  <div className="form-text">
                     <h3>Get In Touch</h3>
                     <h5>Address</h5>

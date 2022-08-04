@@ -33,13 +33,13 @@ const Contact = () => {
                   :
                     <form action="/Contact" method="post" onSubmit={()=>{setsubmit(true)}} >
                       <h3>Send Us A Message</h3>
-                      <input type="text"    placeholder="name" name="name" required />
+                      <input type="text"    placeholder="Name" name="name" required />
                       <br />
-                      <input type="text" placeholder='email' name="email" required/>
+                      <input type="text" placeholder='Email' name="email" required/>
                       <br />
-                      <input type="text" placeholder='subject' name="subject" required/>
+                      <input type="text" placeholder='Subject' name="subject" required/>
                       <br />
-                      <textarea id="" cols="30" rows="10" placeholder="massage" name="massage" required></textarea>
+                      <textarea id="" cols="30" rows="10" placeholder="Massage" name="massage" required></textarea>
                       <br />
                       <button onClick={()=>{ 
                       }} >Send Message</button>

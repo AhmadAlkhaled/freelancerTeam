@@ -5,11 +5,15 @@ const Contact = () => {
   return (
     <div className='contact'>
         <div className="contact-section-1">
+          
+          <div className="opacity">
             <div className="contact-text">
-                <h1>Contact Us</h1>
-                <h3>Contact for Premium Business Services</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
-            </div>
+                  <h1>Contact Us</h1>
+                  <h3>Contact for Premium Business Services</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
+              </div>
+          </div>
+            
         </div>
 
         <div className="form-section">
@@ -17,13 +21,13 @@ const Contact = () => {
               <div className="left-box">
                  <form action="">
                     <h3>Send Us A Message</h3>
-                   <input type="text" placeholder="name" name="name" />
+                   <input type="text" placeholder="Name" name="name" />
                    <br />
-                   <input type="text" placeholder='email' name="email" />
+                   <input type="text" placeholder='Email' name="email" />
                    <br />
-                   <input type="text" placeholder='subject' name="subject" />
+                   <input type="text" placeholder='Subject' name="subject" />
                    <br />
-                   <textarea id="" cols="30" rows="10" placeholder="message" name="message"></textarea>
+                   <textarea id="" cols="30" rows="10" placeholder="Message" name="message"></textarea>
                    <br />
                    <button>Send Message</button>
                  </form>

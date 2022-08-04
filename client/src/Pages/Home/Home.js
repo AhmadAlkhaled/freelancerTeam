@@ -2,6 +2,17 @@ import './Home.scss'
 import StartProject from '../../Components/start/Start'
 import img1 from '../../imgs/res1.png'
 import img2 from '../../imgs/res2.png'
+import wordpress from '../../imgs/wordpress.png'
+import javascript from '../../imgs/javascript.png'
+import mongodb from '../../imgs/mongodb.png'
+import nodejs from '../../imgs/nodejs.png'
+import html from '../../imgs/html.png'
+import css from '../../imgs/css.png'
+import sass from '../../imgs/sass.png'
+import figma from '../../imgs/figma.png'
+import react from '../../imgs/react.png'
+import xd from '../../imgs/xd.png'
+import stencil from '../../imgs/stencil.png'
 
 const Home = (props) => { 
     
@@ -107,7 +118,23 @@ const Home = (props) => {
                             <img src={img2}/>
                             </div>
                         </div>
+                            <p className="subject2" style={{width:'100%',marginBottom:'30px'}}>Our Technology Stack </p>
 
+                            <div className="programming_icons">
+                            
+                                <div className="programming_icon"><img src={html}></img></div>
+                                <div className="programming_icon"><img src={css}></img></div>
+                                <div className="programming_icon"><img src={sass}></img></div>
+                                <div className="programming_icon"><img src={javascript}></img></div>
+                                <div className="programming_icon"><img src={nodejs}></img></div>
+                                <div className="programming_icon"><img src={mongodb}></img></div>
+                                <div className="programming_icon"><img src={react}></img></div>
+                                <div className="programming_icon"><img src={stencil}></img></div>
+                                <div className="programming_icon"><img src={figma}></img></div>
+                                <div className="programming_icon"><img src={xd}></img></div>
+                                <div className="programming_icon"><img src={wordpress}></img></div>
+                                
+                            </div>
                     </div>
 
                         <div className="suction4">

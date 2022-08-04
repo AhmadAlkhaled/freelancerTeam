@@ -41,7 +41,7 @@ const Footer = () => {
                     <h3>Business</h3>
                     <a href="">Project</a>
                     <br />
-                    <a href="">Our Team</a>
+                    <a href="#team">Our Team</a>
                     <br />
                     <a href="">Facte</a>
                     <br />

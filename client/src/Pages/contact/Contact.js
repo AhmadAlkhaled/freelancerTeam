@@ -46,20 +46,6 @@ const Contact = () => {
                     </form>
                 }
                 
-
-                 <form action="">
-                    <h3>Send Us A Message</h3>
-                   <input type="text" placeholder="Name" name="name" />
-                   <br />
-                   <input type="text" placeholder='Email' name="email" />
-                   <br />
-                   <input type="text" placeholder='Subject' name="subject" />
-                   <br />
-                   <textarea id="" cols="30" rows="10" placeholder="Message" name="message"></textarea>
-                   <br />
-                   <button>Send Message</button>
-                 </form>
-
                  <div className="form-text">
                     <h3>Get In Touch</h3>
                     <h5>Address</h5>

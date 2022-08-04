@@ -169,6 +169,31 @@ $font2: 'Orienta', sans-serif;
                 font-size: 25px;
             }
         }
+        .programming_icons{
+            width:80%;
+            height: 150px;
+            margin:0 auto;
+            @include display;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom:100px;
+            @media (max-width: 800px){
+                margin-bottom:160px;
+            }
+            .programming_icon{
+                width: 80px;
+                height: 80px;
+                margin: 5px 15px;
+                @media (max-width: 700px){
+                    width: 60px;
+                    height: 60px;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
         .resposiveCards{
             padding: 10px 10px 100px 10px;
             width: 100%;

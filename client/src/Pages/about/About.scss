@@ -1,6 +1,6 @@
 $font1: 'Montserrat', sans-serif;
 $font2: 'Orienta', sans-serif;
-
+$color1: #2EC0FF;
 .about {
     width: 100%;
     height: 100%;
@@ -61,6 +61,7 @@ $font2: 'Orienta', sans-serif;
         align-items: center;
         flex-wrap: wrap;
         gap: 30px;
+    
         .missions-card {
             width: 320px;
             height: 320px;
@@ -73,14 +74,14 @@ $font2: 'Orienta', sans-serif;
                 margin-bottom: 20px;
                 height: 5px;
                 border-radius: 20px;
-                background-color: #2EC0FF;
+                background-color: $color1;
             }
             h2 {
                 margin-bottom: 20px;
             }
             ul {
                 ::marker {
-                    color: #2EC0FF;
+                    color: $color1;
                 }
             }
         }
@@ -92,9 +93,11 @@ $font2: 'Orienta', sans-serif;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        h1 {
+            margin-bottom: 50px;
+        }
         .cards-main {
             max-width: 1000px;
-            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -139,7 +142,7 @@ $font2: 'Orienta', sans-serif;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
-            background-color: #2EC0FF;
+            background-color: $color1;
             @media (max-width: 700px) {
                 width: 100%;
                 height: 500px;
@@ -265,7 +268,7 @@ $font2: 'Orienta', sans-serif;
                 b {
                     width: 210px;
                     font-size: 80px;
-                    color: #2EC0FF;
+                    color: $color1;
                     .increment {
                         display: inline;
                         margin-right: -20px;
@@ -300,26 +303,26 @@ $font2: 'Orienta', sans-serif;
                 width: 30%;
                 height: 100%;
                 margin: 0 auto;
-                background-color: #2EC0FF;
+                background-color: $color1;
             }
            }
         }
         .cards-main {
-            width: 95%;
+            width: 100%;
             height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 50px;
-            @media (max-width: 800px) {
+            @media (max-width: 900px) {
                 flex-wrap: wrap;
-                gap: 70px;
+                gap: 80px;
                 height: auto;
             }
             .card {
-                width: 280px;
+                width: 300px;
                 height: 100%;
-                padding: 10px;
+                padding: 11px;
                 display: flex;
                 gap: 20px;
                 justify-content: center;
@@ -328,12 +331,25 @@ $font2: 'Orienta', sans-serif;
                 text-align: center;
                 position: relative;
                 background-color: rgb(250, 249, 249);
+                box-shadow: 0px 0px 10px rgb(200, 200, 200);
                 transition: all 0.5s;
-                &:hover {
-                    background-color: #2EC0FF;
-                    color: #FFFFFF;
+                @media (max-width: 900px) {
+                   padding-bottom: 30px;
                 }
-                h2 {
+                &:hover {
+                    background-color: $color1;
+                    color: #FFFFFF;
+                    .icons {
+                        .icon-box {
+                        border: 1px solid #ffffff;
+                        i{
+                            color: #FFFFFF;
+                        }
+                    }
+                    }
+                 
+                }
+                h3 {
                     margin-top: 40px;
                     margin-bottom: -10px;
                     font-family: $font2;
@@ -344,7 +360,7 @@ $font2: 'Orienta', sans-serif;
                 .img-box {
                     width: 100px;
                     height: 100px;
-                    border: 9px solid #2EC0FF;
+                    border: 9px solid $color1;
                     border-radius: 50%;
                     position: absolute;
                     top: -50px;
@@ -365,11 +381,12 @@ $font2: 'Orienta', sans-serif;
                         width: 40px;
                         height: 40px;
                         cursor: pointer;
-                        color: #2EC0FF;
+                        color: $color1;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         border-radius: 50%;
+                        border: 1px solid $color1;
                     }
                 }
             }

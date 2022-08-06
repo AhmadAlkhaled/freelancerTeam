@@ -31,7 +31,7 @@ $font2: 'Orienta', sans-serif;
                     padding:100px;
                     padding-left: 150px;
                     padding-top: 150;
-                    @media (max-width:700px){
+                    @media (max-width:800px){
                         padding:150px 0 0 30px;
                     }
                     .text1{
@@ -124,6 +124,8 @@ $font2: 'Orienta', sans-serif;
             padding: 50px 50px 100px 50px;
             .cards{
                 margin: 10px;
+                transition: all 0.7s;
+                box-shadow: 0px 0px 10px rgb(200, 200, 200);
                 img{
                     width: 100%;
                     margin-bottom: 10px;

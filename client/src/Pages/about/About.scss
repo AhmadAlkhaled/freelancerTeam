@@ -106,23 +106,29 @@ $color1: #2EC0FF;
         }
         .process-card {
             width: 300px;
-            height: 310px;
+            height: 400px;
             text-align: left;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
+            align-items: flex-start;
             flex-direction: column;
             padding: 15px;
             position: relative;
+            // border: 1px solid red;
             span {
                 font-weight: bolder;
                 font-size: 100px;
-                position: absolute;
-                top: 10px;
+                // position: absolute;
+                // top: 0;
                 color: silver;
+                margin-bottom: -20px;
             }
             h3 {
-                margin-top: 10px;
+                // margin-top: 50px;
                 margin-bottom: 20px;
+            }
+            p {
+                margin: 0;
             }
         }
     }

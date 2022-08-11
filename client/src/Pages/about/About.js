@@ -55,7 +55,7 @@ const About = (props) => {
                 <h1>About Us</h1>
                 <h4>Welcome to The Digital Agency</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.
+                  We are a global team of experts that lives up to its value by setting the industries’ future benchmarks today.
                 </p>
            </div>
         </div>
@@ -65,14 +65,14 @@ const About = (props) => {
                 <div className="card-line"></div>
                 <h2>Who Are We</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Ut elit tellus, luctus nec ullam corper mattis, pulvinar. Etiam erat lectus, finibus eget commodo quis, tinci dunt eget leo. Nullam quis vulpu tate orci, ac accum san quam.
+                We are a global IT and digital transformation champion that supports our customers in realizing technology’s huge potential for a smarter and more sustainable world
                 </p>
             </div>
             <div className="missions-card">
                 <div className="card-line"></div>
                 <h2>Our Mission</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consec tetur adipi scing elit. Ut elit tellus, luctus nec ullam corper mattis, pulvinar. Etiam erat lectus, finibus eget commodo quis, tinci dunt eget leo. Nullam quis vulpu tate orci, ac accum san quam.
+                To disrupt the outdated and conventional IT market with new imaginative solutions
                 </p>
             </div>
             <div className="missions-card">
@@ -95,7 +95,7 @@ const About = (props) => {
                 <div className="process-card">             
                     <span>01.</span>
                     <h3>Discover</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                    <p>Every custom software project starts with tech and business scrutiny of the idea behind the solution. This way, we ensure its feasibility to prevent our customers from walking the avenue of a potential budget loss</p>
                 </div>
                 <div className="process-card">  
                     <span>02.</span>
@@ -105,12 +105,12 @@ const About = (props) => {
                 <div className="process-card">             
                     <span>03.</span>
                     <h3>Design</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                    <p>Defining the product vision to meet the customer’s business goals. Setting up a detailed project delivery roadmap and breaking the process down into manageable deliverables.</p>
                 </div>
                 <div className="process-card">  
                     <span>04.</span>
                     <h3>Develop</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                    <p>Having all the requirements transformed into the product implementation, our software engineers move fast yet wisely, harnessing the full potential of the Agile methodology</p>
                 </div>
                 <div className="process-card">               
                     <span>05.</span>

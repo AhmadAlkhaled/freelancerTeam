@@ -1,3 +1,4 @@
+import { useState , useEffect } from 'react'
 import './Home.scss'
 import StartProject from '../../Components/start/Start'
 import img1 from '../../imgs/res1.png'
@@ -13,9 +14,23 @@ import figma from '../../imgs/figma.png'
 import react from '../../imgs/react.png'
 import xd from '../../imgs/xd.png'
 import stencil from '../../imgs/stencil.png'
+import { motion } from "framer-motion";
 
 const Home = (props) => { 
-    
+
+    const [animation, setAnimation] = useState (false)
+  
+    window.addEventListener('scroll', ()=>
+    {
+ 
+        if( document.documentElement.scrollTop > 450 && window.innerWidth > 700 )
+        {
+            setAnimation(true);
+        }
+        else{
+            setAnimation(false);
+        }
+    });
     return (
         
         <div className="home"
@@ -32,11 +47,19 @@ const Home = (props) => {
                             
                       
                             <div className="alltexts">
-                                <p className="text1"> Fast & Secure Web-Apps & Websites </p>
+                                <motion.p className="text1"
+                                  initial={{ x: '1200px'}}
+                                  animate={{ x: '0'}}
+                                  transition={{duration:1.5}}
+                                > Fast & Secure Web-Apps & Websites </motion.p>
                                 <p className="text2"> Create Amazing Business Websites </p>
                                 <p className="text3"> Talk to us, we will find a suitable solution! </p>
                                 <br/><br/><br/>
-                                <button>GET STARTED</button>
+                                <a href="/app-form"><motion.button
+                                initial={{ x: '-500px'}}
+                                animate={{ x: '0'}}
+                                transition={{duration:1.5}}
+                                >GET STARTED</motion.button></a>
                             </div>
                         </div>
 
@@ -49,50 +72,81 @@ const Home = (props) => {
                         <p className="subject3">Every software idea needs a good partner !</p>
                     </div>
 
-                    <div className="ideaCards">
-                        
-                        <div className="cards">
+                    <motion.div className="ideaCards">
+                        {
+                            animation ?
+                             <>
+                                <motion.div className="cards"
+                            initial={{ x: '-100vw'}}
+                            animate={{ x: '0'}}
+                            transition={{duration:0.2}}
+                        >
                             <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-1-300x153.webp"></img>
                             <p className="cardSubject">1. You'r Idea</p>
                             <p className="cardText">You have an idea and are looking for a suitable IT partner to implement it.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="cards">
+                        <motion.div className="cards"
+                        initial={{ x: '-100vw'}}
+                        animate={{ x: '0'}}
+                        transition={{duration:0.2, delay: 0.6}}
+                        >
                             <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-2-300x153.webp"></img>
                             <p className="cardSubject">2. Project Requirements</p>
                             <p className="cardText">We plan with you and help with the creation of specifications.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="cards">
+                        <motion.div className="cards"
+                        initial={{ x: '-100vw'}}
+                        animate={{ x: '0'}}
+                        transition={{duration:0.2, delay: 1}}
+                        >
                             <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-3-300x153.webp"></img>
                             <p className="cardSubject">3. Design Phase</p>
                             <p className="cardText">The requirements become an interactive prototype for customers, board members or investors.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="cards">
+                        <motion.div className="cards"
+                        initial={{ x: '100vw'}}
+                        animate={{ x: '0'}}
+                        transition={{duration:0.2, delay: 1}}
+                        >
                             <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-4-300x153.webp"></img>
                             <p className="cardSubject">4. Phase of Development</p>
                             <p className="cardText">The prototype is converted into a finished software solution.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="cards">
+                        <motion.div className="cards"
+                        initial={{ x: '100vw'}}
+                        animate={{ x: '0'}}
+                        transition={{duration:0.2, delay: 0.6}}
+                        >
                             <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-5-300x153.webp"></img>
                             <p className="cardSubject">5. Test & optimize software</p>
                             <p className="cardText">Our quality management ensures a smooth start.
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="cards">
+                        <motion.div className="cards"
+                        initial={{ x: '100vw'}}
+                        animate={{ x: '0'}}
+                        transition={{duration:0.2, delay: 0.2}}
+                        >
                             <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-6-300x153.webp"></img>
                             <p className="cardSubject">6. Publication</p>
                             <p className="cardText">You will receive a briefing on the software and we will help with the publication.
                             </p>
-                        </div>
-                    </div>
+                        </motion.div>
+                             </>
+                            :
+                            null
+                        }
+                       
+                    </motion.div>
 
                 </div>
 

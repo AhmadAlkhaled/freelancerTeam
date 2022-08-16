@@ -5,6 +5,7 @@ import {Home} from './Pages/Home/Home';
 import {Nav} from '../../client/src/Components/Nav/Nav';
 import Contact from './Pages/contact/Contact';
 import Footer from '../../client/src/Components/Footer/Footer';
+import AppForm from '../src/Pages/app-form/AppForm';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import   { useEffect } from 'react';
 import {Translator, Translate} from 'react-auto-translate';
@@ -52,6 +53,7 @@ const App = () => {
                         <Route path="/" element={<Home setHamburgerAnimation={setHamburgerAnimation}/>}></Route>
                         <Route path="/About" element={<About setHamburgerAnimation={setHamburgerAnimation}/>}></Route>
                         <Route path="/Contact" element={<Contact setHamburgerAnimation={setHamburgerAnimation}/>}></Route>
+                        <Route path="/app-form" element={<AppForm setHamburgerAnimation={setHamburgerAnimation}/>}></Route>
                     </Routes>
 
                 <Footer/>

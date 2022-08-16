@@ -6,6 +6,26 @@ import axios from 'axios' ;
 const Contact = () => {
 
   const [submit, setsubmit] = useState(false);
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [subject, setSubject] = useState();
+  const [message, setMessage] = useState();
+
+  const MessageData = {
+    name: name,
+    email: email,
+    subject: subject,
+    message: message
+  }
+
+  const SendMessage = () => {
+    if(name && email && subject && message) {
+      axios.post('/contact', MessageData)
+      .then((res) => {
+        console.log(res);
+      })
+    }
+  }
 
   return (
     <div className='contact'>
@@ -33,16 +53,41 @@ const Contact = () => {
                   :
                     <form action="/Contact" method="post" onSubmit={()=>{setsubmit(true)}} >
                       <h3>Send Us A Message</h3>
-                      <input type="text"    placeholder="Name" name="name" required />
+                      <input 
+                        type="text"    
+                        placeholder="Name" 
+                        name="name" 
+                        required 
+                        onChange={(e) => setName(e.target.value)}
+                        />
                       <br />
-                      <input type="text" placeholder='Email' name="email" required/>
+                      <input 
+                        type="text" 
+                        placeholder='Email' 
+                        name="email" 
+                        required
+                        onChange={(e) => setEmail(e.target.value)}
+                        />
                       <br />
-                      <input type="text" placeholder='Subject' name="subject" required/>
+                      <input 
+                        type="text" 
+                        placeholder='Subject' 
+                        name="subject" 
+                        required
+                        onChange={(e) => setSubject(e.target.value)}
+                        />
                       <br />
-                      <textarea id="" cols="30" rows="10" placeholder="Massage" name="massage" required></textarea>
+                      <textarea 
+                        id="" 
+                        cols="30" 
+                        rows="10" 
+                        placeholder="Massage" 
+                        name="massage" 
+                        required
+                        onChange={(e) => setMessage(e.target.value)}
+                        ></textarea>
                       <br />
-                      <button onClick={()=>{ 
-                      }} >Send Message</button>
+                      <button onClick={SendMessage} >Send Message</button>
                     </form>
                 }
                 

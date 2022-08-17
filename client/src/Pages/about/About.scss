@@ -13,15 +13,15 @@ $color1: #2EC0FF;
         justify-content: center;
         align-items: center;
         color: aliceblue;
-        background-image: url('../../imgs/about-img.jpeg');
+        background-image: url('../../imgs/coding4.jpeg');
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         .about-text {
-            width: 60%;
+            width: 70%;
             height: 50%;
             padding: 15px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(5px);
             box-shadow: 0px 0px 10px 2px rgb(203, 203, 203);
             border-radius: 10px;
             display: flex;
@@ -144,7 +144,7 @@ $color1: #2EC0FF;
         .service-img {
             width: 50%;
             height: auto;
-            background-image: url('https://www.cursorsystems.de/wp-content/uploads/2022/01/shutterstock_791606392-edited-1024x768.jpg');
+            background-image: url('../../imgs/coding3.jpeg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;

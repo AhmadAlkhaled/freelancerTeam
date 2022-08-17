@@ -20,7 +20,7 @@ const Footer = () => {
                         ><img src={Logo} alt="Logo"/></a>
                     </div>
                     
-                    <p>Lorem ipsum dolor sit amet, <br /> consectetur adipiscing elit. Ut <br/> elit tellus, luctus nec <br/> ullamcorper mattis, pulvinar <br /> dapibus leo.</p>
+                    <p>We are a global team of experts that lives up to its value by setting the industries’ future benchmarks today.</p>
                     <div className='icons'>
                         <i className="fab fa-facebook"></i>
                         <i className="fab fa-twitter"></i>
@@ -39,8 +39,8 @@ const Footer = () => {
                 </div>
                 <div className='box-3'>
                     <h3>Business</h3>
-                    <a href="">Project</a>
-                    <br />
+                    {/* <a href="">Project</a> */}
+                    {/* <br /> */}
                     <a href="#team"
                       onClick={()=>{
                                 
@@ -49,14 +49,13 @@ const Footer = () => {
                         }
                     }}
                     >Our Team</a>
-                    <br />
-                    <a href="">Facte</a>
+                    {/* <a href="">Facte</a> */}
                     <br />
                     <a href="">Customers</a>
                 </div>
                 <div className='box-4'>
                     <h3>Get In Touch</h3>
-                    <p>Rt. 66, Downtown, Washington,DC</p>
+                    <p>Berlin, Germany</p>
                     <p>info@example.com​</p> 
                     <p>1-800-1234-567</p>
                     <p>+001 987-654-3210</p>

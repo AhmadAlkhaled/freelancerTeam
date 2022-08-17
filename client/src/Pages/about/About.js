@@ -3,14 +3,12 @@ import './About.scss';
 import NumberCounter from 'number-counter';
 import StartProject from '../../Components/start/Start';
 import TeamInfo from './TeamInfo';
+
 const About = (props) => {
 
    const [click, setClick] = useState(true)
    const [scroll, setScroll] = useState(false)
-   const [border, setBorder] = useState(false)
-   const [border1, setBorder1] = useState(false)
-   const [border2, setBorder2] = useState(false)
-
+ 
    const serviceDes = (e) => {
     const p = e.target.parentElement.children[2]
     const icon = e.target.parentElement.children[1]
@@ -53,9 +51,8 @@ const About = (props) => {
         <div className="about-section">
             <div className="about-text">
                 <h1>About Us</h1>
-                <h4>Welcome to The Digital Agency</h4>
-                <p>
-                  We are a global team of experts that lives up to its value by setting the industries’ future benchmarks today.
+                <h4>Welcome to FreeLancer Team</h4>
+                <p>We're a creative studio that specializes in Software Development. We are passionate about what we do, and you can expect the highest quality work from us every time.
                 </p>
            </div>
         </div>
@@ -72,17 +69,18 @@ const About = (props) => {
                 <div className="card-line"></div>
                 <h2>Our Mission</h2>
                 <p>
-                To disrupt the outdated and conventional IT market with new imaginative solutions
+                We help businesses and organizations understand, implement and manage technology in order to be more productive, cost-effective and competitive.
                 </p>
             </div>
             <div className="missions-card">
                 <div className="card-line"></div>
                 <h2>What We Do</h2>
                    <ul>
-                        <li>UI UX Design</li>
+                        <li>Software Development</li>
                         <li>Website Development</li>
+                        <li>Applications Development</li>
+                        <li>UI UX Design</li>
                         <li>Marketing</li>
-                        <li>Social Media</li>
                         <li>eCommerce Store</li>
                         <li>Tech Support</li>
                    </ul>
@@ -95,12 +93,12 @@ const About = (props) => {
                 <div className="process-card">             
                     <span>01.</span>
                     <h3>Discover</h3>
-                    <p>Every custom software project starts with tech and business scrutiny of the idea behind the solution. This way, we ensure its feasibility to prevent our customers from walking the avenue of a potential budget loss</p>
+                    <p>Every custom software project starts with tech and business scrutiny of the idea behind the solution. This way, we ensure its feasibility to prevent our customers from walking the avenue of a potential budget loss.</p>
                 </div>
                 <div className="process-card">  
                     <span>02.</span>
                     <h3>Define</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar. </p>
+                    <p>Definition of a high quality design and inspires and motivates users to create more content matches your brand's style guide is well researched and gives users a stellar experience. </p>
                 </div>
                 <div className="process-card">             
                     <span>03.</span>
@@ -110,17 +108,17 @@ const About = (props) => {
                 <div className="process-card">  
                     <span>04.</span>
                     <h3>Develop</h3>
-                    <p>Having all the requirements transformed into the product implementation, our software engineers move fast yet wisely, harnessing the full potential of the Agile methodology</p>
+                    <p>Having all the requirements transformed into the product implementation, our software engineers move fast yet wisely, harnessing the full potential of the Scrum methodology.</p>
                 </div>
                 <div className="process-card">               
                     <span>05.</span>
                     <h3>Deploy</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                    <p>web development deploying we have a mixed bag of backend and frontend developers who specialize in deploying web development projects.</p>
                 </div>
                 <div className="process-card">           
                     <span>06.</span>
                     <h3>Deliver</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar. </p>
+                    <p>Deliver Quality Software Development Services: We are a boutique Software and web development company that helps business and organizations create easy to use and functional websites for their organization. </p>
                 </div>
             </div>   
         </div>
@@ -130,56 +128,56 @@ const About = (props) => {
               <div className="service-text">
                 <div className="title-1">
                    <h1>Why Choose Us?</h1>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar.</p>
+                   <p>Our teams of developers and designers with extensive years of experience working on multiple types of web application. I can show you how much we care about your vision and goals by our engagement levels with setting goals together, fully understanding your needs, and reliability in our methods.</p>
                 </div>
 
                 <div className="service-divs">
-                    <div className="service-box">
+                    <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">Best Quality Designs</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>          
-                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
+                        <p className='description'>Web development company that designs and develops enterprise level mobile applications and powerful web applications taking care of clients ranging from SMBs to large enterprises by providing the best quality design, development and support services in Germany .</p>
                     </div>
                     
-                    <div className="service-box">
+                    <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">24x7 Live Support</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
+                        <p className='description'>With 24×7 web site support, you can have an answer to any problem that your hosted website might be experiencing on the spot 24 hours a day.</p>
                     </div>
 
-                    <div className="service-box">
+                    <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">Result Oriented Projects</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
+                        <p className='description'>We are digital creative Team helps you achieve your business goals through our prime services.</p>
                     </div>
 
-                    <div className="service-box">
+                    {/* <div className="service-box">
                         <p className="title">Award Winning Support Team</p>
                         <i className="fas fa-angle-down"
                          onClick={(e) => {serviceDes(e)}}
                         ></i>
                         <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
-                    </div>
+                    </div> */}
 
-                    <div className="service-box">
-                        <p className="title">Best ROI Techniques</p>
+                    <div className="service-box" onClick={(e) => {serviceDes(e)}}>
+                        <p className="title">Best Techniques</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>                  
+                        <p className='description'>Raw and unbiased information on web development. We show beginners how to do things the right way.</p>                  
                     </div>
 
-                    <div className="service-box">
+                    <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">Experienced Professionals</p>
                         <i className="fas fa-angle-down"
                         onClick={(e) => {serviceDes(e)}}
                         ></i>
-                         <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
+                         <p className='description'>We're a team of experienced, intelligent people who want to build great software with you.</p>
                     </div>
                 </div>
             </div>
@@ -188,7 +186,7 @@ const About = (props) => {
         <div className="info-section">
             <div className="info-text">
                <h2>Some Numbers</h2>
-               <p>Lorem ipsum dolor sit amet, consec tetur adipis.</p>
+               <p>Some Numbers about Web Development We've made.</p>
             </div>
 
             <div className="info-numbers">
@@ -226,7 +224,7 @@ const About = (props) => {
         <div className="team-section" id='team'>
             <div className="team-text">
                 <h1>OUR TEAM</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis pariatur inventore saepe odit aliquam deserunt reprehenderit porro</p>
+                <p>WE ARE UX/UI Software Developer's, Web Designer's, Programmer's and We are Experts in : <br /> <b>HTML-CSS-JAVASCRIPT-SASS-REACT-NODE.JS-MONGODB-EXPRESS-FIGMA-WORDPRESS-ADOBEXD-STENCIL</b> </p>
                 <div className="line">
                     <div className="subline"></div>
                 </div>

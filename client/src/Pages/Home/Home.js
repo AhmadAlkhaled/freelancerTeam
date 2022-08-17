@@ -1,19 +1,19 @@
-import { useState , useEffect } from 'react'
-import './Home.scss'
-import StartProject from '../../Components/start/Start'
-import img1 from '../../imgs/res1.png'
-import img2 from '../../imgs/res2.png'
-import wordpress from '../../imgs/wordpress.png'
-import javascript from '../../imgs/javascript.png'
-import mongodb from '../../imgs/mongodb.png'
-import nodejs from '../../imgs/nodejs.png'
-import html from '../../imgs/html.png'
-import css from '../../imgs/css.png'
-import sass from '../../imgs/sass.png'
-import figma from '../../imgs/figma.png'
-import react from '../../imgs/react.png'
-import xd from '../../imgs/xd.png'
-import stencil from '../../imgs/stencil.png'
+import { useState , useEffect } from 'react';
+import './Home.scss';
+import StartProject from '../../Components/start/Start';
+import img1 from '../../imgs/res1.png';
+import img2 from '../../imgs/res2.png';
+import wordpress from '../../imgs/wordpress.png';
+import javascript from '../../imgs/javascript.png';
+import mongodb from '../../imgs/mongodb.png';
+import nodejs from '../../imgs/nodejs.png';
+import html from '../../imgs/html.png';
+import css from '../../imgs/css.png';
+import sass from '../../imgs/sass.png';
+import figma from '../../imgs/figma.png';
+import react from '../../imgs/react.png';
+import xd from '../../imgs/xd.png';
+import stencil from '../../imgs/stencil.png';
 import { motion } from "framer-motion";
 
 const Home = (props) => { 
@@ -49,7 +49,7 @@ const Home = (props) => {
                                   initial={{ x: '1200px'}}
                                   animate={{ x: '0'}}
                                   transition={{duration:1.5}}
-                                > Fast & Secure Web-Apps & Websites </motion.p>
+                                > Fast & Secure Application's & Websites </motion.p>
                                 <p className="text2"> Create Amazing Business Websites </p>
                                 <p className="text3"> Talk to us, we will find a suitable solution! </p>
                                 <br/><br/><br/>
@@ -205,22 +205,22 @@ const Home = (props) => {
                                     
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">John Doe</h2>
-                                    <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                                    <p className="slider__txt"> I'm very pleased with the service. The website is easy to navigate, the customer support team has been helpful.</p>
                                     </div>
 
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Susan Smith</h2>
-                                    <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                                    <p className="slider__txt"> Their communication is great, always deliver on time, very professional company that can handle any project that comes their way.</p>
                                     </div>
 
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Anna Johnson</h2>
-                                    <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                                    <p className="slider__txt">I've used Freelancer-Team for a while now and I'm always impressed with the way they handle my business.</p>
                                     </div>
 
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Mariah Benchos</h2>
-                                    <p className="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis minima!</p>
+                                    <p className="slider__txt">they have the information they need to make the best decisions for their business.</p>
                                     </div>
 
                                 </div>

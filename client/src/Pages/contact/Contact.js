@@ -35,7 +35,7 @@ const Contact = () => {
             <div className="contact-text">
                   <h1>Contact Us</h1>
                   <h3>Contact for Premium Business Services</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo. Praesent mattis commodo augue. Aliquam ornare hendrerit augue.</p>
+                  <p>We are happy to answer any questions you have about our services. To get in touch with us, please fill out the form below and we will get back to you within 24 hours.</p>
               </div>
           </div>
             
@@ -94,7 +94,7 @@ const Contact = () => {
                  <div className="form-text">
                     <h3>Get In Touch</h3>
                     <h5>Address</h5>
-                    <p>315 Al Falah St – Abu Dhabi – <br /> United Arab Emirates</p>
+                    <p>Berlin – Germany</p>
                     <h5>Email</h5>
                     <p>info@example.com</p>
                     <h5>Phone</h5>

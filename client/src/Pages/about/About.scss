@@ -39,6 +39,9 @@ $color1: #2EC0FF;
                     margin-bottom: 50px;
                 }
             }
+            p {
+                line-height: 30px;
+            }
             p, h4 {
                 text-shadow: 0px 0px 7px rgb(81, 81, 81) ;
                 font-weight: bolder;
@@ -79,6 +82,9 @@ $color1: #2EC0FF;
             h2 {
                 margin-bottom: 20px;
             }
+            p{
+                line-height: 25px;
+            }
             ul {
                 ::marker {
                     color: $color1;
@@ -114,21 +120,18 @@ $color1: #2EC0FF;
             flex-direction: column;
             padding: 15px;
             position: relative;
-            // border: 1px solid red;
             span {
                 font-weight: bolder;
                 font-size: 100px;
-                // position: absolute;
-                // top: 0;
                 color: silver;
                 margin-bottom: -20px;
             }
             h3 {
-                // margin-top: 50px;
                 margin-bottom: 20px;
             }
             p {
                 margin: 0;
+                line-height: 25px;
             }
         }
     }
@@ -175,6 +178,9 @@ $color1: #2EC0FF;
             width: 70%;
             margin-left: 35px;
             text-align: left;
+            p {
+                line-height: 25px;
+            }
             @media (max-width: 700px) {
                 text-align: center;
                  
@@ -196,6 +202,7 @@ $color1: #2EC0FF;
                 border-radius: 5px;
                 margin: 2px 0px 2px 0px;
                 position: relative;
+                cursor: pointer;
                 background-color: #FFFFFF;
                 .title {
                     padding-left: 10px;
@@ -209,7 +216,7 @@ $color1: #2EC0FF;
                 }
                 .description {
                     width: 100%;
-                    overflow: hidden;
+                    overflow: auto;
                     color: #4e5050;
                     font-weight: bold;
                     border-radius: 10px;
@@ -221,7 +228,7 @@ $color1: #2EC0FF;
                 }
                 p {
                     margin: 0;
-                    
+                    line-height: 25px;
                 }
                
             }
@@ -299,6 +306,7 @@ $color1: #2EC0FF;
             text-align: center;
             p {
                 margin: 50px;
+                line-height: 28px;
             }
            .line {
             width: 60%;

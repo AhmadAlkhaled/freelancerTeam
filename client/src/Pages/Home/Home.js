@@ -27,9 +27,7 @@ const Home = (props) => {
         {
             setAnimation(true);
         }
-        else{
-            setAnimation(false);
-        }
+        
     });
     return (
         

@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './AppForm.scss';
 import axios from 'axios';
+
+import desktop_pic from '../../imgs/desktop-pic.png'
+import online_shop from '../../imgs/online-shop.png'
+import home_page from '../../imgs/homepage.png'
+import web_app from '../../imgs/web-app.png'
+import mobile_app from '../../imgs/mobile-app.png'
+import send_icon from '../../imgs/send-icon.jpeg'
+
+
 const AppForm = () => {
     const [sent, setSent] = useState(false)
     const [projectArt, setProjectArt] = useState()
@@ -11,6 +20,30 @@ const AppForm = () => {
     const [status, setStatus] = useState()
     const [contactArt, setContactArt] = useState()
     const [message, setMessage] = useState()
+    const [formImg, setFormImg] = useState()
+
+    useEffect (() => {
+        
+        if(projectArt == 'Desktop Application' ){
+            setFormImg(desktop_pic)
+        }
+        if(projectArt == 'Online Shop' ){
+            setFormImg(online_shop)
+        }
+        if(projectArt == 'Home-Page / Website' ){
+            setFormImg(home_page)
+        }
+        if(projectArt == 'Mobile Application' ){
+            setFormImg(mobile_app)
+        }
+        if(projectArt == 'Web Application' ){
+            setFormImg(web_app)
+        }
+        if(projectArt == 'Other' ){
+            setFormImg(home_page)
+        }
+
+    },[projectArt])
    
     const ProjectInfo = {
         projectArt: projectArt,
@@ -33,23 +66,30 @@ const AppForm = () => {
     }
   return (
     <div className="app-form">
-        <div className="section-1"></div>
+        <div className="section-1">
+            <div className="section-pictures" 
+            style={{
+                backgroundImage: `url(${formImg})`,
+            }}>
+            </div>
+        </div>
         <div className="section-2">
             <form action="">
                 {
                     sent ? 
-                    <img src="https://thumbs.dreamstime.com/b/message-sent-notification-vector-icon-wbsite-design-element-120000357.jpg" alt="" />
+                    <img src={send_icon} alt="" />
                     :
                     <>
                        <h2>Project Form</h2>
                         <label htmlFor="">Project Art</label>
-                        <select name="" id="" onChange={(e) => setProjectArt(e.target.value)}>
+                        <select name="" id="" onChange={(e) => 
+                            setProjectArt(e.target.value)}>
                             <option>Choose your Project Art</option>
-                            <option>desktop aplication</option>
-                            <option>online shop</option>
-                            <option>homepage/website</option>
-                            <option>mobile aplication</option>
-                            <option>web aplication</option>
+                            <option>Desktop Application</option>
+                            <option>Online Shop</option>
+                            <option>Home-Page / Website</option>
+                            <option>Mobile Application</option>
+                            <option>Web Application</option>
                             <option>Other</option>
                         </select>
                         <div className="info">
@@ -99,7 +139,7 @@ const AppForm = () => {
                                 />
                             </div>
                         </div>
-                        <label>Project state</label>
+                        <label>Project State</label>
                         <br />
                         <select required name="" id="" onChange={(e) => setStatus(e.target.value)}>
                             <option>Project state</option>
@@ -108,7 +148,7 @@ const AppForm = () => {
                             <option>sonstiges</option>
                         </select>
                         <br />
-                        <label>wie möchten kontaktieren werden</label>
+                        <label>How do you prefer to be contacted </label>
                         <br/>
                         <select required name="" onChange={(e) => setContactArt(e.target.value)}>
                             <option>Contact Art </option>
@@ -125,6 +165,7 @@ const AppForm = () => {
                         <button onClick={() => {
                             SendProjectInfo()
                             setSent(true)
+                            setFormImg()
                         }}>SEND</button>
                     </>
                 }

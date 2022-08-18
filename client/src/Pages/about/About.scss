@@ -172,7 +172,7 @@ $color1: #2EC0FF;
           background-color: #F3F6F6;
           @media (max-width: 700px) {
             width: 100%;
-            
+            align-items: center;
          }
           .title-1 {
             width: 70%;
@@ -182,8 +182,9 @@ $color1: #2EC0FF;
                 line-height: 25px;
             }
             @media (max-width: 700px) {
+                width: 70%;
                 text-align: center;
-                 
+                margin-left: 0; 
               }
           }
           .service-divs {
@@ -206,7 +207,7 @@ $color1: #2EC0FF;
                 background-color: #FFFFFF;
                 .title {
                     padding-left: 10px;
-                    width: 90%;
+                    width: 96%;
                 }
                 i {
                     color: rgb(117, 116, 116);
@@ -390,7 +391,10 @@ $color1: #2EC0FF;
                     justify-content: center;
                     align-items: center;
                     gap: 20px;
-                    font-size: 18px;
+                    font-size: 20px;
+                    a {
+                        text-decoration: none;
+                    }
                     .icon-box {
                         width: 40px;
                         height: 40px;
@@ -401,6 +405,7 @@ $color1: #2EC0FF;
                         align-items: center;
                         border-radius: 50%;
                         border: 1px solid $color1;
+                       
                     }
                 }
             }

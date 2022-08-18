@@ -10,7 +10,7 @@ const StartProject = () => {
             <h2>Would you like to start a project with us?</h2>
         </div>
         <div className="button">
-          <button>Start Now</button>
+          <a href="/app-form"> <button>Start Now</button></a>
         </div>
       </div>
      

@@ -23,7 +23,7 @@ const Home = (props) => {
     window.addEventListener('scroll', ()=>
     {
  
-        if( document.documentElement.scrollTop > 450 && window.innerWidth > 700 )
+        if( document.documentElement.scrollTop > 300 && window.innerWidth > 700 )
         {
             setAnimation(true);
         }
@@ -189,12 +189,12 @@ const Home = (props) => {
                             </div>
                     </div>
 
-                        <div className="suction4">
+                        <div className="suction4" >
                             <p className="suction4Subject">That's what our satisfied customers say</p>
                             <br/>
                             
 
-                            <div className="slider">
+                            <div className="slider" id='customers'>
 
                                 <input type="radio" name="slider" title="slide1" defaultChecked="checked" className="slider__nav" />
                                 <input type="radio" name="slider" title="slide2" className="slider__nav" />

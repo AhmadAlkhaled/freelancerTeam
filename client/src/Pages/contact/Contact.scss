@@ -37,8 +37,21 @@ $color1: #2EC0FF;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                @media (max-width: 550px) {
+                    height: auto;
+                }
+                h1 {
+                    font-size: 60px;
+                    @media (max-width: 550px) {
+                        font-size: 40px;
+                    }
+                }
+                h3 {
+                    font-size: 30px;
+                }
                 p {
                     line-height: 28px;
+                    font-size: 20px;
                 }
             }
         }

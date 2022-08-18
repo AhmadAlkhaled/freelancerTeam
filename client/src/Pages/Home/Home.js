@@ -124,7 +124,7 @@ const Home = (props) => {
                         transition={{duration:0.2, delay: 0.6}}
                         >
                             <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-5-300x153.webp"></img>
-                            <p className="cardSubject">5. Test & optimize software</p>
+                            <p className="cardSubject">5. Test & Optimize Software</p>
                             <p className="cardText">Our quality management ensures a smooth start.
                             </p>
                         </motion.div>

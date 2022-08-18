@@ -66,7 +66,15 @@ $font2: 'Orienta', sans-serif;
             .sent-message {
                 width: 100%;
                 text-align: center;
-                margin-top: 0px;
+                margin-top: -80px;
+                .sent-message-img{
+                    width: 99%;
+                    height: 95%;
+                    
+                    img{
+                        width: 60%;
+                    }
+                }
                 h3 {
                     font-family: $font1;
                 }
@@ -145,7 +153,7 @@ $font2: 'Orienta', sans-serif;
                 padding: 8px;
                 border: none;
                 letter-spacing: 5px;
-                margin-top: 20px;
+                margin-top: 10px;
                 border-radius: 4px;
                 color: aliceblue;
                 background-color: $color1;

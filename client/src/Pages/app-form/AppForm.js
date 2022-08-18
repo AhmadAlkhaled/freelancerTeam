@@ -85,7 +85,7 @@ const AppForm = () => {
                     sent ? 
                     <div className="sent-message" >
                        <h3> Thanks for contacting Us ! We will be in touch with you shortly.</h3>
-                        <img src={send_icon} alt="" />
+                        <div className="sent-message-img"><img src={send_icon} alt="" /></div>
                         <NavLink to="/app-form"> <button onClick={() => {
                             setSent(false)
                             setFormImg(home_page)

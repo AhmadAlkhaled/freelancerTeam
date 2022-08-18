@@ -6,7 +6,6 @@ import TeamInfo from './TeamInfo';
 
 const About = (props) => {
 
-   const [click, setClick] = useState(true)
    const [scroll, setScroll] = useState(false)
  
    const serviceDes = (e) => {

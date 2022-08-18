@@ -51,7 +51,14 @@ const Footer = () => {
                     >Our Team</a>
                     {/* <a href="">Facte</a> */}
                     <br />
-                    <a href="">Customers</a>
+                    <a href="#customers"
+                        onClick={()=>{
+                                
+                            if(window.location.href != 'http://localhost:3000/' ){
+                                window.open('/#customers','_self')
+                            }
+                        }}
+                    >Customers</a>
                 </div>
                 <div className='box-4'>
                     <h3>Get In Touch</h3>

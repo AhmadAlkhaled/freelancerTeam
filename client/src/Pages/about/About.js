@@ -10,23 +10,24 @@ const About = (props) => {
    const [scroll, setScroll] = useState(false)
  
    const serviceDes = (e) => {
-    const p = e.target.parentElement.children[2]
-    const icon = e.target.parentElement.children[1]
-        if(click){
-            p.style.height = '100px'
-            p.style.paddingTop = '10px'
-            setClick(false)
-            icon.style.transform = 'rotate( 180deg)'
-        }
-        else {
-            p.style.height = '0'
-            setClick(true)
-            p.style.paddingTop = '0px'
-            icon.style.transform = 'rotate( 0deg)'
-        }
+      if(e.target.classList.value != 'service-box'){
+        const p = e.target.parentElement.children[2]
+        const icon = e.target.parentElement.children[1]
+            if(p.style.height !== '100px'){
+                p.style.height = '100px'
+                p.style.paddingTop = '10px'
+                icon.style.transform = 'rotate( 180deg)'
+            }
+            else {
+                p.style.height = '0'
+                p.style.paddingTop = '0px'
+                icon.style.transform = 'rotate( 0deg)'
+            }
+      }
+   
    }
  
-   window.addEventListener('scroll', ()=>
+   window.addEventListener('scroll', () =>
     {
         if( document.documentElement.scrollTop > 3100 && window.innerWidth < 700 )
         {
@@ -134,49 +135,31 @@ const About = (props) => {
                 <div className="service-divs">
                     <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">Best Quality Designs</p>
-                        <i className="fas fa-angle-down"
-                        onClick={(e) => {serviceDes(e)}}
-                        ></i>          
+                        <i className="fas fa-angle-down"></i>          
                         <p className='description'>Web development company that designs and develops enterprise level mobile applications and powerful web applications taking care of clients ranging from SMBs to large enterprises by providing the best quality design, development and support services in Germany .</p>
                     </div>
                     
                     <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">24x7 Live Support</p>
-                        <i className="fas fa-angle-down"
-                        onClick={(e) => {serviceDes(e)}}
-                        ></i>
+                        <i className="fas fa-angle-down"></i>
                         <p className='description'>With 24×7 web site support, you can have an answer to any problem that your hosted website might be experiencing on the spot 24 hours a day.</p>
                     </div>
 
                     <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">Result Oriented Projects</p>
-                        <i className="fas fa-angle-down"
-                        onClick={(e) => {serviceDes(e)}}
-                        ></i>
+                        <i className="fas fa-angle-down"></i>
                         <p className='description'>We are digital creative Team helps you achieve your business goals through our prime services.</p>
                     </div>
 
-                    {/* <div className="service-box">
-                        <p className="title">Award Winning Support Team</p>
-                        <i className="fas fa-angle-down"
-                         onClick={(e) => {serviceDes(e)}}
-                        ></i>
-                        <p className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper</p>
-                    </div> */}
-
                     <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">Best Techniques</p>
-                        <i className="fas fa-angle-down"
-                        onClick={(e) => {serviceDes(e)}}
-                        ></i>
+                        <i className="fas fa-angle-down"></i>
                         <p className='description'>Raw and unbiased information on web development. We show beginners how to do things the right way.</p>                  
                     </div>
 
                     <div className="service-box" onClick={(e) => {serviceDes(e)}}>
                         <p className="title">Experienced Professionals</p>
-                        <i className="fas fa-angle-down"
-                        onClick={(e) => {serviceDes(e)}}
-                        ></i>
+                        <i className="fas fa-angle-down"></i>
                          <p className='description'>We're a team of experienced, intelligent people who want to build great software with you.</p>
                     </div>
                 </div>
@@ -224,7 +207,7 @@ const About = (props) => {
         <div className="team-section" id='team'>
             <div className="team-text">
                 <h1>OUR TEAM</h1>
-                <p>WE ARE UX/UI Software Developer's, Web Designer's, Programmer's and We are Experts in : <br /> <b>HTML-CSS-JAVASCRIPT-SASS-REACT-NODE.JS-MONGODB-EXPRESS-FIGMA-WORDPRESS-ADOBEXD-STENCIL</b> </p>
+                <p>We are UX/UI Software Developer's, Web Designer's, Programmer's and We are Experts in : <br /> <b>HTML - CSS - JAVASCRIPT - SASS - REACT - NODE.JS - MONGODB - EXPRESS - FIGMA - WORDPRESS - ADOBEXD - STENCIL</b> </p>
                 <div className="line">
                     <div className="subline"></div>
                 </div>
@@ -238,18 +221,31 @@ const About = (props) => {
                               <img src={card.img} alt="" />
                             </div>
                                 <h3>{card.name}</h3>
-                                <p>{card.rolle}</p>
+                                <p>{card.job}</p>
                                 <p> {card.description} </p>
                             <div className="icons">
-                                <div className="icon-box">
-                                  <i className="fab fa-facebook"></i>
-                                </div>
-                                <div className="icon-box">
-                                  <i className="fab fa-twitter"></i>
-                                </div>
-                                <div className="icon-box">
-                                    <i className="fab fa-linkedin"></i>
-                                </div>      
+                            
+                                { 
+                                  card.website ?
+                                    card.website
+                                    :
+                                    null
+                                }
+                                
+                                {
+                                   card.linkedin ? 
+                                    card.linkedin
+                                    :
+                                    null
+                                }
+                             
+                                {
+                                  card.github ? 
+                                    card.github
+                                    :
+                                    null
+                                }
+                                    
                             </div> 
                         </div>
                             )

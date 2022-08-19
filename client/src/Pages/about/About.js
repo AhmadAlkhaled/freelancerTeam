@@ -52,7 +52,7 @@ const About = (props) => {
             <div className="about-text">
                 <h1>About Us</h1>
                 <h4>Welcome to FreeLancer Team</h4>
-                <p>We're a creative studio that specializes in Software Development. We are passionate about what we do, and you can expect the highest quality work from us every time.
+                <p>We're a creative studio that specializes in Software Development. <br /> We are passionate about what we do, and you can expect the highest quality work from us every time.
                 </p>
            </div>
         </div>

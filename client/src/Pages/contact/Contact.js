@@ -35,7 +35,7 @@ const Contact = () => {
             <div className="contact-text">
                   <h1>Contact Us</h1>
                   <h3>Contact for Premium Business Services</h3>
-                  <p>We are happy to answer any questions you have about our services. To get in touch with us, please fill out the form below and we will get back to you within 24 hours.</p>
+                  <p>We are happy to answer any questions you have about our services. <br /> To get in touch with us, please fill out the form below and we will get back to you within 24 hours.</p>
               </div>
           </div>
             

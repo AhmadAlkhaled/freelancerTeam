@@ -17,7 +17,7 @@ import stencil from '../../imgs/stencil.png';
 import { motion } from "framer-motion";
 
 const Home = (props) => { 
-
+     console.log(document.documentElement.scrollTop);
     const [animation, setAnimation] = useState (false)
   
     window.addEventListener('scroll', ()=>
@@ -189,12 +189,12 @@ const Home = (props) => {
                             </div>
                     </div>
 
-                        <div className="suction4" id='customers'>
-                            <p className="suction4Subject">That's what our satisfied customers say</p>
+                        <div className="suction4">
+                            <p  className="suction4Subject">That's what our satisfied customers say</p>
                             <br/>
                             
-
-                            <div className="slider">
+                             
+                            <div className="slider" id='customer-1'>
 
                                 <input type="radio" name="slider" title="slide1" defaultChecked="checked" className="slider__nav" />
                                 <input type="radio" name="slider" title="slide2" className="slider__nav" />
@@ -207,7 +207,7 @@ const Home = (props) => {
                                     <h2 className="slider__caption">John Doe</h2>
                                     <p className="slider__txt"> I'm very pleased with the service. The website is easy to navigate, the customer support team has been helpful.</p>
                                     </div>
-
+                                    
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Susan Smith</h2>
                                     <p className="slider__txt"> Their communication is great, always deliver on time, very professional company that can handle any project that comes their way.</p>
@@ -217,14 +217,14 @@ const Home = (props) => {
                                     <h2 className="slider__caption">Anna Johnson</h2>
                                     <p className="slider__txt">I've used Freelancer-Team for a while now and I'm always impressed with the way they handle my business.</p>
                                     </div>
-
                                     <div className="slider__contents">
                                     <h2 className="slider__caption">Mariah Benchos</h2>
                                     <p className="slider__txt">they have the information they need to make the best decisions for their business.</p>
                                     </div>
+                                    
 
                                 </div>
-
+                               <div id='customers' style={{}}></div>
                             </div>
 
                         </div>

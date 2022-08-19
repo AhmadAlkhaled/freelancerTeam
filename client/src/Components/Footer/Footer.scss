@@ -44,6 +44,7 @@ footer {
                 width: 100%;
                 max-width: 300px;
                 height: 150px;
+              
                 @media (max-width: 500px) {
                     width: 100%;
                     display: flex;
@@ -63,7 +64,6 @@ footer {
           .box-2, .box-3, .box-4 {
               width: 255px;
               height: 400px;
-             
               padding: 50px 25px 25px 20px;
             @media (max-width: 500px) {
                 height: 260px;
@@ -77,6 +77,7 @@ footer {
                 text-decoration: none;
                 color: white;
                 line-height: 30px;
+                cursor: pointer;
               }
           }
     }

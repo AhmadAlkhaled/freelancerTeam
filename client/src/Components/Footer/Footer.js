@@ -49,13 +49,15 @@ const Footer = () => {
                         }
                     }}
                     >Our Team</a>
-                    {/* <a href="">Facte</a> */}
                     <br />
-                    <a href="#customers"
+                    <a className="costomer-link"
                         onClick={()=>{
-                                
+                            console.log(window.location.href);
                             if(window.location.href != 'http://localhost:3000/' ){
-                                window.open('/#customers','_self')
+                                window.open('http://localhost:3000/#customers','_self') 
+                            }
+                            else {
+                                window.open('http://localhost:3000/#customer-1','_self')
                             }
                         }}
                     >Customers</a>

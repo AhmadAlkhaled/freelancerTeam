@@ -64,7 +64,7 @@ const AppForm = () => {
             .then((res) => {
               console.log(res);
               console.log(ProjectInfo);
-              
+              setForm(home_page)
             })
             setSent(true)
             document.documentElement.scrollTop = 0
@@ -188,7 +188,6 @@ const AppForm = () => {
                         <br />
                        <button onClick={(e) => {
                             SendProjectInfo(e)
-                            setFormImg()
                         }}>SEND</button> 
                     </>
                 }

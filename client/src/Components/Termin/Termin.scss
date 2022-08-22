@@ -1,0 +1,181 @@
+$color1: #2EC0FF;
+$font1: 'Montserrat', sans-serif;
+$font2: 'Orienta', sans-serif;
+
+.Termin{
+    width: 100%;
+    margin-top: 100px;
+    height: 400px;
+    background-color: rgb(51, 51, 51);
+    background-image: url(../../imgs/contact-img.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  
+    .opacity{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.507);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .btn{
+            background-color: $color1;
+            color: white;
+            font-size: 23px;
+            font-family: $font2;
+            i{
+                font-size: 25px;
+                margin-right: 5px;
+            }
+        }
+    }
+  
+}
+
+.TerminPage{
+    width: 100%;
+    // height: 100vh;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(141,216,244);
+    background: linear-gradient(180deg, rgba(141,216,244,1) 13%, rgba(255,255,255,1) 73%);
+    background-attachment: fixed;
+    @media ( max-width : 800px ) {
+        padding-top: 100px;
+    }
+    .min{
+        width: 60%;
+        padding: 40px 20px;
+        // background-color: rgba(0, 0, 0, 0.178);
+        // box-shadow: 0px 0px 13px black;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        @media ( max-width : 800px ) {
+            width: 90%;
+        }
+        form {
+            width: 100%;
+            padding: 20px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            @media (max-width: 800px) {
+                
+                margin-top: 20px;
+            }
+         
+            input {
+                width: 100%;
+                padding: 8px;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid rgb(212, 212, 212);
+                background-color: #FAFAFA;
+              
+            }
+            textarea {
+                width: 100%;
+                padding: 8px;
+                outline: none;
+                border: 1px solid rgb(212, 212, 212);
+                background-color: #FAFAFA;
+            
+            }
+            button {
+               width: 180px;
+               border: none;
+               padding: 13px;
+               border-radius: 6px;
+               color: white;
+               background-color: $color1;
+               &:hover {
+                background-color: #0DACF2;
+               }
+            }
+        }
+        .buttBox{
+            width: 100%;
+            text-align: center;
+            margin-top: 40px  ;
+
+            .butt{
+                width:150px;
+                font-family: $font2;
+                background-color: $color1;
+                border:none;
+                outline:none;
+                border-radius:5px;
+                padding: 10px;
+                font-size: 15px;
+                color: aliceblue;
+               
+            }
+        }
+      
+        h2{
+            width: 100%;
+            text-align: center;
+            color:white;
+            margin-bottom: 100px;
+            @media (max-width: 800px) {
+                margin-bottom: 30px;
+            }
+        }
+        .time{
+         
+            // background-color: red;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            @media ( max-width : 1200px ) {
+                margin-top: 20px;
+            }
+         
+            .time1{
+                display: inline-block;
+                padding: 10px;
+                border:2px solid rgb(255, 255, 255);
+                border-radius: 10px;
+                color:white;
+                text-shadow: 0px 0px 30px black;
+                font-weight: bolder;
+                margin:  5px;
+                &:hover{
+                    cursor: pointer;
+                    border:2px solid $color1;
+                    color: $color1;
+                    background-color: #000000;
+                }
+            }
+            .disabled{
+                display: inline-block;
+                padding: 10px;
+                border:1px solid rgb(255, 255, 255);
+                border-radius: 10px;
+                color:white;
+                margin:  5px;
+                background-color: #666565;
+                cursor: not-allowed;
+            }
+        }
+
+    }
+}
+
+.sdp {
+    
+    --theme-color: $color1; /* violet color */
+    background-color: red;
+    
+    button{
+        
+        width: 50px;
+    }
+  }

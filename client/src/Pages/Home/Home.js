@@ -15,6 +15,7 @@ import react from '../../imgs/react.png';
 import xd from '../../imgs/xd.png';
 import stencil from '../../imgs/stencil.png';
 import { motion } from "framer-motion";
+import { Termin } from '../../Components/Termin/Termin';
 
 const Home = (props) => { 
      console.log(document.documentElement.scrollTop);
@@ -228,6 +229,7 @@ const Home = (props) => {
                             </div>
 
                         </div>
+                        <Termin/>
                         <StartProject/>
             </div>     
         </div>

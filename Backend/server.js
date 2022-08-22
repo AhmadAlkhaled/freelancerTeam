@@ -8,6 +8,9 @@ const bodyParser = require('body-parser');
 
 const DB = 'mongodb://127.0.0.1:27017/ContactMassage';
 const ContactMassage = require('./Model')
+const Appointment = require('./Model')
+
+
 const ProjectInformation = require('./ProjectModel.js');
 
 app.use( bodyParser.urlencoded({extended: true} ));
@@ -37,6 +40,27 @@ app.post('/Contact', (req,res)=>{
           console.log( 'DB Connected Success Saved' );
           res.redirect('/Contact');
     })
+
+})
+
+app.post('/Appointment', (req,res)=>{
+
+  const { name , email , subject , massage , Date  } = req.body ;
+  console.log(req.body);
+  mongoose.connect(DB)
+  .then(()=>{
+      console.log( 'DB Connected Success' );
+        const Appointment = new Appointment({
+          Name: name,
+          Email: email,
+          Subject: subject,
+          Massage : massage,
+          Date : Date
+        });
+        Appointment.save();
+        console.log( 'DB Appointment Success Saved' );
+        res.redirect('/Appointment');
+  })
 
 })
 

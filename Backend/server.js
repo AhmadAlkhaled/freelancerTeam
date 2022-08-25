@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 
 const DB = 'mongodb://127.0.0.1:27017/ContactMassage';
 const ContactMassage = require('./Model')
-const Appointment = require('./Model')
+const appointment = require('./Model')
 
 
 const ProjectInformation = require('./ProjectModel.js');
@@ -50,7 +50,7 @@ app.post('/Appointment', (req,res)=>{
   mongoose.connect(DB)
   .then(()=>{
       console.log( 'DB Connected Success' );
-        const Appointment = new Appointment({
+        const Appointment = new appointment({
           Name: name,
           Email: email,
           Subject: subject,

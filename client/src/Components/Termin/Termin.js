@@ -2,6 +2,10 @@ import  './Termin.scss';
 import React, { useState , useEffect} from 'react';
 import DatePicker from 'sassy-datepicker';
 import axios from 'axios';
+import React, { useState, useCallback } from 'react';
+import { Calendar } from '@natscale/react-calendar';
+import '@natscale/react-calendar/dist/main.css';
+import e from 'cors';
 
 const Termin = ()=>{
   
@@ -24,6 +28,8 @@ export { Termin }
 
 const TerminPage = ()=>{
 
+  
+
     const [date, setDate] = useState(new Date());
     const [Time, setTime] = useState('');
     const [submit, setsubmit] = useState(false);
@@ -32,6 +38,20 @@ const TerminPage = ()=>{
     const [subject, setSubject] = useState();
     const [message, setMessage] = useState();
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const [timeError, setTimeError] = useState (false)
+    const [formError, setFormError] = useState (false)
+
+    
+    const onChange2 = (e)=>{
+      setDate(e)
+    };
+    useEffect (()=>{
+      setTimeout(() => {
+        const x = document.querySelector('.rc');
+        x.style.width ='100%';
+    }, 10);
+    },[])
+    
   
     const Appointment = {
       name: name,
@@ -43,26 +63,30 @@ const TerminPage = ()=>{
    
 
     const SendMessage = (e) => {
-        e.preventDefault();
-       
-      if(name && email && subject && message) {
-        console.log(Appointment);
-        axios.post('/Appointment', Appointment)
-        .then((res) => {
-          console.log(res);
-        })
+      e.preventDefault();
+      if(Time === ''){
+        
+        setTimeError(true)
+        setFormError(false)
       }
+      else{
+        setTimeError(false)
+        setFormError(true)
+        if(name && email && subject && message) {
+          setFormError(false)
+          axios.post('/Appointment', Appointment)
+            .then((res) => {
+              console.log(res);
+              const form = document.querySelector('form');
+              form.reset()
+  
+            })
+        }
+        
+      }
+      
+      
     }
-
-    
-    const onChange = newDate => {
-        setDate(newDate);
-    };
-    setTimeout(() => {
-        const x = document.querySelector('.sdp ');
-        x.style.width ='500px';
-    }, 10);
-   
 
    
 const  time = (e)=>{
@@ -74,17 +98,57 @@ const  time = (e)=>{
     {
         setTime(e.target.textContent);
         e.target.classList='disabled'
+        setTimeError(false)
     }
 }
+
+
+
+const newOne = ()=>{
+  const days = document.querySelectorAll('.rc_wknd')
+   for (let i = 0; i < days.length; i++) {
+        
+        days[i].children[0].children[0].onclick =(i)=>{
+          i.preventDefault()
+        }
+    
+ }
+
+}
+
+
+ useEffect (() => {
+  newOne()
+
+  //  const days = document.querySelector('.sdp--dates-grid')
+  //   days.parentElement.children[0].children[0].onclick = () => {
+  //     setTimeout(() =>{
+  //      newOne();
+  //     },1)
+  //    }
+  //   days.parentElement.children[0].children[2].onclick = () => {
+  //    setTimeout(() =>{
+  //      newOne();
+  //     },1)
+  //   };
+  //    // console.log(days.parentElement.children[0]);
+  //    days.parentElement.children[0].onclick = () => {
+  //      newOne();
+  //    }
+  //    newOne();
+    
+ })
    
 
     return(
         <div className='TerminPage' > 
         <div className='min' > 
        
-       <h2>    <i class="fas fa-calendar-alt"></i>  {Time}  {date.getDate()} { months[date.getMonth()] }  { date.getFullYear() } </h2>
-      
-            <DatePicker onChange={onChange} value={date} options={{ weekStartsFrom: 'Monday' }} />
+        <h2>    <i class="fas fa-calendar-alt"></i>  {Time}  {date.getDate()} { months[date.getMonth()] } { date.getFullYear() } </h2> 
+
+       <div className="newCalender">
+          <Calendar value={date} onChange={onChange2} />
+        </div>
 
             <div className='time' onClick={time} >
                 <div className='time1' >10:00 </div>
@@ -92,7 +156,15 @@ const  time = (e)=>{
                 <div className='time1' >13:00 </div>
                 <div className='time1' >14:00 </div>
                 <div className='time1' >15:00 </div>
+                { 
+              timeError ?
+              <p className='timeerorrmsg'>PLEASE CHOOSE ONE OF THE AVAILABLE TIME'S</p>
+              :
+              null
+            }
             </div>
+            
+              
             <form  onSubmit={()=>{setsubmit(true)}} >
                      
                       <input 
@@ -128,6 +200,12 @@ const  time = (e)=>{
                         required
                         onChange={(e) => setMessage(e.target.value)}
                         ></textarea>
+                        { 
+                          formError ?
+                          <p className='timeerorrmsg'>Please Fill All Field's</p>
+                          :
+                          null
+                        }
                       <br />
                       <div className='buttBox' >
                       <button  onClick={SendMessage} type='submit' className='butt' > Submit </button>

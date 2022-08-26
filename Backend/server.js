@@ -6,7 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const DB = 'mongodb://127.0.0.1:27017/ContactMassage';
+const DB = 'mongodb+srv://team:team@cluster0.chvcs59.mongodb.net/?retryWrites=true&w=FreeLancerTeamDB';
 const ContactMassage = require('./Model')
 const appointment = require('./Model')
 

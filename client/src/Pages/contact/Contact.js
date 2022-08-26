@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import './Contact.scss';
 import Start from '../../Components/start/Start';
 import axios from 'axios' ;
+import { motion } from "framer-motion";
 
 const Contact = () => {
 
@@ -32,11 +33,15 @@ const Contact = () => {
         <div className="contact-section-1">
           
           <div className="opacity">
-            <div className="contact-text">
+            <motion.div  className="contact-text"
+                initial={{ x: '-30%', opacity:0 }}
+                animate={{ x: '0' , opacity:1  }} 
+                transition={{ duration: 0.5 }}
+            >
                   <h1>Contact Us</h1>
                   <h3>Contact for Premium Business Services</h3>
                   <p>We are happy to answer any questions you have about our services. <br /> To get in touch with us, please fill out the form below and we will get back to you within 24 hours.</p>
-              </div>
+              </motion.div >
           </div>
             
         </div>

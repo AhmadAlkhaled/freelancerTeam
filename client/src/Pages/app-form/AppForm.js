@@ -22,6 +22,7 @@ const AppForm = () => {
     const [message, setMessage] = useState()
     const [formImg, setFormImg] = useState(home_page)
     const [messageError, setMessageError] = useState(false)
+    const [formError, setFormError] = useState (false)
 
     useEffect (() => {
         
@@ -58,7 +59,7 @@ const AppForm = () => {
     }
     const SendProjectInfo = (e) => {
         e.preventDefault();
-        if(projectArt && firstName && lastName && email && phone && status && contactArt && message.length > 50 ) {
+        if(projectArt && firstName && lastName && email && phone && status && contactArt && message ) {
             
             axios.post('/app-form', ProjectInfo)
             .then((res) => {
@@ -66,12 +67,19 @@ const AppForm = () => {
               console.log(ProjectInfo);
               setForm(home_page)
             })
+            if(message.length > 50){
+                setMessageError(false)
+            }
+            else {
+                setMessageError(true)
+            }
             setSent(true)
+            setFormError(false)
             document.documentElement.scrollTop = 0
         }
         else {
             setSent(false)
-            setMessageError(true)
+            setFormError(true)
         }   
     }
   return (
@@ -169,6 +177,12 @@ const AppForm = () => {
                             <option>Email </option>
                             <option>Telefon</option>
                         </select>
+                        { 
+                            formError ?
+                            <p className='timeerorrmsg'>Please Fill All Field's</p>
+                            :
+                            null
+                        }
                         <br />
                         <label>Message <span>*</span></label>
                         <br/>

@@ -19,9 +19,7 @@ app.use( '/static' ,express.static(path.join(__dirname, '../dist'), { index: fal
 app.use( cors() );
 
 
-app.get('*', (req, res) => {
-    res.status(200).sendFile( path.join(__dirname,'../dist' , 'index.html'));
-})
+
 
 app.post('/Contact', (req,res)=>{
 
@@ -59,7 +57,9 @@ app.post('/Appointment', (req,res)=>{
         });
         Appointment.save();
         console.log( 'DB Appointment Success Saved' );
-        res.redirect('/Appointment');
+        res.status(200).json({
+          success: true,
+        });
   })
 
 })
@@ -87,6 +87,20 @@ app.post('/app-form', (req, res) => {
     })
 
 
+})
+
+app.get('/date', async (req, res) => {
+ const db = await mongoose.connect(DB)
+ 
+    const allDates = await appointment.find()
+    res.status(200).json({ allDates: allDates });
+    console.log(allDates);
+
+  
+})
+
+app.get('*', (req, res) => {
+  res.status(200).sendFile( path.join(__dirname,'../dist' , 'index.html'));
 })
 
 app.listen(port,()=>{

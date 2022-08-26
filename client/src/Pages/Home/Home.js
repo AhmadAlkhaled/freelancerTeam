@@ -24,7 +24,7 @@ const Home = (props) => {
     window.addEventListener('scroll', ()=>
     {
  
-        if( document.documentElement.scrollTop > 300 && window.innerWidth > 700 )
+        if( document.documentElement.scrollTop > 300 && window.innerWidth > 0 )
         {
             setAnimation(true);
         }

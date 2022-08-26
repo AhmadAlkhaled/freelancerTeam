@@ -60,6 +60,20 @@ $font2: 'Orienta', sans-serif;
                 width:100%;
                 
             }
+            .timeerorrmsg{
+                color:red;
+                font-family: $font2;
+                margin: 20px;
+                padding: 7px;
+                border-radius:10px;
+                letter-spacing:1px;
+                font-weight: bolder;
+                text-align: center;
+                @media ( max-width : 700px ) {
+                    padding:0px;
+                    font-size: 14px;
+                }
+            }
             span {
                 color: red;
             }

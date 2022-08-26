@@ -3,6 +3,7 @@ import './About.scss';
 import NumberCounter from 'number-counter';
 import StartProject from '../../Components/start/Start';
 import TeamInfo from './TeamInfo';
+import { motion } from "framer-motion";
 
 const About = (props) => {
 
@@ -49,12 +50,16 @@ const About = (props) => {
     >
 
         <div className="about-section">
-            <div className="about-text">
+            <motion.div className="about-text"
+              initial={{ x: '-30%', opacity:0 }}
+              animate={{ x: '0' , opacity:1  }} 
+              transition={{ duration: 0.5  }}
+            >
                 <h1>About Us</h1>
                 <h4>Welcome to FreeLancer Team</h4>
                 <p>We're a creative studio that specializes in Software Development. <br /> We are passionate about what we do, and you can expect the highest quality work from us every time.
                 </p>
-           </div>
+           </motion.div>
         </div>
 
         <div className="out-mission">
@@ -80,7 +85,6 @@ const About = (props) => {
                         <li>Website Development</li>
                         <li>Applications Development</li>
                         <li>UI UX Design</li>
-                        <li>Marketing</li>
                         <li>eCommerce Store</li>
                         <li>Tech Support</li>
                    </ul>

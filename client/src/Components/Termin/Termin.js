@@ -31,6 +31,7 @@ const TerminPage = ()=>{
   
 
     const [date, setDate] = useState(new Date());
+
     const [Time, setTime] = useState('');
     const [submit, setsubmit] = useState(false);
     const [name, setName] = useState();
@@ -47,34 +48,34 @@ const TerminPage = ()=>{
       setDate(e)
       axios.get('/date')
       .then((res) => {
-        // console.log(res);
-         setAllDates(res.data.allDates)
-      })
-      if(allDates.length > 0) {
-        console.log(allDates);
-        allDates.map((d) => {
-             
-
-          if (d.Date.substring(9, 12) == date.getDate()) {
-            const times = document.querySelector('.time')
-            for (let i = 0; i < times.children.length; i++) {
-            
-              if (times.children[i].textContent == d.Date.substring(2, 7)) {
-                times.children[i].setAttribute("disabled", "")
-                times.children[i].classList='disabled-1'
-                
-              }
-              else {
-                times.children[i].removeAttribute("disabled")
-                times.children[i].classList='time1'
-              }
+        
+         setAllDates(res.data.allDates);
+         const times = document.querySelector('.time');
+         for (let i = 0; i < times.children.length; i++) {
+           times.children[i].removeAttribute("disabled", "");
+           times.children[i].classList='time1';
+         }
+       
+         if(allDates.length > 0) {
+          allDates.map((d) => {
+            if (d.Date.substring(9, 12) == e.getDate() || e.getDate() ==  d.Date.substring(9, 10) ) {
+  
+              const times = document.querySelector('.time')
+              for (let i = 0; i < times.children.length; i++) {
+                if (times.children[i].textContent == d.Date.substring(2, 7)) {
               
+                  times.children[i].setAttribute("disabled", "")
+                  times.children[i].classList='disabled-1'
+                  times.children[i].setAttribute("title", " not available... !")
+                }
+              }
             }
-            
-          }
-          
-        })
-      }
+          })
+        }
+
+
+      })
+   
     };
 
     useEffect (()=>{
@@ -84,43 +85,37 @@ const TerminPage = ()=>{
     }, 10);
     },[])
 
-    // useEffect(() => {
-    //   axios.get('/date')
-    //   .then((res) => {
-    //      setAllDates(res.data.allDates)
-    //   })
-    // }, [])
+    useEffect(() => {
+      axios.get('/date')
+      .then((res) => {
+         setAllDates(res.data.allDates)
+      })
+    }, [])
 
     useEffect(() => {
+     
       if(allDates.length > 0) {
-        // console.log(allDates);
-        allDates.map((d) => {
-               
 
-          if (d.Date.substring(9, 12) == date.getDate()) {
-             const times = document.querySelector('.time')
+        allDates.map((d) => {
+          const x = date.getDate() ;
+          const x1 = d.Date.substring(9, 12) ;
+          if ( x ==  x1 ) {
+
+             const times = document.querySelector('.time');
+           
             for (let i = 0; i < times.children.length; i++) {
-            
-              if (times.children[i].textContent == d.Date.substring(2, 7)) {
-                times.children[i].setAttribute("disabled", "")
-                times.children[i].classList='disabled-1'
+              
+              if (times.children[i].textContent === d.Date.substring(2, 7)) {
+
+                times.children[i].setAttribute("disabled", "");
+                times.children[i].classList='disabled-1';
+                times.children[i].setAttribute("title", " not available... !")
                 
               }
-              else {
-                times.children[i].removeAttribute("disabled")
-                times.children[i].classList='time1'
-              }
-              
             }
             
           }
-          // else {
-          //   for (let i = 0; i < times.children.length; i++) {
-          //       times.children[i].removeAttribute("disabled")
-          //       times.children[i].classList='time1'
-              
-          //   }
-          // }
+
           
         })
       }
@@ -217,24 +212,7 @@ const newOne = ()=>{
  useEffect (() => {
   newOne()
 
-  //  const days = document.querySelector('.sdp--dates-grid')
-  //   days.parentElement.children[0].children[0].onclick = () => {
-  //     setTimeout(() =>{
-  //      newOne();
-  //     },1)
-  //    }
-  //   days.parentElement.children[0].children[2].onclick = () => {
-  //    setTimeout(() =>{
-  //      newOne();
-  //     },1)
-  //   };
-  //    // console.log(days.parentElement.children[0]);
-  //    days.parentElement.children[0].onclick = () => {
-  //      newOne();
-  //    }
-  //    newOne();
-    
- })
+ });
    
 
     return(

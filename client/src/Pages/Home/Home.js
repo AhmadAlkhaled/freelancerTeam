@@ -47,12 +47,22 @@ const Home = (props) => {
                       
                             <div className="alltexts">
                                 <motion.p className="text1"
-                                  initial={{ x: '1200px'}}
-                                  animate={{ x: '0'}}
-                                  transition={{duration:1.5}}
-                                > Fast & Secure Application's & Websites </motion.p>
-                                <p className="text2"> Create Amazing Business Websites </p>
-                                <p className="text3"> Talk to us, we will find a suitable solution! </p>
+                                  initial={{ x: '1200px', opacity:0 }}
+                                  animate={{ x: '0' , opacity:1  }}
+                                  transition={{duration:1.5 }}
+                                > Fast & Secure Application's <br/> & Websites </motion.p>
+                                <motion.p 
+                                initial={{ y: '100%' , opacity:0 }}
+                                animate={{ y: '0' , opacity:1  }}
+                                transition={{delay:0.5 }}
+                                className="text2"> Create Amazing <br/> Business Websites 
+                                </motion.p>
+                                <motion.p className="text3"
+                                 initial={{ y: '100%' , opacity:0 }}
+                                 animate={{ y: '0' , opacity:1  }}
+                                 transition={{delay:0.5 }}
+                                > Talk to us, we will find a suitable solution! 
+                                </motion.p>
                                 <br/><br/><br/>
                                 <a href="/app-form"><motion.button
                                 initial={{ x: '-500px'}}
@@ -75,71 +85,71 @@ const Home = (props) => {
                         {
                             animation ?
                              <>
-                                <motion.div className="cards"
-                            initial={{ x: '-100vw'}}
-                            animate={{ x: '0'}}
-                            transition={{duration:0.2}}
-                        >
-                            <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-1-300x153.webp"></img>
-                            <p className="cardSubject">1. You'r Idea</p>
-                            <p className="cardText">You have an idea and are looking for a suitable IT partner to implement it.
-                            </p>
-                        </motion.div>
+                            <motion.div className="cards"
+                                initial={{ x: '-100vw'}}
+                                animate={{ x: '0'}}
+                                transition={{}}
+                                >
+                                <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-1-300x153.webp"></img>
+                                <p className="cardSubject">1. You'r Idea</p>
+                                <p className="cardText">You have an idea and are looking for a suitable IT partner to implement it.
+                                </p>
+                            </motion.div>
 
-                        <motion.div className="cards"
-                        initial={{ x: '-100vw'}}
-                        animate={{ x: '0'}}
-                        transition={{duration:0.2, delay: 0.6}}
-                        >
-                            <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-2-300x153.webp"></img>
-                            <p className="cardSubject">2. Project Requirements</p>
-                            <p className="cardText">We plan with you and help with the creation of specifications.
-                            </p>
-                        </motion.div>
+                            <motion.div className="cards"
+                                initial={{ x: '-100vw'}}
+                                animate={{ x: '0'}}
+                                transition={{  delay: 0.4}}
+                                >
+                                <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-2-300x153.webp"></img>
+                                <p className="cardSubject">2. Project Requirements</p>
+                                <p className="cardText">We plan with you and help with the creation of specifications.
+                                </p>
+                            </motion.div>
 
-                        <motion.div className="cards"
-                        initial={{ x: '-100vw'}}
-                        animate={{ x: '0'}}
-                        transition={{duration:0.2, delay: 1}}
-                        >
-                            <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-3-300x153.webp"></img>
-                            <p className="cardSubject">3. Design Phase</p>
-                            <p className="cardText">The requirements become an interactive prototype for customers, board members or investors.
-                            </p>
-                        </motion.div>
+                            <motion.div className="cards"
+                                initial={{ x: '-100vw'}}
+                                animate={{ x: '0'}}
+                                transition={{ delay: 1}}
+                                >
+                                <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-3-300x153.webp"></img>
+                                <p className="cardSubject">3. Design Phase</p>
+                                <p className="cardText">The requirements become an interactive prototype for customers, board members or investors.
+                                </p>
+                            </motion.div>
 
-                        <motion.div className="cards"
-                        initial={{ x: '100vw'}}
-                        animate={{ x: '0'}}
-                        transition={{duration:0.2, delay: 1}}
-                        >
-                            <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-4-300x153.webp"></img>
-                            <p className="cardSubject">4. Phase of Development</p>
-                            <p className="cardText">The prototype is converted into a finished software solution.
-                            </p>
-                        </motion.div>
+                            <motion.div className="cards"
+                                initial={{ x: '100vw'}}
+                                animate={{ x: '0'}}
+                                transition={{ delay: 1}}
+                                >
+                                <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-4-300x153.webp"></img>
+                                <p className="cardSubject">4. Phase of Development</p>
+                                <p className="cardText">The prototype is converted into a finished software solution.
+                                </p>
+                            </motion.div>
 
-                        <motion.div className="cards"
-                        initial={{ x: '100vw'}}
-                        animate={{ x: '0'}}
-                        transition={{duration:0.2, delay: 0.6}}
-                        >
-                            <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-5-300x153.webp"></img>
-                            <p className="cardSubject">5. Test & Optimize Software</p>
-                            <p className="cardText">Our quality management ensures a smooth start.
-                            </p>
-                        </motion.div>
+                            <motion.div className="cards"
+                                initial={{ x: '100vw'}}
+                                animate={{ x: '0'}}
+                                transition={{ delay: 0.4}}
+                                >
+                                <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-5-300x153.webp"></img>
+                                <p className="cardSubject">5. Test & Optimize Software</p>
+                                <p className="cardText">Our quality management ensures a smooth start.
+                                </p>
+                            </motion.div>
 
-                        <motion.div className="cards"
-                        initial={{ x: '100vw'}}
-                        animate={{ x: '0'}}
-                        transition={{duration:0.2, delay: 0.2}}
-                        >
-                            <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-6-300x153.webp"></img>
-                            <p className="cardSubject">6. Publication</p>
-                            <p className="cardText">You will receive a briefing on the software and we will help with the publication.
-                            </p>
-                        </motion.div>
+                            <motion.div className="cards"
+                                initial={{ x: '100vw'}}
+                                animate={{ x: '0'}}
+                                transition={{ }}
+                                >
+                                <img src="https://www.quiskamp.com/wp-content/uploads/2021/03/ablauf-6-300x153.webp"></img>
+                                <p className="cardSubject">6. Publication</p>
+                                <p className="cardText">You will receive a briefing on the software and we will help with the publication.
+                                </p>
+                            </motion.div>
                              </>
                             :
                             null

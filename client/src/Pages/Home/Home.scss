@@ -11,7 +11,7 @@ $font2: 'Orienta', sans-serif;
 
 .home{
     width: 100%;
-    color: #cacaca;
+   
     .background{
 
         .background2{
@@ -37,34 +37,36 @@ $font2: 'Orienta', sans-serif;
                     }
                     .text1{
                         margin-top: 70px;
-                        width:500px;
+                        width:100%;
+                        font-weight: bolder;
                         color:$color1;
-                        font-size:35px;
+                        font-size:40px;
                         font-family: $font1;
                         @media (max-width:700px){
-                            width: 370px;
+                            
                             font-size: 30px;
                             margin-top: 30px;
                         }
                     }
                     .text2{
-                        width:500px;
+                        width:100%;
                         color:white;
-                        font-size:50px;
+                        font-size:65px;
                         font-family: $font1;
                         @media (max-width:700px){
-                            width: 370px;
+                           
                             font-size: 40px;
                         }
                     }
                     .text3{
                         width:500px;
-                        color:rgb(163, 163, 163);
-                        font-size:16px;
+                        color:rgb(187, 187, 187);
+                        
+                        font-size:20px;
                         font-family: $font2;
                         @media (max-width:700px){
-                            width: 370px;
-                            font-size: 15px;
+                            width: 100%;
+                            font-size:20px;
                         }
                     }
                     }

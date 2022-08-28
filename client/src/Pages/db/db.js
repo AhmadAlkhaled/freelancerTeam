@@ -132,7 +132,7 @@ const Delete = (e)=>{
                                             :
                                          <>
                                             <div className='InfoElement' >
-                                                <i class="fas fa-trash-alt" onClick={(e)=>{ Delete( e.target.parentElement.children[1].textContent ) }} ></i>
+                                                <i class="fas fa-trash-alt" onClick={(e)=>{ Delete( e.target.parentElement.children[2].textContent ) }} ></i>
                                                 <p className='createdAt' > 
                                                 <snap>{ e.createdAt.substring(0,10) } </snap>
                                                 <snap>{ e.createdAt.substring(11,16) }</snap>  

@@ -287,6 +287,7 @@ app.post('/Delete' , async (req, res)=>{
 
     const { id , coll } = req.body
     const db = await mongoose.connect(DB)
+    console.log(id);
     if(coll == 'Appointment' )
     {
       await appointment.deleteOne( { _id: id } )

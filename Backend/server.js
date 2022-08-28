@@ -73,7 +73,7 @@ app.post('/Contact', (req,res)=>{
           style="font-size:15px"
           >
           <br/>
-          Thanks so much for reaching out! This Auto-reply is just to let you know…<br/>
+          Thank you so much for reaching out! This Auto-reply is just to let you know…<br/>
           <br/>
           I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
           During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
@@ -83,6 +83,7 @@ app.post('/Contact', (req,res)=>{
           <div style= "
           width: 370px;
           height:200px;
+          margin-top: 20px;
           background-color:black ;
           background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
           background-position: center;
@@ -230,23 +231,22 @@ app.post('/app-form', (req, res) => {
         let mailOptions1 = {
           from:'service@aliossman.com',
           to: req.body.email.charAt(0).toUpperCase() + req.body.email.substring(1,100),
-          subject:`We got it — RE: [ ${req.body.projectArt } ${req.body.name} ${req.body.lastName} ]`,
+          subject:`We got it — RE: [ ${req.body.projectArt } ]`,
           html:
           `
           <div  >
-            <h1 style="color:grey">Welcome ${req.body.firstName.charAt(0).toUpperCase() + req.body.lastName.charAt(0).toUpperCase() } </h1>
+            <h1 style="color:grey">Welcome ${req.body.firstName.charAt(0).toUpperCase() + req.body.firstName.substring(1, 100)} ${req.body.lastName.charAt(0).toUpperCase() + req.body.lastName.substring(1, 100)} </h1>
             <p style="font-size:15px">
             <br/>
-            Thanks so much for reaching out! This Auto-reply is just to let you know…<br/>
+            Thank you so much for reaching out! This Auto-reply is just to let you know…<br/>
             <br/>
-            I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
-            During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
-            If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
+            Thanks for sending your project details to us.<br/> We will give you a reply as soon as possible.
             </p>
             <a href="mailto:Stexe@msn.com">Send E-mail</a>
             <div style= "
             width: 370px;
             height:200px;
+            margin-top: 20px;
             background-color:black ;
             background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
             background-position: center;

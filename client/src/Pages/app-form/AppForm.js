@@ -11,6 +11,7 @@ import send_icon from '../../imgs/send-icon.jpeg'
 
 
 const AppForm = () => {
+    
     const [sent, setSent] = useState(false)
     const [projectArt, setProjectArt] = useState()
     const [firstName, setFirstName] = useState()

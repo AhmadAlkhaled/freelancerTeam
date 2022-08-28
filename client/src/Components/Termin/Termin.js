@@ -54,21 +54,23 @@ const TerminPage = ()=>{
          for (let i = 0; i < times.children.length; i++) {
            times.children[i].removeAttribute("disabled", "");
            times.children[i].classList='time1';
+           times.children[i].removeAttribute("title")
          }
        
          if(allDates.length > 0) {
           allDates.map((d) => {
-            if (d.Date.substring(9, 12) == e.getDate() || e.getDate() ==  d.Date.substring(9, 10) ) {
-  
-              const times = document.querySelector('.time')
-              for (let i = 0; i < times.children.length; i++) {
-                if (times.children[i].textContent == d.Date.substring(2, 7)) {
-              
-                  times.children[i].setAttribute("disabled", "")
-                  times.children[i].classList='disabled-1'
-                  times.children[i].setAttribute("title", " not available... !")
-                }
-              }
+            const da = `${Time}  ${e.getDate()} ${ months[e.getMonth()] }  ${ e.getFullYear() }` 
+            if( d.Date.substring(7,50) == da.substring(2,50))
+            {
+                  const times = document.querySelector('.time')
+                  for (let i = 0; i < times.children.length; i++) {
+                    if (times.children[i].textContent == d.Date.substring(0, 5)  ) {
+                  
+                      times.children[i].setAttribute("disabled", "")
+                      times.children[i].classList='disabled-1'
+                      times.children[i].setAttribute("title", " not available... !")
+                    }
+                  }
             }
           })
         }
@@ -95,26 +97,27 @@ const TerminPage = ()=>{
     useEffect(() => {
      
       if(allDates.length > 0) {
-
+        
         allDates.map((d) => {
-          const x = date.getDate() ;
-          const x1 = d.Date.substring(9, 12) ;
-          if ( x ==  x1 ) {
-
-             const times = document.querySelector('.time');
-           
-            for (let i = 0; i < times.children.length; i++) {
-              
-              if (times.children[i].textContent === d.Date.substring(2, 7)) {
-
-                times.children[i].setAttribute("disabled", "");
-                times.children[i].classList='disabled-1';
-                times.children[i].setAttribute("title", " not available... !")
-                
+          setTimeout(() => {
+            const da = `${Time}  ${date.getDate()} ${ months[date.getMonth()] }  ${ date.getFullYear() }` ;
+             
+           if( d.Date.substring(7,50) == da.substring(2,50))
+            {
+               const times = document.querySelector('.time');
+             
+              for (let i = 0; i < times.children.length; i++) {
+                if (times.children[i].textContent === d.Date.substring(0,5)) {
+                  times.children[i].setAttribute("disabled", "");
+                  times.children[i].classList='disabled-1';
+                  times.children[i].setAttribute("title", "not available... !")
+                  
+                }
               }
+              
             }
             
-          }
+          }, 100);
 
           
         })
@@ -129,7 +132,7 @@ const TerminPage = ()=>{
       email: email,
       subject: subject,
       message: message,
-      Date: `  ${Time}  ${date.getDate()} ${ months[date.getMonth()] }  ${ date.getFullYear() }  ` ,
+      Date: `${Time}  ${date.getDate()} ${ months[date.getMonth()] }  ${ date.getFullYear() }` ,
     }
    
 

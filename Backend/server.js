@@ -7,9 +7,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const DB = 'mongodb+srv://team:team@cluster0.chvcs59.mongodb.net/?retryWrites=true&w=majority';
-const ContactMassage = require('./Model')
+
+const contactMassage = require('./Contact')
 const appointment = require('./Model')
 const ProjectInformation = require('./ProjectModel.js');
+const pass = require('./pass')
 
 var Module = require("module");
 var fs = require("fs");
@@ -41,7 +43,7 @@ app.post('/Contact', (req,res)=>{
     mongoose.connect(DB)
     .then(()=>{
         console.log( 'DB Connected Success' );
-          const connect = new ContactMassage({
+          const connect = new contactMassage({
             Name: name,
             Email: email,
             Subject: subject,
@@ -226,25 +228,28 @@ app.post('/app-form', (req, res) => {
           from:'service@aliossman.com',
           to: req.body.email.charAt(0).toUpperCase() + req.body.email.substring(1,100),
           subject:`We got it — RE: [ ${req.body.projectArt } ${req.body.name} ${req.body.lastName} ]`,
-          html:`<h1 style="color:grey">Welcome ${req.body.firstName.charAt(0).toUpperCase() + req.body.lastName.charAt(0).toUpperCase() } </h1><p
-          style="font-size:15px"
-          >
-          <br/>
-          Thanks so much for reaching out! This Auto-reply is just to let you know…<br/>
-          <br/>
-          I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
-          During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
-          If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
-          </p>
-          <a href="mailto:Stexe@msn.com">Send E-mail</a>
-          <div style= "
-          width: 370px;
-          height:200px;
-          background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-           ">
+          html:
+          `
+          <div  >
+            <h1 style="color:grey">Welcome ${req.body.firstName.charAt(0).toUpperCase() + req.body.lastName.charAt(0).toUpperCase() } </h1>
+            <p style="font-size:15px">
+            <br/>
+            Thanks so much for reaching out! This Auto-reply is just to let you know…<br/>
+            <br/>
+            I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
+            During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
+            If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
+            </p>
+            <a href="mailto:Stexe@msn.com">Send E-mail</a>
+            <div style= "
+            width: 370px;
+            height:200px;
+             background-color:black ;
+            background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            "></div>
           </div>
           `
       }
@@ -275,8 +280,58 @@ app.get('/date', async (req, res) => {
     const allDates = await appointment.find()
     res.status(200).json({ allDates: allDates });
 
-})
+});
 
+
+app.post('/Delete' , async (req, res)=>{
+
+    const { id , coll } = req.body
+    const db = await mongoose.connect(DB)
+    if(coll == 'Appointment' )
+    {
+      await appointment.deleteOne( { _id: id } )
+     
+    }
+    if(coll == 'ContactMassage' )
+    {
+      await contactMassage.deleteOne( { _id: id } )
+     
+    }
+
+    if(coll == 'ProjectInformation' )
+    {
+      await ProjectInformation.deleteOne( { _id: id } )
+     
+    }
+ 
+
+ 
+} );
+
+app.get('/db.data', async (req, res) => {
+      await mongoose.connect(DB)
+      const Appointment = await appointment.find()
+      const contactMassages = await contactMassage.find()
+      const projectInformation = await ProjectInformation.find()
+      res.status(200).json({AllDate : { Appointment , contactMassages , projectInformation }  });
+ });
+
+ app.post('/login', async (req, res) => {
+  await mongoose.connect(DB)
+  const { pro } = req.body
+  const Pass = await pass.findOne({ password : pro })
+  if(Pass)
+  {
+    res.status(200).json({
+      success:true,
+    })
+  }else{
+    res.status(200).json({
+      success:false,
+    })
+  }
+  
+});
 app.get('*', (req, res) => {
   res.status(200).sendFile( path.join(__dirname,'../dist' , 'index.html'));
 })

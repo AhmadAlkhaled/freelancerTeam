@@ -83,6 +83,7 @@ app.post('/Contact', (req,res)=>{
           <div style= "
           width: 370px;
           height:200px;
+          background-color:black ;
           background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
           background-position: center;
           background-size: cover;
@@ -115,6 +116,7 @@ app.post('/Contact', (req,res)=>{
 app.post('/Appointment', (req,res)=>{
 
   const { name , email , subject , massage , Date  } = req.body ;
+
   mongoose.connect(DB)
   .then(()=>{
       console.log( 'DB Connected Success' );
@@ -153,16 +155,17 @@ app.post('/Appointment', (req,res)=>{
         style="font-size:15px"
         >
         <br/>
-        Thanks so much for reaching out! This Auto-reply is just to let you know…<br/>
+        Thank you so much for your appointment email. This Auto-reply is just to let you know…<br/>
         <br/>
-        I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
-        During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
-        If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
+         We have received your details ,<br/>  Your appointment  <b style="color: #2EC0FF"> ${Date.substring(5)} at ${Date.substring(0,5)}</b>  has been successfully confirmed.
+        <br/> see you soon
         </p>
         <a href="mailto:Stexe@msn.com">Send E-mail</a>
         <div style= "
         width: 370px;
         height:200px;
+        margin-top: 20px; 
+        background-color:black ;
         background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
         background-position: center;
         background-size: cover;
@@ -244,7 +247,7 @@ app.post('/app-form', (req, res) => {
             <div style= "
             width: 370px;
             height:200px;
-             background-color:black ;
+            background-color:black ;
             background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
             background-position: center;
             background-size: cover;

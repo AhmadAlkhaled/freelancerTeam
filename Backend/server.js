@@ -84,8 +84,7 @@ app.post('/Contact', (req,res)=>{
           width: 370px;
           height:200px;
           margin-top: 20px;
-          background-color:black ;
-          background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
+          background-image : url('https://im5.ezgif.com/tmp/ezgif-5-b5fa6e7958.png');
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -158,16 +157,19 @@ app.post('/Appointment', (req,res)=>{
         <br/>
         Thank you so much for your appointment email. This Auto-reply is just to let you know…<br/>
         <br/>
-         We have received your details ,<br/>  Your appointment  <b style="color: #2EC0FF"> ${Date.substring(5)} at ${Date.substring(0,5)}</b>  has been successfully confirmed.
-        <br/> see you soon
+         We have received your details ,your appointment on <b style="color: #2EC0FF"> ${Date.substring(5)} at ${Date.substring(0,5)}</b>  has been successfully confirmed.
+        <br/> See you Soon.
+        <br/>
+        <br/>
+        <br/>
+        <p style="color: red"> Note: If you need to change or cancel an appointment, Please Contact Us at least 24 hours in advance.</p>
         </p>
         <a href="mailto:Stexe@msn.com">Send E-mail</a>
         <div style= "
         width: 370px;
         height:200px;
         margin-top: 20px; 
-        background-color:black ;
-        background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
+        background-image : url('https://im5.ezgif.com/tmp/ezgif-5-b5fa6e7958.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -241,14 +243,17 @@ app.post('/app-form', (req, res) => {
             Thank you so much for reaching out! This Auto-reply is just to let you know…<br/>
             <br/>
             Thanks for sending your project details to us.<br/> We will give you a reply as soon as possible.
+            <br/>
+            <br/>
+            <br/>
+            <p style="color: red"> Note: If you need to change or cancel, Please Contact Us.</p>
             </p>
             <a href="mailto:Stexe@msn.com">Send E-mail</a>
             <div style= "
             width: 370px;
             height:200px;
             margin-top: 20px;
-            background-color:black ;
-            background-image : url('https://i.ibb.co/qNFb8FQ/logo.png');
+            background-image : url('https://im5.ezgif.com/tmp/ezgif-5-b5fa6e7958.png');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;

@@ -103,7 +103,7 @@ const AppForm = () => {
                     </div>
                     :
                     <>
-                       <h2>Project Form</h2>
+                       <h2>Start Your Project</h2>
                         <label htmlFor="">Project Art <span>*</span></label>
                         <select name="" required onChange={(e) => 
                             setProjectArt(e.target.value)}>

@@ -79,7 +79,7 @@ app.post('/Contact', (req,res)=>{
           During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
           If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
           </p>
-          <a href="mailto:Stexe@msn.com">Send E-mail</a>
+          <a href="mailto:Stexe@msn.com">Send Direct E-mail</a>
           <div style= "
           width: 370px;
           height:200px;
@@ -164,7 +164,7 @@ app.post('/Appointment', (req,res)=>{
         <br/>
         <p style="color: red"> Note: If you need to change or cancel an appointment, Please Contact Us at least 24 hours in advance.</p>
         </p>
-        <a href="mailto:Stexe@msn.com">Send E-mail</a>
+        <a href="mailto:Stexe@msn.com">Send Direct E-mail</a>
         <div style= "
         width: 370px;
         height:200px;
@@ -248,7 +248,7 @@ app.post('/app-form', (req, res) => {
             <br/>
             <p style="color: red"> Note: If you need to change or cancel, Please Contact Us.</p>
             </p>
-            <a href="mailto:Stexe@msn.com">Send E-mail</a>
+            <a href="mailto:Stexe@msn.com">Send Direct E-mail</a>
             <div style= "
             width: 370px;
             height:200px;

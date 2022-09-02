@@ -69,26 +69,42 @@ app.post('/Contact', (req,res)=>{
           from:'service@aliossman.com',
           to: req.body.email.charAt(0).toUpperCase() + req.body.email.substring(1,100),
           subject:`We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1,100) } ]`,
-          html:`<h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1,100) } </h1><p
-          style="font-size:15px"
-          >
-          <br/>
-          Thank you so much for reaching out! This Auto-reply is just to let you know…<br/>
-          <br/>
-          I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
-          During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
-          If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
-          </p>
-          <a href="mailto:Stexe@msn.com">Send Direct E-mail</a>
-          <div style= "
-          width: 370px;
-          height:200px;
-          margin-top: 20px;
-          background-image : url('https://im5.ezgif.com/tmp/ezgif-5-b5fa6e7958.png');
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-           ">
+          html:`
+          <div style="
+          border: 4px solid #2EC0FF;
+          padding:20px;
+          width:92%;
+          color:white;
+          background-color:black">
+
+            <h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1,100) } </h1><p
+            style="font-size:15px"
+            >
+            <br/>
+            Thank you so much for reaching out! This Auto-reply is just to let you know…<br/>
+            <br/>
+            I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
+            During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
+            If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
+            </p>
+            <br/>
+            <br/>
+            <a style="color:#0080ff" href="mailto:Stexe@msn.com">Send Direct E-mail</a>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div style= "
+            width: 400px;
+            height:200px;
+            margin-top: 20px;
+            background-image : url('https://im.ezgif.com/tmp/ezgif-1-a11ba36d1b.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            ">
+            </div>
           </div>
           `
       }
@@ -151,30 +167,42 @@ app.post('/Appointment', (req,res)=>{
         from:'service@aliossman.com',
         to: req.body.email.charAt(0).toUpperCase() + req.body.email.substring(1,100),
         subject:`We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1,100) } ]`,
-        html:`<h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1,100) } </h1><p
-        style="font-size:15px"
+        html:`
+        <div
+          style="
+          border: 4px solid #2EC0FF;
+          padding:20px;
+          width:92%;
+          color:white;
+          background-color:black"
         >
-        <br/>
-        Thank you so much for your appointment email. This Auto-reply is just to let you know…<br/>
-        <br/>
-         We have received your details ,your appointment on <b style="color: #2EC0FF"> ${Date.substring(5)} at ${Date.substring(0,5)}</b>  has been successfully confirmed.
-        <br/> See you Soon.
-        <br/>
-        <br/>
-        <br/>
-        <p style="color: red"> Note: If you need to change or cancel an appointment, Please Contact Us at least 24 hours in advance.</p>
-        </p>
-        <a href="mailto:Stexe@msn.com">Send Direct E-mail</a>
-        <div style= "
-        width: 370px;
-        height:200px;
-        margin-top: 20px; 
-        background-image : url('https://im5.ezgif.com/tmp/ezgif-5-b5fa6e7958.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-         ">
+
+          <h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1,100) } </h1><p
+          style="font-size:15px"
+          >
+          <br/>
+          Thank you so much for your appointment email.<br/> This Auto-reply is just to let you know…<br/>
+          <br/>
+          We have received your details ,your appointment <br/> on <b style="color: #2EC0FF"> ${Date.substring(5)} at ${Date.substring(0,5)}</b>  has been successfully confirmed.
+          <br/> See you Soon.
+          <br/>
+          <br/>
+          <br/>
+          <p style="color: red"> Note: If you need to change or cancel an appointment, <br/> Please Contact Us at least 24 hours in advance.</p>
+          </p>
+          <a style="color:#0080ff" href="mailto:Stexe@msn.com">Send Direct E-mail</a>
+          <div style= "
+          width: 400px;
+          height:200px;
+          margin-top: 20px; 
+          background-image : url('https://im.ezgif.com/tmp/ezgif-1-a11ba36d1b.png');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          ">
+          </div>
         </div>
+        
         `
     }
       
@@ -236,11 +264,17 @@ app.post('/app-form', (req, res) => {
           subject:`We got it — RE: [ ${req.body.projectArt } ]`,
           html:
           `
-          <div  >
+          <div 
+            style="
+            border: 4px solid #2EC0FF;
+            padding:20px;
+            width:92%;
+            color:white;
+            background-color:black" >
             <h1 style="color:grey">Welcome ${req.body.firstName.charAt(0).toUpperCase() + req.body.firstName.substring(1, 100)} ${req.body.lastName.charAt(0).toUpperCase() + req.body.lastName.substring(1, 100)} </h1>
             <p style="font-size:15px">
             <br/>
-            Thank you so much for reaching out! This Auto-reply is just to let you know…<br/>
+            Thank you so much for reaching out!<br/> This Auto-reply is just to let you know…<br/>
             <br/>
             Thanks for sending your project details to us.<br/> We will give you a reply as soon as possible.
             <br/>
@@ -248,12 +282,12 @@ app.post('/app-form', (req, res) => {
             <br/>
             <p style="color: red"> Note: If you need to change or cancel, Please Contact Us.</p>
             </p>
-            <a href="mailto:Stexe@msn.com">Send Direct E-mail</a>
+            <a style="color:#0080ff" href="mailto:Stexe@msn.com">Send Direct E-mail</a>
             <div style= "
-            width: 370px;
+            width: 400px;
             height:200px;
             margin-top: 20px;
-            background-image : url('https://im5.ezgif.com/tmp/ezgif-5-b5fa6e7958.png');
+            background-image : url('https://im.ezgif.com/tmp/ezgif-1-a11ba36d1b.png');
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;

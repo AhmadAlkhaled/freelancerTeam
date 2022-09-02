@@ -1,5 +1,5 @@
 import './Footer.scss';
-import Logo from './Orange Digital Code Logo Template.png';
+import Logo from '../../imgs/logo.png';
 import { NavLink } from 'react-router-dom';
 
 const Footer = () => { 

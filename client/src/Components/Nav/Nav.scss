@@ -18,15 +18,15 @@ $font2: 'Orienta', sans-serif;
     z-index: 1;
     .logo{
         width: 220px;
-        height: 120px;
+        height: 150px;
         position: absolute;
-        left:160px;
-        top:0px;
+        left:180px;
+        top:10px;
         @media (max-width:800px){
-            left:50px;
+            left:30px;
             top: 5px;
             width: 170px;
-            height: 90px;
+            height: 120px;
         }
         img{
             width: 100%;

@@ -36,13 +36,20 @@ useEffect(()=>{
 },[])
 
 const Delete = (e)=>{
-    console.log(e);
+    const app = document.querySelector('.App');
+    app.style. cursor= 'wait';
+  
     const data = {
         id:e,
         coll:Data
     }
-    axios.post( '/Delete' , data ).then(()=>{
-       
+    axios.post( '/Delete' , data ).then((res)=>{
+        
+        if(res.data.success)
+        {
+            app.style. cursor= 'default';
+        }
+      
     });
     setdel( !del )
 }

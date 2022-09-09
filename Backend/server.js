@@ -333,17 +333,26 @@ app.post('/Delete' , async (req, res)=>{
     if(coll == 'Appointment' )
     {
       await appointment.deleteOne( { _id: id } )
+      res.status(200).json({
+        success:true
+      })
      
     }
     if(coll == 'ContactMassage' )
     {
       await contactMassage.deleteOne( { _id: id } )
+      res.status(200).json({
+        success:true
+      })
      
     }
 
     if(coll == 'ProjectInformation' )
     {
       await ProjectInformation.deleteOne( { _id: id } )
+      res.status(200).json({
+        success:true
+      })
      
     }
  

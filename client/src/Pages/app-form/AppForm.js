@@ -192,13 +192,17 @@ const AppForm = () => {
 
                                 <textarea required name="" id="" cols="30" rows="10" placeholder="Message" value={message}
                                     onChange={(e) => {
-                                        setMessage(e.target.value)
-                                        if (message.length < 50) {
-                                            setMessageError(true)
+                                        setMessage(e.target.value);
+                                        if(message)
+                                        {
+                                            if (message.length < 50) {
+                                                setMessageError(true)
+                                            }
+                                            else {
+                                                setMessageError(false)
+                                            }
                                         }
-                                        else {
-                                            setMessageError(false)
-                                        }
+                                     
                                     }}
                                 ></textarea>
                                 <br />

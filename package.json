@@ -5,7 +5,9 @@
   "scripts": {
     "start:dev": "concurrently \" nodemon ./Backend/server.js \" \"parcel watch ./client/src/index.html --public-url ./static/ \"  ",
     "build": "parcel build ./client/src/index.html --public-url ./static/ ",
-    "start": "  node ./Backend/server.js "
+    "start": "  node ./Backend/server.js ",
+    "nstart" : "./node_modules/.bin/netlify-lambda serve ./Backend",
+    "nbuild" : "./node_modules/.bin/netlify-lambda build ./Backend"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,7 @@
     "i": "^0.3.7",
     "module": "^1.2.5",
     "mongoose": "^6.5.1",
+    "netlify-lambda": "^2.0.15",
     "node": "^16.13.2",
     "nodemailer": "^6.7.8",
     "nodemon": "^2.0.19",
@@ -39,6 +42,7 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2",
     "sassy-datepicker": "^0.9.0",
+    "serverless-http": "^3.0.3",
     "translate-google": "^1.5.0"
   },
   "devDependencies": {

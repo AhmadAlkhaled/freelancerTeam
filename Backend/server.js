@@ -12,6 +12,7 @@ const contactMassage = require('./Contact')
 const appointment = require('./Model')
 const ProjectInformation = require('./ProjectModel.js');
 const pass = require('./pass')
+const  serverless = require('serverless-http');
 
 var Module = require("module");
 var fs = require("fs");
@@ -391,3 +392,5 @@ app.get('*', (req, res) => {
 app.listen(port,()=>{
     console.log( ` server listening on ${port}` );
 });
+
+module.exports.handler = serverless(app)

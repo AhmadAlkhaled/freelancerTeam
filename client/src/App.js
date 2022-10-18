@@ -8,7 +8,6 @@ import Footer from '../../client/src/Components/Footer/Footer';
 import AppForm from '../src/Pages/app-form/AppForm';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import   { useEffect } from 'react';
-import {Translator, Translate} from 'react-auto-translate';
 import { TerminPage } from './Components/Termin/Termin';
 import { DB } from './Pages/db/db';
 // import translate from 'translate-google';

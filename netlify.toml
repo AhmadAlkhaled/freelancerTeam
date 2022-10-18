@@ -1,7 +1,0 @@
-[ build ]
-
-functions = "functions"
-
-[ start ]
-
-npm run start

@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import   { useEffect } from 'react';
 import { TerminPage } from './Components/Termin/Termin';
 import { DB } from './Pages/db/db';
+// import translate from 'translate-google';
 
 
 const App = () => {
@@ -24,7 +25,9 @@ const App = () => {
     })
     return(
         <div className="App">
-  
+      
+ 
+            
             <BrowserRouter>
 
                 <Nav setHamburgerAnimation={setHamburgerAnimation} hamburgerAnimation={hamburgerAnimation}/> 

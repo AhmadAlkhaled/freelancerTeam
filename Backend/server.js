@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -386,9 +386,11 @@ app.get('/db.data', async (req, res) => {
   }
   
 });
-app.get('*', (req, res) => {
+
+app.get('/*', (req, res) => {
   res.status(200).sendFile( path.join(__dirname,'../dist' , 'index.html'));
 })
+
 
 app.listen(port,()=>{
     console.log( ` server listening on ${port}` );

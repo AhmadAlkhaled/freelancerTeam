@@ -10,7 +10,6 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import   { useEffect } from 'react';
 import { TerminPage } from './Components/Termin/Termin';
 import { DB } from './Pages/db/db';
-// import translate from 'translate-google';
 
 
 const App = () => {
@@ -22,30 +21,10 @@ const App = () => {
 
         const x = document.querySelectorAll('p');
 
-    //    for (let i = 0; i < x.length; i++) {
-    //         console.log( x.length )
-    //         console.log( x[i].textContent )
-    //    }
-
-    //    translate('I speak Chinese', {to: 'zh-cn'}).then(res => {
-    //     console.log(res)
-    //     }).catch(err => {
-    //         console.error(err)
-    //     })
-
-       
-      
     })
     return(
         <div className="App">
-        <Translator
-            // cacheProvider={cacheProvider}
-            from='en'
-            to='de'
-         
-            ></Translator>
- 
-            
+  
             <BrowserRouter>
 
                 <Nav setHamburgerAnimation={setHamburgerAnimation} hamburgerAnimation={hamburgerAnimation}/> 

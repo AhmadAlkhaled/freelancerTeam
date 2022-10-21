@@ -41,7 +41,7 @@ const Nav = (props) => {
         <motion.div
           className={mobileMode ? "navList" : "nav_mobile"}
           initial={{ height: "0px" }}
-          animate={{ height: props.hamburgerAnimation ? "100vh" : "0px" }}
+          animate={{ height: props.hamburgerAnimation ? "620px" : "0px" }}
           transition={{ duration: 0.6 }}
           onClick={(e) => {
             props.setHamburgerAnimation(false);

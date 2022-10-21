@@ -5,7 +5,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const [submit, setsubmit] = useState(false);
+  const [submit, setSubmit] = useState(false);
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [subject, setSubject] = useState();
@@ -53,8 +53,8 @@ const Contact = () => {
             {submit ? (
               <p
                 style={{
-                  width: "60%",
-                  padding: " 0 20px",
+                  width: "100%",
+                  padding: " 10px 20px",
                   textAlign: "center",
                   margin: " auto 0 ",
                   textAlign: "center",
@@ -69,7 +69,7 @@ const Contact = () => {
                 action="/Contact"
                 method="post"
                 onSubmit={() => {
-                  setsubmit(true);
+                  setSubmit(true);
                 }}
               >
                 <h3>Send Us A Message</h3>

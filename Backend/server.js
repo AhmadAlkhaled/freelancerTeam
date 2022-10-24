@@ -95,6 +95,7 @@ app.post('/Contact', (req, res) => {
             <div style= "
             width: 400px;
             height:200px;
+            padding-left: 20px;
             margin-top: 20px;
             background-image : url('https://freelancerteame.herokuapp.com/logo');
             background-position: center;
@@ -192,6 +193,7 @@ app.post('/Appointment', (req, res) => {
           <div style= "
           width: 400px;
           height:200px;
+          padding-left: 20px;
           margin-top: 20px; 
           background-image : url('https://freelancerteame.herokuapp.com/logo');
           background-position: center;
@@ -287,6 +289,7 @@ app.post('/app-form', (req, res) => {
             <div style= "
             width: 400px;
             height:200px;
+            padding-left: 20px;
             margin-top: 20px;
             background-image : url('https://freelancerteame.herokuapp.com/logo');
             background-position: center;

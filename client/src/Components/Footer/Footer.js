@@ -91,7 +91,7 @@ const Footer = () => {
               className="footerIcons"
               src="https://img.icons8.com/fluency/48/000000/circled-envelope.png"
             />
-            info@example.com​
+            info@freelancerteam.net
           </p>
           <p>
             <img

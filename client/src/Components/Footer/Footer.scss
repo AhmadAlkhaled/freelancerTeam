@@ -3,22 +3,27 @@ footer {
   padding: 20px 0px 0px 0px;
   color: aliceblue;
   background-color: black;
+
   @media (max-width: 500px) {
     padding: 20px 0px 20px 0px;
   }
+
   .boxes {
     width: 100%;
     padding: 30px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+
     .box-1 {
       width: 255px;
       height: 400px;
       margin-top: -20px;
+
       p {
         margin-top: -10px;
       }
+
       @media (max-width: 600px) {
         width: 100%;
         padding: 0;
@@ -29,6 +34,7 @@ footer {
         align-items: center;
         justify-content: center;
       }
+
       .icons {
         width: 100%;
         text-align: left;
@@ -40,24 +46,29 @@ footer {
         @media (max-width: 600px) {
           justify-content: center;
         }
+
         i {
           font-size: 20px;
         }
       }
+
       .logo-box {
         width: 100%;
         max-width: 200px;
         height: 130px;
         margin-top: 20px;
+
         @media (max-width: 600px) {
           width: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
         }
+
         img {
           width: 80%;
           height: 80%;
+
           @media (max-width: 600px) {
             width: 80%;
           }
@@ -71,15 +82,18 @@ footer {
       width: 255px;
       height: 400px;
       padding: 50px 25px 25px 20px;
+
       //   border: 1px solid red;
       @media (max-width: 600px) {
         height: 260px;
         width: 100%;
         text-align: center;
       }
+
       h3 {
         margin-bottom: 25px;
       }
+
       a {
         text-decoration: none;
         color: white;
@@ -87,31 +101,49 @@ footer {
         cursor: pointer;
       }
     }
+
     .box-4 {
+      width: 290px;
+      // border: 1px solid red;
+
+      h3 {
+        width: 200px;
+        text-align: left;
+
+        @media (max-width: 600px) {
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+      }
+
       .footerIcons {
         width: 30px;
         height: 30px;
         margin-right: 15px;
         margin-left: 9px;
       }
+
       @media (max-width: 600px) {
         margin-bottom: 40px;
         margin: 0 auto;
         text-align: left;
         width: 85%;
-        max-width: 250px;
+        max-width: 290px;
       }
+
       @media (max-width: 320px) {
         width: 100%;
       }
     }
   }
+
   .footer-line {
     width: 100%;
     height: 1px;
     margin: 20px 0px 20px 0px;
     background-color: #8dcbe5;
   }
+
   .box-5 {
     width: 100%;
     padding: 10px 28px 28px 37px;
@@ -119,6 +151,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
     @media (max-width: 500px) {
       justify-content: center;
       align-items: center;
@@ -126,6 +159,7 @@ footer {
       gap: 20px;
       flex-direction: column;
     }
+
     p {
       margin: 0;
     }

@@ -103,7 +103,7 @@ app.post("/Contact", (req, res) => {
             <br/>
             <br/>
             <div style= "
-            width: 435px;
+            width: 450px;
             height:200px;
             margin-top: 20px;
             background-image : url('https://freelancerteame.herokuapp.com/logo');

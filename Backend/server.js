@@ -186,7 +186,7 @@ app.post('/Appointment', (req, res) => {
           <br/>
           <br/>
           <br/>
-          <p style="color: red"> Note: If you need to change or cancel an appointment, <br/> Please Contact Us at least 24 hours in advance.</p>
+          <p style="color: red"> Note: If You Need to Change or Cancel Your Appointment, <br/> Please Contact Us at least 24 hours in advance.</p>
           </p>
           <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
           <div style= "
@@ -281,7 +281,7 @@ app.post('/app-form', (req, res) => {
             <br/>
             <br/>
             <br/>
-            <p style="color: red"> Note: If you need to change or cancel, Please Contact Us.</p>
+            <p style="color: red"> Note: If You Need to Change or Cancel Your Order, Please Contact Us.</p>
             </p>
             <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
             <div style= "

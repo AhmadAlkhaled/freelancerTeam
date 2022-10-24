@@ -56,7 +56,7 @@ app.post("/Contact", (req, res) => {
 
     const mailOptions = {
       from: "info@freelancerteam.net",
-      to: "info@freelancerteam.net",
+      to: "info2@freelancerteam.net",
       subject: "message",
       text: `
             from : ${name}

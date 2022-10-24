@@ -28,8 +28,8 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "aliosman027@gmail.com",
-    pass: "kyfxpmjmoqdzhiih",
+    user: "freelancerteam66@gmail.com",
+    pass: "wknbgexrsghkqbja",
   },
 });
 
@@ -56,7 +56,7 @@ app.post("/Contact", (req, res) => {
 
     const mailOptions = {
       from: "info@freelancerteam.net",
-      to: "info2@freelancerteam.net",
+      to: "info@freelancerteam.net",
       subject: "message",
       text: `
             from : ${name}

@@ -35,7 +35,7 @@ app.get('/logo', (req, res) => {
 
 app.post('/Contact', (req, res) => {
 
-  const { name, email, subject, massage } = req.body;
+  const { name, email, subject, message } = req.body;
   console.log(req.body);
   mongoose.connect(DB)
     .then(() => {
@@ -44,26 +44,26 @@ app.post('/Contact', (req, res) => {
         Name: name,
         Email: email,
         Subject: subject,
-        Massage: massage,
+        Massage: message,
       });
       connect.save();
       console.log('DB Connected Success Saved');
       res.redirect('/Contact');
 
       const mailOptions = {
-        from: 'service@aliossman.com',
-        to: 'aliosman027@gmail.com',
-        subject: 'massage',
+        from: 'info@freelancerteam.net',
+        to: 'info@freelancerteam.net',
+        subject: 'message',
         text: `
-            from : ${req.body.name}
-            Email : ${req.body.email}
-            subject : ${req.body.subject}
-            massage : ${req.body.massage}`,
+            from : ${name}
+            Email : ${email}
+            subject : ${subject}
+            massage : ${message}`,
 
       }
 
       let mailOptions1 = {
-        from: 'service@aliossman.com',
+        from: 'info@freelancerteam.net',
         to: req.body.email.charAt(0).toUpperCase() + req.body.email.substring(1, 100),
         subject: `We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)} ]`,
         html: `
@@ -86,7 +86,7 @@ app.post('/Contact', (req, res) => {
             </p>
             <br/>
             <br/>
-            <a style="color:#0080ff" href="mailto:Stexe@msn.com">Send Direct E-mail</a>
+            <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
             <br/>
             <br/>
             <br/>
@@ -128,7 +128,7 @@ app.post('/Contact', (req, res) => {
 
 app.post('/Appointment', (req, res) => {
 
-  const { name, email, subject, massage, Date } = req.body;
+  const { name, email, subject, message, Date } = req.body;
 
   mongoose.connect(DB)
     .then(() => {
@@ -137,7 +137,7 @@ app.post('/Appointment', (req, res) => {
         Name: name,
         Email: email,
         Subject: subject,
-        Massage: massage,
+        Massage: message,
         Date: Date
       });
       Appointment.save();
@@ -148,20 +148,21 @@ app.post('/Appointment', (req, res) => {
 
 
       const mailOptions = {
-        from: 'service@aliossman.com',
-        to: 'aliosman027@gmail.com',
+        from: 'info@freelancerteam.net',
+        to: 'info@freelancerteam.net',
         subject: 'massage',
         text: `
-          from : ${req.body.name}
-          Email : ${req.body.email}
-          subject : ${req.body.subject}
-          massage : ${req.body.massage}`,
+          from : ${name}
+          Email : ${email}
+          subject : ${subject}
+          Date: ${Date}
+          massage : ${message}`,
 
       }
 
 
       let mailOptions1 = {
-        from: 'service@aliossman.com',
+        from: 'info@freelancerteam.net',
         to: req.body.email.charAt(0).toUpperCase() + req.body.email.substring(1, 100),
         subject: `We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)} ]`,
         html: `
@@ -187,7 +188,7 @@ app.post('/Appointment', (req, res) => {
           <br/>
           <p style="color: red"> Note: If you need to change or cancel an appointment, <br/> Please Contact Us at least 24 hours in advance.</p>
           </p>
-          <a style="color:#0080ff" href="mailto:Stexe@msn.com">Send Direct E-mail</a>
+          <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
           <div style= "
           width: 400px;
           height:200px;
@@ -243,20 +244,23 @@ app.post('/app-form', (req, res) => {
       console.log('DB Connected Success Saved');
 
       const mailOptions = {
-        from: 'service@aliossman.com',
-        to: 'aliosman027@gmail.com',
-        subject: 'massage',
+        from: 'info@freelancerteam.net',
+        to: 'info@freelancerteam.net',
+        subject: 'Project Form',
         text: `
-            from : ${req.body.name}
-            Email : ${req.body.email}
-            subject : ${req.body.subject}
-            massage : ${req.body.massage}`,
+            From: ${firstName + lastName}
+            Email: ${email}
+            Phone: ${phone}
+            Project Status: ${status}
+            Project Art: ${projectArt}
+            Contact Art: ${contactArt}
+            massage : ${message}`,
 
       }
 
 
       let mailOptions1 = {
-        from: 'service@aliossman.com',
+        from: 'info@freelancerteam.net',
         to: req.body.email.charAt(0).toUpperCase() + req.body.email.substring(1, 100),
         subject: `We got it — RE: [ ${req.body.projectArt} ]`,
         html:
@@ -279,7 +283,7 @@ app.post('/app-form', (req, res) => {
             <br/>
             <p style="color: red"> Note: If you need to change or cancel, Please Contact Us.</p>
             </p>
-            <a style="color:#0080ff" href="mailto:Stexe@msn.com">Send Direct E-mail</a>
+            <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
             <div style= "
             width: 400px;
             height:200px;

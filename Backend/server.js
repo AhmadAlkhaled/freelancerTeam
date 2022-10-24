@@ -93,7 +93,7 @@ app.post('/Contact', (req, res) => {
             <br/>
             <br/>
             <div style= "
-            width: 380px;
+            width: 400px;
             height:200px;
             margin-top: 20px;
             background-image : url('https://freelancerteame.herokuapp.com/logo');
@@ -190,7 +190,7 @@ app.post('/Appointment', (req, res) => {
           </p>
           <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
           <div style= "
-          width: 380px;
+          width: 400px;
           height:200px;
           margin-top: 20px; 
           background-image : url('https://freelancerteame.herokuapp.com/logo');
@@ -285,7 +285,7 @@ app.post('/app-form', (req, res) => {
             </p>
             <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
             <div style= "
-            width: 380px;
+            width: 400px;
             height:200px;
             margin-top: 20px;
             background-image : url('https://freelancerteame.herokuapp.com/logo');

@@ -79,9 +79,10 @@ const AppForm = () => {
       }
       setSent(true);
       setFormError(false);
-      if (document.documentElement.scrollTop > 0) {
-        document.documentElement.scrollTop = 0;
-      }
+      // document.documentElement.scrollTop = 0;
+      window.pageYOffset = 0
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
     } else {
       setSent(false);
       setFormError(true);

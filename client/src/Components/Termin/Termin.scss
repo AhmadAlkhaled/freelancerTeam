@@ -2,7 +2,7 @@ $color1: #2EC0FF;
 $font1: 'Montserrat', sans-serif;
 $font2: 'Orienta', sans-serif;
 
-.Termin{
+.Termin {
     width: 100%;
     margin-top: 200px;
     height: 400px;
@@ -11,57 +11,63 @@ $font2: 'Orienta', sans-serif;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-  
-    .opacity{
+
+    .opacity {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.507);
         display: flex;
         justify-content: center;
         align-items: center;
-        .btn{
+
+        .btn {
             background-color: $color1;
             color: white;
             font-size: 23px;
             font-family: $font2;
-            i{
+
+            i {
                 font-size: 25px;
                 margin-right: 5px;
             }
         }
     }
-  
+
 }
 
-.TerminPage{
+.TerminPage {
     width: 100%;
     //height: 100vh;
     padding-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(141,216,244);
-    background: linear-gradient(180deg, rgba(141,216,244,1) 13%, rgba(255,255,255,1) 170%);
+    background: rgb(141, 216, 244);
+    background: linear-gradient(180deg, rgba(141, 216, 244, 1) 13%, rgba(255, 255, 255, 1) 170%);
     background-attachment: fixed;
-    @media ( max-width : 800px ) {
+
+    @media (max-width : 800px) {
         padding-top: 100px;
     }
+
     .doneTermin {
         width: 100%;
         height: 70vh;
-        margin-top: -200px;
+        margin-top: -100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 30px;
+
         p {
             font-family: $font1;
             font-size: 20px;
             text-align: center;
         }
+
         .done-card {
-       
+
             padding: 20px;
             color: #FAFAFA;
             border: 2px solid white;
@@ -69,7 +75,8 @@ $font2: 'Orienta', sans-serif;
             border-left: 4px solid #16c000;
             backdrop-filter: blur(4px);
             background: rgba(141, 217, 244, 0.46);
-            background: linear-gradient(45deg, rgba(141,216,244,1) 13%, rgba(255,255,255,1) 170%);
+            background: linear-gradient(45deg, rgba(141, 216, 244, 1) 13%, rgba(255, 255, 255, 1) 170%);
+
             h2 {
                 height: 100%;
                 display: flex;
@@ -77,50 +84,68 @@ $font2: 'Orienta', sans-serif;
                 align-items: center;
                 gap: 20px;
                 margin: 0;
+
                 .fa-check-circle {
                     color: #16c000;
                     font-size: 40px;
                 }
             }
-         
+
         }
     }
-    .min{
+
+    .min {
         width: 60%;
+        max-width: 700px;
         padding: 40px 20px;
-        // background-color: rgba(0, 0, 0, 0.178);
-        // box-shadow: 0px 0px 13px black;
         display: flex;
-        justify-content:space-around;
+        justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        .timeerorrmsg{
-            color:red;
+
+        .timeerorrmsg {
+            color: red;
             font-family: $font2;
             margin: 20px;
             padding: 7px;
-            border-radius:10px;
-            letter-spacing:1px;
+            border-radius: 10px;
+            letter-spacing: 1px;
             font-weight: bolder;
             text-align: center;
-            @media ( max-width : 700px ) {
-                padding:0px;
+
+            @media (max-width : 700px) {
+                padding: 0px;
                 font-size: 14px;
             }
         }
-        .element.style{
+
+        .element.style {
             width: 100%;
         }
-        .rc_root{
-            width: 500px;
-            box-shadow: 0px 0px 10px rgb(200, 200, 200);
-            .rc_wkend{
-                background-color: black;
+
+        .newCalender {
+            width: 70%;
+
+            @media (max-width : 700px) {
+                width: 100%;
+            }
+
+            .rc_root {
+                width: 100%;
+                box-shadow: 0px 0px 10px rgb(200, 200, 200);
+
+                .rc_wkend {
+                    background-color: black;
+                }
             }
         }
-        @media ( max-width : 800px ) {
+
+
+
+        @media (max-width : 800px) {
             width: 90%;
         }
+
         form {
             width: 100%;
             padding: 20px;
@@ -129,125 +154,140 @@ $font2: 'Orienta', sans-serif;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
             @media (max-width: 800px) {
-                
+
                 margin-top: 20px;
             }
-         
+
             input {
                 width: 100%;
                 padding: 8px;
+                margin-bottom: 20px;
                 outline: none;
                 border-radius: 5px;
                 border: 1px solid rgb(212, 212, 212);
                 background-color: #FAFAFA;
+
                 &::placeholder {
                     color: rgb(159, 159, 159);
                     letter-spacing: 3px;
                     font-size: 14px;
                 }
             }
+
             textarea {
                 width: 100%;
                 padding: 8px;
                 outline: none;
                 border: 1px solid rgb(212, 212, 212);
                 background-color: #FAFAFA;
+
                 &::placeholder {
                     color: rgb(159, 159, 159);
                     letter-spacing: 3px;
                     font-size: 14px;
                 }
             }
+
             button {
-               width: 180px;
-               border: none;
-               padding: 13px;
-               border-radius: 6px;
-               color: white;
-               background-color: $color1;
-               &:hover {
-                background-color: #0DACF2;
-               }
+                width: 180px;
+                border: none;
+                padding: 13px;
+                border-radius: 6px;
+                color: white;
+                background-color: $color1;
+
+                &:hover {
+                    background-color: #0DACF2;
+                }
             }
         }
-        .buttBox{
+
+        .buttBox {
             width: 100%;
             text-align: center;
-            margin-top: 40px  ;
+            margin-top: 40px;
 
-            .butt{
-                width:150px;
+            .butt {
+                width: 150px;
                 font-family: $font2;
                 background-color: $color1;
-                border:none;
-                outline:none;
-                border-radius:5px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
                 padding: 10px;
                 font-size: 15px;
                 color: aliceblue;
-               
+
             }
         }
-      
-        h2{
+
+        h2 {
             width: 100%;
             text-align: center;
-            color:white;
+            color: white;
             margin-bottom: 100px;
+
             @media (max-width: 800px) {
                 margin-bottom: 30px;
             }
         }
-        .time{
+
+        .time {
             width: 50%;
             // background-color: red;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            @media ( max-width : 1580px ) {
+
+            @media (max-width : 1580px) {
                 margin-top: 20px;
             }
-            @media ( max-width : 1500px ) {
+
+            @media (max-width : 1500px) {
                 margin-top: 20px;
                 width: 100%;
             }
-         
-            .time1{
+
+            .time1 {
                 display: inline-block;
                 padding: 10px;
-                border:2px solid rgb(255, 255, 255);
+                border: 2px solid rgb(255, 255, 255);
                 border-radius: 10px;
-                color:white;
+                color: white;
                 font-weight: bolder;
-                margin:  5px;
+                margin: 5px;
                 box-shadow: 0px 0px 10px rgb(200, 200, 200);
                 background-color: transparent;
-                &:hover{
+
+                &:hover {
                     cursor: pointer;
-                    border:2px solid $color1;
+                    border: 2px solid $color1;
                     color: $color1;
                     background-color: #000000;
                 }
             }
-            .disabled{
+
+            .disabled {
                 display: inline-block;
                 padding: 10px;
-                border:2px solid rgb(255, 255, 255);
+                border: 2px solid rgb(255, 255, 255);
                 border-radius: 10px;
-                color:white;
-                margin:  5px;
+                color: white;
+                margin: 5px;
                 font-weight: bolder;
                 background-color: #666565;
                 cursor: not-allowed;
             }
+
             .disabled-1 {
                 display: inline-block;
                 padding: 10px;
-                border:2px solid rgb(255, 255, 255);
+                border: 2px solid rgb(255, 255, 255);
                 border-radius: 10px;
-                color:white;
-                margin:  5px;
+                color: white;
+                margin: 5px;
                 font-weight: bolder;
                 background-color: #D53B24;
                 cursor: not-allowed;
@@ -258,12 +298,13 @@ $font2: 'Orienta', sans-serif;
 }
 
 .sdp {
-    
-    --theme-color: $color1; /* violet color */
+
+    --theme-color: $color1;
+    /* violet color */
     background-color: red;
-    
-    button{
-        
+
+    button {
+
         width: 50px;
     }
-  }
+}

@@ -189,7 +189,7 @@ app.post("/Appointment", (req, res) => {
           style="font-size:15px"
           >
           <br/>
-          Thank you so much for your appointment email.<br/> This Auto-reply is just to let you know…<br/>
+          Thank you for your appointment email.<br/> This Auto-reply is just to let you know…<br/>
           <br/>
           We have received your details ,your appointment <br/> on <b style="color: #2EC0FF"> ${Date.substring(
             5
@@ -299,7 +299,7 @@ app.post("/app-form", (req, res) => {
       } </h1>
             <p style="font-size:15px">
             <br/>
-            Thank you so much for reaching out!<br/> This Auto-reply is just to let you know…<br/>
+            Thank you for reaching out!<br/> This Auto-reply is just to let you know…<br/>
             <br/>
             Thanks for sending your project details to us.<br/> We will give you a reply as soon as possible.
             <br/>

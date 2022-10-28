@@ -79,7 +79,7 @@ const AppForm = () => {
       }
       setSent(true);
       setFormError(false);
-      if (window.innerWidth > 0) {
+      if (document.documentElement.scrollTop > 0) {
         document.documentElement.scrollTop = 0;
       }
     } else {

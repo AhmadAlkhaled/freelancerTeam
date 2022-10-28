@@ -80,7 +80,6 @@ const Contact = () => {
                   required
                   onChange={(e) => setName(e.target.value)}
                 />
-                <br />
                 <input
                   type="text"
                   placeholder="Email"
@@ -88,7 +87,6 @@ const Contact = () => {
                   required
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <br />
                 <input
                   type="text"
                   placeholder="Subject"
@@ -96,7 +94,6 @@ const Contact = () => {
                   required
                   onChange={(e) => setSubject(e.target.value)}
                 />
-                <br />
                 <textarea
                   id=""
                   cols="30"
@@ -106,7 +103,6 @@ const Contact = () => {
                   required
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
-                <br />
                 <button onClick={SendMessage}>Send Message</button>
               </form>
             )}

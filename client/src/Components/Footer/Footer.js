@@ -91,7 +91,7 @@ const Footer = () => {
               className="footerIcons"
               src="https://img.icons8.com/fluency/48/000000/circled-envelope.png"
             />
-            info@freelancerteam.net
+            info@softwareprime.com
           </p>
           <p>
             <img
@@ -111,8 +111,8 @@ const Footer = () => {
       </div>
       <div className="footer-line"></div>
       <div className="box-5">
-        <p>Copyright © 2022 FreeLancer Team</p>
-        <p>Powered by | FreeLancer Team</p>
+        <p>Copyright © 2022 Software Prime</p>
+        <p>Powered by | Software Prime</p>
       </div>
     </footer>
   );

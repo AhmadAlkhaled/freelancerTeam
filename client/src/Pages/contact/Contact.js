@@ -112,7 +112,7 @@ const Contact = () => {
               <h5>Address</h5>
               <p>Berlin – Germany</p>
               <h5>Email</h5>
-              <p>info@freelancerteam.net</p>
+              <p>info@softwareprime.com</p>
               <h5>Phone</h5>
               <p>+490000000000</p>
               <h5>Follow Us</h5>

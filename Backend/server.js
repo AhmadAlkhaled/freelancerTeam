@@ -28,8 +28,8 @@ app.use(cors());
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "freelancerteam66@gmail.com",
-    pass: "wknbgexrsghkqbja",
+    user: "softwareprime66@gmail.com",
+    pass: "tkhebzbotfoejjki",
   },
 });
 
@@ -55,8 +55,8 @@ app.post("/Contact", (req, res) => {
     res.redirect("/Contact");
 
     const mailOptions = {
-      from: "info@freelancerteam.net",
-      to: "info@freelancerteam.net",
+      from: "info@software-prime.com",
+      to: "info@software-prime.com",
       subject: "message",
       text: `
             from : ${name}
@@ -66,13 +66,12 @@ app.post("/Contact", (req, res) => {
     };
 
     let mailOptions1 = {
-      from: "info@freelancerteam.net",
+      from: "info@software-prime.com",
       to:
         req.body.email.charAt(0).toUpperCase() +
         req.body.email.substring(1, 100),
-      subject: `We got it — RE: [ ${
-        req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
-      } ]`,
+      subject: `We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
+        } ]`,
       html: `
           <div style="
           border: 4px solid #2EC0FF;
@@ -81,10 +80,9 @@ app.post("/Contact", (req, res) => {
           color:white;
           background-color:black">
 
-            <h1 style="color:grey">Welcome ${
-              req.body.name.charAt(0).toUpperCase() +
-              req.body.name.substring(1, 100)
-            } </h1><p
+            <h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() +
+        req.body.name.substring(1, 100)
+        } </h1><p
             style="font-size:15px"
             >
             <br/>
@@ -169,9 +167,8 @@ app.post("/Appointment", (req, res) => {
       to:
         req.body.email.charAt(0).toUpperCase() +
         req.body.email.substring(1, 100),
-      subject: `We got it — RE: [ ${
-        req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
-      } ]`,
+      subject: `We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
+        } ]`,
       html: `
         <div
           style="
@@ -182,18 +179,17 @@ app.post("/Appointment", (req, res) => {
           background-color:black"
         >
 
-          <h1 style="color:grey">Welcome ${
-            req.body.name.charAt(0).toUpperCase() +
-            req.body.name.substring(1, 100)
-          } </h1><p
+          <h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() +
+        req.body.name.substring(1, 100)
+        } </h1><p
           style="font-size:15px"
           >
           <br/>
           Thank you for your appointment email.<br/> This Auto-reply is just to let you know…<br/>
           <br/>
           We have received your details ,your appointment <br/> on <b style="color: #2EC0FF"> ${Date.substring(
-            5
-          )} at ${Date.substring(0, 5)}</b>  has been successfully confirmed.
+          5
+        )} at ${Date.substring(0, 5)}</b>  has been successfully confirmed.
           <br/> See you Soon.
           <br/>
           <br/>
@@ -290,13 +286,11 @@ app.post("/app-form", (req, res) => {
             width:92%;
             color:white;
             background-color:black" >
-            <h1 style="color:grey">Welcome ${
-              req.body.firstName.charAt(0).toUpperCase() +
-              req.body.firstName.substring(1, 100)
-            } ${
-        req.body.lastName.charAt(0).toUpperCase() +
+            <h1 style="color:grey">Welcome ${req.body.firstName.charAt(0).toUpperCase() +
+        req.body.firstName.substring(1, 100)
+        } ${req.body.lastName.charAt(0).toUpperCase() +
         req.body.lastName.substring(1, 100)
-      } </h1>
+        } </h1>
             <p style="font-size:15px">
             <br/>
             Thank you for reaching out!<br/> This Auto-reply is just to let you know…<br/>

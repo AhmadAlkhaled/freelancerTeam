@@ -10,6 +10,10 @@ const DB = ()=>{
     const [ DBData , setDBData ]= useState([]);
     const [ login , setLogin ]= useState(false);
     const [ del ,setdel ] = useState(false);
+    const [ DeleteData , setDeleteData] = useState(false);
+    const [ alert , setAlert] = useState(false);
+    const [ alertText , setalertText] = useState('');
+    
 
     const [ A , setA ]= useState([]);
     const [ C , setC ]= useState([]);
@@ -22,7 +26,7 @@ useEffect(()=>{
     const d = prompt('');
     axios.post('/login' , { pro:d} )
     .then((res)=>{
-        console.log(res.data.success);
+        
         if(res.data.success)
         {
             setLogin(true);
@@ -36,8 +40,9 @@ useEffect(()=>{
 },[])
 
 const Delete = (e)=>{
+    
     const app = document.querySelector('.App');
-    app.style. cursor= 'wait';
+    app.style.cursor= 'wait';
   
     const data = {
         id:e,
@@ -47,7 +52,7 @@ const Delete = (e)=>{
         
         if(res.data.success)
         {
-            app.style. cursor= 'default';
+            app.style.cursor= 'default';
         }
       
     });
@@ -57,6 +62,10 @@ const Delete = (e)=>{
         
    
     useEffect(()=>{
+
+        // setInterval(()=>{
+        //     setdel( !del )
+        // },1000)
 
         axios.get( '/db.data' )
         .then((data)=>{
@@ -90,14 +99,72 @@ const Delete = (e)=>{
         })
     },[Data , del ])
   
+    const deleteColl = ()=>{
 
-   
-  
+        axios.post('/DeleteData' , {coll :  Data})
+        .then((res)=>{
+            setDeleteData(false);
+            setAlert(false);
+            setdel( !del )
+        })
+        
+    }
 
-  
+    const deleteAll = ()=>{
 
+        axios.post('/DeleteData' , {coll :'All'})
+        .then((res)=>{
+            setDeleteData(false);
+            setAlert(false);
+            setdel( !del )
+        })
+    }
+ 
+ 
     return(
         <div className='db' > 
+            {
+                (DeleteData)?
+                <div className='DeleteAllBox' > 
+                    <div className='Box' >
+                        <i class="fas fa-times" onClick={()=>{ setDeleteData(false) }} ></i>
+                        <button onClick={()=>{ 
+                            setalertText(<p>Are you sure You want to Delete <span style={{color:'red'}}>All Databases</span> ?</p>),
+                            setAlert(true);
+                            setDeleteData(false)}} > Delete All Databases </button>
+                        <button onClick={()=>{ 
+                            setalertText( <p>Are you sure You want to Delete <span style={{color:'red'}} >{ Data }</span> Collection ?  </p>);
+                            setAlert(true);
+                            setDeleteData(false)
+                         }} > Delete { Data } </button>
+                    </div>
+                </div>
+                :
+                null
+            }
+            { 
+                alert?
+                <div className='DeleteAllBox' > 
+                <div className='alert' >
+                    {alertText}
+                    <div className='btnBox' > 
+                        <button onClick={()=>{ setDeleteData(true); setAlert(false) }} > No </button>
+                        <button className='Yes' onClick={()=>{ 
+                            if(alertText.props.children[1].props.children  == 'All Databases')
+                            {
+                                deleteAll()
+                            }else{
+                                deleteColl()
+                            }
+                         }} > Yes </button>
+                    </div>
+                </div>
+                </div>
+                :
+                null
+            }
+       
+      
         {
             (login)?
                 <>
@@ -106,6 +173,7 @@ const Delete = (e)=>{
                         <div className='dbNavBtn' onClick={ (e)=>{  setData(e.target.textContent) } } >Appointment</div><div className='num'> { A.length } </div>
                         <div className='dbNavBtn' onClick={ (e)=>{  setData(e.target.textContent) } }  >ContactMassage</div><div className='num'> { C.length } </div>
                         <div className='dbNavBtn' onClick={ (e)=>{  setData(e.target.textContent) } }  >ProjectInformation</div><div className='num'>{ P.length }</div>
+                        <i class="fas fa-trash-alt" onClick={(e)=>{ setDeleteData(true) }} ></i>
                     </div>
 
                     <div className='dataInfo' >

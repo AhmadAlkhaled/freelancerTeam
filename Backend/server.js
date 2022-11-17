@@ -94,7 +94,7 @@ app.post("/Contact", (req, res) => {
             </p>
             <br/>
             <br/>
-            <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
+            <a style="color:#0080ff" href="mailto:info@software-prime.com">Send Direct E-mail</a>
             <br/>
             <br/>
             <br/>
@@ -196,7 +196,7 @@ app.post("/Appointment", (req, res) => {
           <br/>
           <p style="color: red"> Note: If You Need to Change or Cancel Your Appointment, <br/> Please Contact Us at least 24 hours in advance.</p>
           </p>
-          <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
+          <a style="color:#0080ff" href="mailto:info@software-prime.com">Send Direct E-mail</a>
           <div style= "
           width: 400px;
           height:200px;
@@ -301,7 +301,7 @@ app.post("/app-form", (req, res) => {
             <br/>
             <p style="color: red"> Note: If You Need to Change or Cancel Your Order, Please Contact Us.</p>
             </p>
-            <a style="color:#0080ff" href="mailto:info@freelancerteam.net">Send Direct E-mail</a>
+            <a style="color:#0080ff" href="mailto:info@software-prime.com">Send Direct E-mail</a>
             <div style= "
             width: 400px;
             height:200px;

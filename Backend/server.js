@@ -151,8 +151,8 @@ app.post("/Appointment", (req, res) => {
     });
 
     const mailOptions = {
-      from: "info@freelancerteam.net",
-      to: "info@freelancerteam.net",
+      from: "info@software-prime.com",
+      to: "info@software-prime.com",
       subject: "massage",
       text: `
           from : ${name}
@@ -163,7 +163,7 @@ app.post("/Appointment", (req, res) => {
     };
 
     let mailOptions1 = {
-      from: "info@freelancerteam.net",
+      from: "info@software-prime.com",
       to:
         req.body.email.charAt(0).toUpperCase() +
         req.body.email.substring(1, 100),
@@ -259,8 +259,8 @@ app.post("/app-form", (req, res) => {
     console.log("DB Connected Success Saved");
 
     const mailOptions = {
-      from: "info@freelancerteam.net",
-      to: "info@freelancerteam.net",
+      from: "info@software-prime.com",
+      to: "info@software-prime.com",
       subject: "Project Form",
       text: `
             From: ${firstName + lastName}
@@ -273,7 +273,7 @@ app.post("/app-form", (req, res) => {
     };
 
     let mailOptions1 = {
-      from: "info@freelancerteam.net",
+      from: "info@software-prime.com",
       to:
         req.body.email.charAt(0).toUpperCase() +
         req.body.email.substring(1, 100),

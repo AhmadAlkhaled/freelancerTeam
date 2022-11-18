@@ -59,10 +59,10 @@ const Footer = () => {
             className="costomer-link"
             onClick={() => {
               console.log(window.location.href);
-              if (window.location.href != "https://www.software-prime.com/") {
-                window.open("https://www.software-prime.com/#customers", "_self");
+              if (window.location.href != "http://localhost:3000/") {
+                window.open("http://localhost:3000/#customers", "_self");
               } else {
-                window.open("https://www.software-prime.com/#customer-1", "_self");
+                window.open("http://localhost:3000/#customer-1", "_self");
               }
             }}
           >

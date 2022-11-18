@@ -96,12 +96,16 @@ $font2: 'Orienta', sans-serif;
 
     .min {
         width: 60%;
-        max-width: 700px;
+        max-width: 800px;
         padding: 40px 20px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+
+        .time {
+            margin-top: 20px;
+        }
 
         .timeerorrmsg {
             color: red;

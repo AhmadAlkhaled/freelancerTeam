@@ -339,6 +339,49 @@ app.get("/date", async (req, res) => {
   const allDates = await appointment.find();
   res.status(200).json({ allDates: allDates });
 });
+app.post('/DeleteData' , async (req, res)=>{
+
+  const { coll } = req.body;
+  console.log(coll);
+
+  const db = await mongoose.connect(DB);
+  
+  if(coll == "Appointment")
+  {
+    await appointment.deleteMany({});
+    res.status(200).json({
+      success: true,
+    });
+
+  }
+  if(coll == "ContactMassage")
+  {
+    await contactMassage.deleteMany({});
+    res.status(200).json({
+      success: true,
+    });
+    
+  }
+  if(coll == "ProjectInformation")
+  {
+    await ProjectInformation.deleteMany({});
+    res.status(200).json({
+      success: true,
+    });
+  }
+
+  if(coll == "All" )
+  {
+    
+    await appointment.deleteMany({});
+    await contactMassage.deleteMany({});
+    await ProjectInformation.deleteMany({});
+    res.status(200).json({
+      success: true,
+    });
+  }
+  
+})
 
 app.post("/Delete", async (req, res) => {
   const { id, coll } = req.body;

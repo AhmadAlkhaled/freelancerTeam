@@ -88,7 +88,7 @@ app.post("/Contact", (req, res) => {
             <br/>
             Thank you for reaching out! This Auto-reply is just to let you know…<br/>
             <br/>
-            I received your email and will get back to you with a ( Human ) response as soon as possible.<br/>
+            We have received your email and we will get back to you with a ( Human ) response as soon as possible.<br/>
             During [ Business_Hours ] that’s usually within a couple of hours. Evenings and weekends may take me a little bit longer.<br/>
             If you have any additional information that you think will help me to assist you, please feel free to reply to this email.
             </p>

@@ -3,6 +3,12 @@ import "./Contact.scss";
 import Start from "../../Components/start/Start";
 import axios from "axios";
 import { motion } from "framer-motion";
+import Recaptcha from 'react-recaptcha';
+
+
+// 6LfdYhUjAAAAAGvt0h9M2ykZKjFn91CIGJbwcSL0
+// 6LfdYhUjAAAAAEH1KW1cOHjSw8CQY9Ga97bLWyt4
+
 
 const Contact = () => {
   const [submit, setSubmit] = useState(false);
@@ -10,6 +16,18 @@ const Contact = () => {
   const [email, setEmail] = useState();
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
+  const [isVerified, setIsVerified] = useState(false);
+  const [verifyError, setVerifyError] = useState(false);
+
+  const recaptchaLoaded = () => {
+    console.log('capcha successfully loaded');
+  }
+
+  const verifyCallback = (response) => {
+    if (response) {
+      setIsVerified({ status: true, message: 'vitrify success' })
+    }
+  }
 
   const MessageData = {
     name: name,
@@ -18,12 +36,25 @@ const Contact = () => {
     message: message,
   };
 
-  const SendMessage = () => {
-    if (name && email && subject && message) {
+  const SendMessage = (e) => {
+    e.preventDefault()
+    if (name && email && subject && message && isVerified) {
       axios.post("/contact", MessageData).then((res) => {
         console.log(res);
       });
+      setSubmit(true);
+      setIsVerified(false)
+      console.log('done');
+      setVerifyError(false)
+
+
     }
+    else {
+      setSubmit(false);
+      setVerifyError(true)
+    };
+
+
   };
 
   return (
@@ -66,11 +97,11 @@ const Contact = () => {
               </p>
             ) : (
               <form
-                action="/Contact"
-                method="post"
-                onSubmit={() => {
-                  setSubmit(true);
-                }}
+              // action="/Contact"
+              // method="post"
+              // onSubmit={() => {
+              //   setSubmit(true);
+              // }}
               >
                 <h3>Send Us A Message</h3>
                 <input
@@ -103,8 +134,24 @@ const Contact = () => {
                   required
                   onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
-                <button onClick={SendMessage}>Send Message</button>
+                <div style={{ marginBottom: '20px' }}>
+                  <Recaptcha
+                    sitekey="6LfdYhUjAAAAAGvt0h9M2ykZKjFn91CIGJbwcSL0"
+                    render="explicit"
+                    onloadCallback={recaptchaLoaded}
+                    verifyCallback={verifyCallback}
+                  />
+                </div>
+                {
+                  verifyError ?
+                    <p style={{ color: 'red' }}>Please fill all fields and Verify as you not robot</p>
+                    :
+                    null
+                }
+
+                <button onClick={(e) => SendMessage(e)}>Send Message</button>
               </form>
+
             )}
 
             <div className="form-text">

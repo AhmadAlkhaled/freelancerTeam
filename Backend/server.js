@@ -133,7 +133,7 @@ app.post("/Contact", (req, res) => {
 });
 
 app.post("/Appointment", (req, res) => {
-  const { name, email, subject, message, Date } = req.body;
+  const { name, email, subject, message, Date, telefon, contactArt } = req.body;
 
   mongoose.connect(DB).then(() => {
     console.log("DB Connected Success");
@@ -141,6 +141,8 @@ app.post("/Appointment", (req, res) => {
       Name: name,
       Email: email,
       Subject: subject,
+      contactArt: contactArt,
+      telefon: telefon,
       Massage: message,
       Date: Date,
     });
@@ -158,6 +160,8 @@ app.post("/Appointment", (req, res) => {
           from : ${name}
           Email : ${email}
           subject : ${subject}
+          contactArt: ${contactArt}
+          telefon: ${telefon}
           Date: ${Date}
           massage : ${message}`,
     };

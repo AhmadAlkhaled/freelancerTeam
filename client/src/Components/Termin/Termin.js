@@ -38,6 +38,8 @@ const TerminPage = () => {
   const [email, setEmail] = useState();
   const [subject, setSubject] = useState();
   const [message, setMessage] = useState();
+  const [contactArt, setContactArt] = useState();
+  const [telefon, setTelefon] = useState();
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const [timeError, setTimeError] = useState(false)
   const [formError, setFormError] = useState(false)
@@ -122,14 +124,13 @@ const TerminPage = () => {
     }
   }, [allDates])
 
-
-
-
   const Appointment = {
     name: name,
     email: email,
     subject: subject,
     message: message,
+    contactArt: contactArt,
+    telefon: telefon,
     Date: `${Time}  ${date.getDate()} ${months[date.getMonth()]}  ${date.getFullYear()}`,
   }
 
@@ -144,7 +145,7 @@ const TerminPage = () => {
     else {
       setTimeError(false)
       setFormError(true)
-      if (name && email && subject && message) {
+      if (contactArt === 'Email' ? name && email && subject && message && contactArt : name && email && subject && message && contactArt && telefon) {
         setFormError(false)
         axios.post('/Appointment', Appointment)
           .then((res) => {
@@ -159,8 +160,6 @@ const TerminPage = () => {
       }
 
     }
-
-
   }
 
 
@@ -254,6 +253,10 @@ const TerminPage = () => {
 
 
             <form onSubmit={() => { setsubmit(true) }} >
+              {/* <label htmlFor="">
+                Project Art <span>*</span>
+              </label> */}
+
 
               <input
                 type="text"
@@ -276,6 +279,31 @@ const TerminPage = () => {
                 required
                 onChange={(e) => setSubject(e.target.value)}
               />
+              <select
+                name="contact"
+                required
+                onChange={(e) => setContactArt(e.target.value)}
+              >
+
+                <option value="" disabled selected hidden>
+                  Choose Your Contact Art
+                </option>
+                <option>Email</option>
+                <option>Telefon</option>
+              </select>
+              {
+                contactArt == 'Telefon' ?
+                  <input
+                    type='text'
+                    className=''
+                    required
+                    name='telefon'
+                    placeholder='Telefon number'
+                    onChange={(e) => { setTelefon(e.target.value) }}
+                  />
+                  :
+                  null
+              }
               <textarea
                 id=""
                 cols="30"

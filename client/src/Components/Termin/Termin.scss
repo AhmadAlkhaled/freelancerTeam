@@ -164,6 +164,25 @@ $font2: 'Orienta', sans-serif;
                 margin-top: 20px;
             }
 
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                // background-color: rgba(230, 230, 230, 0.694);
+
+                &:invalid {
+                    color: rgb(159, 159, 159);
+                }
+
+                option {
+                    color: black;
+                }
+
+            }
+
             input {
                 width: 100%;
                 padding: 8px;

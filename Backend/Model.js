@@ -1,14 +1,16 @@
-const { Schema , model } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const appointment = new Schema({
-Name: String,
-Email: String,
-Subject: String,
-Massage : String,
-Date:String
+    Name: String,
+    Email: String,
+    Subject: String,
+    Massage: String,
+    contactArt: String,
+    telefon: { type: String, default: 'not available' },
+    Date: String
 
-}, { timestamps: true})
+}, { timestamps: true })
 
-const Appointment = new model( 'appointment' , appointment , 'Appointment' );
+const Appointment = new model('appointment', appointment, 'Appointment');
 
-module.exports =  Appointment ;
+module.exports = Appointment;

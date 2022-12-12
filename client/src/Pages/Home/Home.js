@@ -54,7 +54,7 @@ const Home = (props) => {
                 className="text2"
               >
                 {" "}
-                Create Amazing <br /> Business Websites
+                Create Amazing <br /> Business Application's & Websites
               </motion.p>
               <motion.p
                 className="text3"
@@ -180,7 +180,7 @@ const Home = (props) => {
 
         <div className="suction3">
           <div className="subject">
-            <p className="subject2">Full Responsive Websites</p>
+            <p className="subject2">Full Responsive Application's & Websites</p>
           </div>
 
           <div className="resposiveCards">

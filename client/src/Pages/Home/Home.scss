@@ -16,7 +16,7 @@ $font2: "Orienta", sans-serif;
     .background2 {
       width: 100%;
       height: 100vh;
-      background-image: url("../../imgs/coding2.jpeg");
+      background-image: url("../../imgs/pictest.jpeg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -119,7 +119,7 @@ $font2: "Orienta", sans-serif;
           font-size: 15px;
           color: aliceblue;
 
-          @media (max-width: 768px) {
+          @media (max-width: 500px) {
             margin-top: 60px;
           }
 
@@ -353,19 +353,19 @@ $font2: "Orienta", sans-serif;
       animation: check 0.4s linear forwards;
     }
 
-    .slider__nav:checked:nth-of-type(1)~.slider__inner {
+    .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
       left: 0%;
     }
 
-    .slider__nav:checked:nth-of-type(2)~.slider__inner {
+    .slider__nav:checked:nth-of-type(2) ~ .slider__inner {
       left: -100%;
     }
 
-    .slider__nav:checked:nth-of-type(3)~.slider__inner {
+    .slider__nav:checked:nth-of-type(3) ~ .slider__inner {
       left: -200%;
     }
 
-    .slider__nav:checked:nth-of-type(4)~.slider__inner {
+    .slider__nav:checked:nth-of-type(4) ~ .slider__inner {
       left: -300%;
     }
 

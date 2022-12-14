@@ -54,7 +54,7 @@ const Home = (props) => {
                 className="text2"
               >
                 {" "}
-                Create Amazing <br /> Business Application's & Websites
+                Create Amazing <br /> Business Web Application's
               </motion.p>
               <motion.p
                 className="text3"

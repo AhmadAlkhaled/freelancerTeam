@@ -16,15 +16,18 @@ $font2: "Orienta", sans-serif;
     .background2 {
       width: 100%;
       height: 100vh;
-      // background-image: url("../../imgs/pictest.jpeg");
+      background-image: url("../../imgs/pictest.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;
       overflow: hidden;
-      background-color: red;
+
       @media (max-width: 840px) {
-        background-color: blue;
+        background-image: url("../../imgs/pictest.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
       }
 
       .opacity {

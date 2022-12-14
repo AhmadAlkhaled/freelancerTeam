@@ -16,7 +16,7 @@ $font2: "Orienta", sans-serif;
     .background2 {
       width: 100vw;
       height: 100vh;
-      background-image: url("../../imgs/coding1.jpeg");
+      background-image: url("../../imgs/coding2.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -128,7 +128,8 @@ $font2: "Orienta", sans-serif;
           }
 
           @media (max-width: 414px) {
-            margin-top: 0px;
+            margin-top: -50px;
+            border: 1px solid red;
           }
 
           @media (max-width: 375px) {

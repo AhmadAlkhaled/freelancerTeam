@@ -18,6 +18,9 @@ $color1: #2ec0ff;
     background-repeat: no-repeat;
     background-size: 100vw 100%;
     background-attachment: fixed;
+    @media (max-width: 840px) {
+      background-attachment: scroll;
+    }
     .about-text {
       width: 70%;
       height: 50%;

@@ -18,8 +18,9 @@ footer {
     .box-1 {
       width: 255px;
       height: 400px;
-      margin-top: -20px;
+      // margin-top: -20px;
 
+      // border: 1px solid red;
       p {
         margin-top: -10px;
       }
@@ -57,7 +58,7 @@ footer {
         max-width: 200px;
         height: 150px;
         margin-top: 5px;
-
+        // border: 1px solid red;
         @media (max-width: 600px) {
           width: 100%;
           display: flex;
@@ -83,7 +84,7 @@ footer {
       height: 400px;
       padding: 50px 25px 25px 20px;
 
-      //border: 1px solid red;
+      // border: 1px solid red;
       @media (max-width: 600px) {
         height: 260px;
         width: 100%;
@@ -103,9 +104,8 @@ footer {
     }
 
     .box-4 {
-      max-width: 350px;
+      width: 310px;
       //border: 1px solid greenyellow;
-
       h3 {
         width: 200px;
         text-align: left;
@@ -121,6 +121,14 @@ footer {
         height: 30px;
         margin-right: 10px;
         margin-left: 9px;
+      }
+
+      @media (max-width: 800px) {
+        margin-bottom: 40px;
+        margin: 0 auto;
+        text-align: left;
+        width: 95%;
+        max-width: 290px;
       }
 
       @media (max-width: 600px) {

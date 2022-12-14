@@ -127,9 +127,12 @@ $font2: "Orienta", sans-serif;
             margin-top: 60px;
           }
 
-          @media (max-width: 414px) {
+          @media (max-width: 459px) {
             margin-top: -50px;
-            border: 1px solid red;
+          }
+
+          @media (max-width: 414px) {
+            margin-top: 20px;
           }
 
           @media (max-width: 375px) {

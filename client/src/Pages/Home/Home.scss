@@ -13,9 +13,6 @@ $font2: "Orienta", sans-serif;
   width: 100%;
 
   .background {
-    @media (max-width: 840px) {
-      width: 100%;
-    }
     .background2 {
       width: 100%;
       height: 100vh;
@@ -27,11 +24,11 @@ $font2: "Orienta", sans-serif;
       overflow: hidden;
 
       @media (max-width: 840px) {
-        width: 100%;
         background-image: url("../../imgs/pictest.jpeg");
         background-repeat: no-repeat;
-        background-size: cover cover cover;
-        background-position: center center;
+        background-size: 200% 100%;
+        background-position: center 0px;
+        resize: cover;
       }
 
       .opacity {

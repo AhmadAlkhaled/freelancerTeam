@@ -14,21 +14,20 @@ $font2: "Orienta", sans-serif;
 
   .background {
     .background2 {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       background-image: url("../../imgs/pictest.jpeg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      background-attachment: fixed;
+      // background-attachment: fixed;
       overflow: hidden;
 
       @media (max-width: 840px) {
         background-image: url("../../imgs/pictest.jpeg");
         background-repeat: no-repeat;
-        background-size: 200% 100%;
+        background-size: cover;
         background-position: center 0px;
-        resize: cover;
       }
 
       .opacity {

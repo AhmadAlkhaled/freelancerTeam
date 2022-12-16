@@ -119,8 +119,8 @@ footer {
       .footerIcons {
         width: 30px;
         height: 30px;
-        margin-right: 10px;
-        margin-left: 9px;
+        margin-right: 5px;
+        margin-left: 0px;
       }
 
       @media (max-width: 800px) {
@@ -134,7 +134,7 @@ footer {
       @media (max-width: 600px) {
         margin-bottom: 40px;
         margin: 0 auto;
-        text-align: left;
+        text-align: center;
         width: 95%;
         max-width: 290px;
       }

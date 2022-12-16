@@ -70,8 +70,9 @@ app.post("/Contact", (req, res) => {
       to:
         req.body.email.charAt(0).toUpperCase() +
         req.body.email.substring(1, 100),
-      subject: `We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
-        } ]`,
+      subject: `We got it — RE: [ ${
+        req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
+      } ]`,
       html: `
           <div style="
           border: 4px solid #2EC0FF;
@@ -80,9 +81,10 @@ app.post("/Contact", (req, res) => {
           color:white;
           background-color:black">
 
-            <h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() +
-        req.body.name.substring(1, 100)
-        } </h1><p
+            <h1 style="color:grey">Welcome ${
+              req.body.name.charAt(0).toUpperCase() +
+              req.body.name.substring(1, 100)
+            } </h1><p
             style="font-size:15px"
             >
             <br/>
@@ -133,7 +135,8 @@ app.post("/Contact", (req, res) => {
 });
 
 app.post("/Appointment", (req, res) => {
-  const { name, email, subject, message, Date, telefon, contactArt } = req.body;
+  const { name, email, subject, message, Date, Telephone, contactArt } =
+    req.body;
 
   mongoose.connect(DB).then(() => {
     console.log("DB Connected Success");
@@ -142,7 +145,7 @@ app.post("/Appointment", (req, res) => {
       Email: email,
       Subject: subject,
       contactArt: contactArt,
-      telefon: telefon,
+      Telephone: Telephone,
       Massage: message,
       Date: Date,
     });
@@ -161,7 +164,7 @@ app.post("/Appointment", (req, res) => {
           Email : ${email}
           subject : ${subject}
           contactArt: ${contactArt}
-          telefon: ${telefon}
+          Telephone: ${Telephone}
           Date: ${Date}
           massage : ${message}`,
     };
@@ -171,8 +174,9 @@ app.post("/Appointment", (req, res) => {
       to:
         req.body.email.charAt(0).toUpperCase() +
         req.body.email.substring(1, 100),
-      subject: `We got it — RE: [ ${req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
-        } ]`,
+      subject: `We got it — RE: [ ${
+        req.body.name.charAt(0).toUpperCase() + req.body.name.substring(1, 100)
+      } ]`,
       html: `
         <div
           style="
@@ -183,17 +187,18 @@ app.post("/Appointment", (req, res) => {
           background-color:black"
         >
 
-          <h1 style="color:grey">Welcome ${req.body.name.charAt(0).toUpperCase() +
-        req.body.name.substring(1, 100)
-        } </h1><p
+          <h1 style="color:grey">Welcome ${
+            req.body.name.charAt(0).toUpperCase() +
+            req.body.name.substring(1, 100)
+          } </h1><p
           style="font-size:15px"
           >
           <br/>
           Thank you for your appointment email.<br/> This Auto-reply is just to let you know…<br/>
           <br/>
           We have received your details ,your appointment <br/> on <b style="color: #2EC0FF"> ${Date.substring(
-          5
-        )} at ${Date.substring(0, 5)}</b>  has been successfully confirmed.
+            5
+          )} at ${Date.substring(0, 5)}</b>  has been successfully confirmed.
           <br/> See you Soon.
           <br/>
           <br/>
@@ -290,11 +295,13 @@ app.post("/app-form", (req, res) => {
             width:92%;
             color:white;
             background-color:black" >
-            <h1 style="color:grey">Welcome ${req.body.firstName.charAt(0).toUpperCase() +
-        req.body.firstName.substring(1, 100)
-        } ${req.body.lastName.charAt(0).toUpperCase() +
+            <h1 style="color:grey">Welcome ${
+              req.body.firstName.charAt(0).toUpperCase() +
+              req.body.firstName.substring(1, 100)
+            } ${
+        req.body.lastName.charAt(0).toUpperCase() +
         req.body.lastName.substring(1, 100)
-        } </h1>
+      } </h1>
             <p style="font-size:15px">
             <br/>
             Thank you for reaching out!<br/> This Auto-reply is just to let you know…<br/>
@@ -343,40 +350,32 @@ app.get("/date", async (req, res) => {
   const allDates = await appointment.find();
   res.status(200).json({ allDates: allDates });
 });
-app.post('/DeleteData' , async (req, res)=>{
-
+app.post("/DeleteData", async (req, res) => {
   const { coll } = req.body;
   console.log(coll);
 
   const db = await mongoose.connect(DB);
-  
-  if(coll == "Appointment")
-  {
+
+  if (coll == "Appointment") {
     await appointment.deleteMany({});
     res.status(200).json({
       success: true,
     });
-
   }
-  if(coll == "ContactMassage")
-  {
+  if (coll == "ContactMassage") {
     await contactMassage.deleteMany({});
     res.status(200).json({
       success: true,
     });
-    
   }
-  if(coll == "ProjectInformation")
-  {
+  if (coll == "ProjectInformation") {
     await ProjectInformation.deleteMany({});
     res.status(200).json({
       success: true,
     });
   }
 
-  if(coll == "All" )
-  {
-    
+  if (coll == "All") {
     await appointment.deleteMany({});
     await contactMassage.deleteMany({});
     await ProjectInformation.deleteMany({});
@@ -384,8 +383,7 @@ app.post('/DeleteData' , async (req, res)=>{
       success: true,
     });
   }
-  
-})
+});
 
 app.post("/Delete", async (req, res) => {
   const { id, coll } = req.body;

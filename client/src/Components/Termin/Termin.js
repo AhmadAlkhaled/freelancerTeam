@@ -148,7 +148,7 @@ const TerminPage = () => {
       if (
         contactArt === "Email"
           ? name && email && subject && message && contactArt
-          : name && email && subject && message && contactArt && telefon
+          : name && email && subject && message && contactArt && Telephone
       ) {
         setFormError(false);
         axios.post("/Appointment", Appointment).then((res) => {

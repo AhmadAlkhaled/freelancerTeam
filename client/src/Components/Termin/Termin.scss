@@ -102,12 +102,16 @@ $font2: 'Orienta', sans-serif;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        // border: 1px solid red;
 
         .time {
+            width: 800px;
             margin-top: 20px;
+            // border: 1px solid red;
         }
 
         .timeerorrmsg {
+            width: 60%;
             color: red;
             font-family: $font2;
             margin: 20px;
@@ -116,11 +120,13 @@ $font2: 'Orienta', sans-serif;
             letter-spacing: 1px;
             font-weight: bolder;
             text-align: center;
+            border: 3px solid rgb(255, 255, 255);
 
-            @media (max-width : 700px) {
-                padding: 0px;
-                font-size: 14px;
-            }
+
+            // @media (max-width : 700px) {
+            //     padding: 0px;
+            //     font-size: 14px;
+            // }
         }
 
         .element.style {
@@ -129,6 +135,7 @@ $font2: 'Orienta', sans-serif;
 
         .newCalender {
             width: 70%;
+            // border: 1px solid red;
 
             @media (max-width : 700px) {
                 width: 100%;
@@ -158,6 +165,15 @@ $font2: 'Orienta', sans-serif;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+            // .react-tel-input .form-control {
+            //     margin-left: 40px;
+            //     width: calc(100% - 40px);
+            // }
+            .PhoneInputCountry {
+                height: 45px;
+                // border: 1px solid red;
+            }
 
             @media (max-width: 800px) {
 
@@ -258,7 +274,7 @@ $font2: 'Orienta', sans-serif;
         }
 
         .time {
-            width: 50%;
+            width: 80%;
             // background-color: red;
             display: flex;
             justify-content: center;

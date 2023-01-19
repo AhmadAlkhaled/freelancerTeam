@@ -6,7 +6,7 @@ import React, { useState, useCallback } from "react";
 import { Calendar } from "@natscale/react-calendar";
 import "@natscale/react-calendar/dist/main.css";
 import e from "cors";
-import PhoneInput from 'react-phone-number-input'
+import PhoneInput from "react-phone-number-input";
 
 const Termin = () => {
   return (
@@ -62,33 +62,35 @@ const TerminPage = () => {
   const [uncorrectTimeError, setUncorrectTimeError] = useState(false);
   const [country, setCountry] = useState();
 
-
-  const input = useRef()
+  const input = useRef();
 
   const getCountryCode = () => {
-    axios.get(`https://api.geoapify.com/v1/ipinfo?&apiKey=71206d06bb1f45f789da625b85b163a3`)
+    axios
+      .get(
+        `https://api.geoapify.com/v1/ipinfo?&apiKey=71206d06bb1f45f789da625b85b163a3`
+      )
       .then((res) => {
         if (res.data) {
-          setLocation(res.data.country.iso_code)
-          setCountry(res.data.country.name)
+          setLocation(res.data.country.iso_code);
+          setCountry(res.data.country.name);
         }
-      })
+      });
   };
 
   useEffect(() => {
-    getCountryCode()
-  }, [])
+    getCountryCode();
+  }, []);
   const onChange2 = (e) => {
     setDate(e);
     const currentDate = new Date().getTime();
     const selectedDate = e.getTime();
     if (selectedDate <= currentDate) {
-      setCorrectTime(false)
-      setUncorrectTimeError(true)
-      setTimeError(false)
+      setCorrectTime(false);
+      setUncorrectTimeError(true);
+      setTimeError(false);
     } else {
-      setCorrectTime(true)
-      setUncorrectTimeError(false)
+      setCorrectTime(true);
+      setUncorrectTimeError(false);
       axios.get("/date").then((res) => {
         setAllDates(res.data.allDates);
         const times = document.querySelector(".time");
@@ -100,15 +102,19 @@ const TerminPage = () => {
 
         if (allDates.length > 0) {
           allDates.map((d) => {
-            const da = `${Time}  ${e.getDate()} ${months[e.getMonth()]
-              }  ${e.getFullYear()}`;
+            const da = `${Time}  ${e.getDate()} ${
+              months[e.getMonth()]
+            }  ${e.getFullYear()}`;
             if (d.Date.substring(7, 50) == da.substring(2, 50)) {
               const times = document.querySelector(".time");
               for (let i = 0; i < times.children.length; i++) {
                 if (times.children[i].textContent == d.Date.substring(0, 5)) {
                   times.children[i].setAttribute("disabled", "");
                   times.children[i].classList = "disabled-1";
-                  times.children[i].setAttribute("title", " not available... !");
+                  times.children[i].setAttribute(
+                    "title",
+                    " not available... !"
+                  );
                 }
               }
             }
@@ -116,9 +122,7 @@ const TerminPage = () => {
         }
       });
     }
-
   };
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -137,8 +141,9 @@ const TerminPage = () => {
     if (allDates.length > 0) {
       allDates.map((d) => {
         setTimeout(() => {
-          const da = `${Time}  ${date.getDate()} ${months[date.getMonth()]
-            }  ${date.getFullYear()}`;
+          const da = `${Time}  ${date.getDate()} ${
+            months[date.getMonth()]
+          }  ${date.getFullYear()}`;
 
           if (d.Date.substring(7, 50) == da.substring(2, 50)) {
             const times = document.querySelector(".time");
@@ -156,22 +161,16 @@ const TerminPage = () => {
     }
   }, [allDates]);
 
-  // const handelTelChange = (e) => {
-  //   setTelephone(e.countryCode.toString() + e.phoneNumber.toString());
-  //   console.log(typeof (e.countryCode));
-  //   // console.log(e.countryCode.toString() + e.phoneNumber.toString());
-
-  // };
-
   const Appointment = {
     name: name,
     email: email,
     subject: subject,
     message: message,
     contactArt: contactArt,
-    Telephone: Telephone + ' ' + country,
-    Date: `${Time}  ${date.getDate()} ${months[date.getMonth()]
-      }  ${date.getFullYear()}`,
+    Telephone: Telephone + " " + country,
+    Date: `${Time}  ${date.getDate()} ${
+      months[date.getMonth()]
+    }  ${date.getFullYear()}`,
   };
 
   const SendMessage = (e) => {
@@ -240,7 +239,6 @@ const TerminPage = () => {
     newOne();
   });
 
-
   return (
     <div className="TerminPage">
       {sentDate ? (
@@ -268,40 +266,24 @@ const TerminPage = () => {
             <Calendar value={date} onChange={onChange2} />
           </div>
 
-          {
-            timeError ? (
-              <p className="timeerorrmsg id='cc'">
-                PLEASE CHOOSE ONE OF THE AVAILABLE TIME'S
-              </p>
+          {timeError ? (
+            <p className="timeerorrmsg id='cc'">
+              PLEASE CHOOSE ONE OF THE AVAILABLE TIME'S
+            </p>
+          ) : null}
+          {uncorrectTimeError ? (
+            <p className="timeerorrmsg">PLEASE CHOOSE CORRECT DAY!!</p>
+          ) : null}
 
-            ) :
-              null
-          }
-          {
-            uncorrectTimeError ?
-              <p className="timeerorrmsg">please choose correct day</p>
-              :
-              null
-          }
-
-
-          {
-            correctTime ?
-              <div className="time" onClick={time}>
-
-                <button className="time1">10:00</button>
-                <button className="time1">11:00</button>
-                <button className="time1">13:00</button>
-                <button className="time1">14:00</button>
-                <button className="time1">15:00</button>
-
-              </div>
-              :
-              null
-          }
-
-
-
+          {correctTime ? (
+            <div className="time" onClick={time}>
+              <button className="time1">10:00</button>
+              <button className="time1">11:00</button>
+              <button className="time1">13:00</button>
+              <button className="time1">14:00</button>
+              <button className="time1">15:00</button>
+            </div>
+          ) : null}
 
           <form
             onSubmit={() => {
@@ -345,15 +327,21 @@ const TerminPage = () => {
               <option>Telephone</option>
             </select>
             {contactArt == "Telephone" ? (
-              <div style={{ width: '100%', height: '50px', display: 'flex', alignItems: 'center' }}>
+              <div
+                style={{
+                  width: "100%",
+                  height: "50px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
                 <PhoneInput
                   international
-                  // countryCallingCodeEditable={true}
                   defaultCountry={location}
                   value={Telephone}
-                  onChange={setTelephone} />
+                  onChange={setTelephone}
+                />
               </div>
-
             ) : null}
             <textarea
               id=""

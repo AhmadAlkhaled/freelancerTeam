@@ -60,9 +60,15 @@ const Footer = () => {
             onClick={() => {
               console.log(window.location.href);
               if (window.location.href != "https://www.software-prime.com/") {
-                window.open("https://www.software-prime.com/#customers", "_self");
+                window.open(
+                  "https://www.software-prime.com/#customers",
+                  "_self"
+                );
               } else {
-                window.open("https://www.software-prime.com/#customer-1", "_self");
+                window.open(
+                  "https://www.software-prime.com/#customer-1",
+                  "_self"
+                );
               }
             }}
           >
@@ -91,22 +97,31 @@ const Footer = () => {
               className="footerIcons"
               src="https://img.icons8.com/fluency/48/000000/circled-envelope.png"
             />
-            <p><a href={`mailto:${'info@software-prime.com'}`}>info@software-prime.com</a></p>
+            <p>
+              <a href={`mailto:${"info@software-prime.com"}`}>
+                info@software-prime.com
+              </a>
+            </p>
           </span>
           <span className="contact-info">
             <img
               className="footerIcons"
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAEAUlEQVRoge2ZXWwUVRiGn292xQYVgz/hhotq8JfutEnBkNja3RairBqJWo2KCbfUJsWEyIVGvVCiFwYNUdQ7L9BErDEq2BhlhvqDkhLsFCIQvTHRiNCKgRDLbvfzQjA72/2ZMz9bL/rczZn53rzvnjPnnDkL88yTCDLXBi5iO7pUhbUWrAFuVLgemBLlzfQVvHJwhRTq1c9tEFUr49IrwhBwdx0/+7mEdd7t8kctqbkJoiq2y8MIL/LvLx+EH0tFcodXy4lqN5sexHZ0FcJrwG2mtQLjf6fpPtYlZ6rcaw6tjrZcCc+rsBlIRZAauUq5181JsbzRimYvGB2urlwkjKuwhWghAO6aFF6ubEy8R2xXNwLbgEtjlFWUvJeTkYsN6RjFfXSO6cLzZ3kLWJ+AvGDxDJBskLYvdEnhLB9LiBc6MEpb+WXsQZY7uswS9gA3xK3tQzhafhnry2672p0SDpB0CPiLGYbKG2IL0uFoFtgDLI5LswaflYSM1yvflzfGMmtl9mlelGGgJQ69GpxWYctEj7xd7WbUOR17rz4gwi7inV79CMOlIvnDvTJa+5EItDt6jwrDwAKDst9RnkToB+5v8OwJlEEvJx80Eg0dxN6rfVh8islwEr5JpXjoUJf8Bv/tu7YBq6oY25VWBg7m5FQw6RC0O9qlwghwmUHZh+fO8ehPeZn2tapa9iiPowwCtwLHgWe9rHxi4sk4SMbRm0X4FoPZSZSdi2FD5UYvToyCdDp6TVHYr7DMoGyH18MgIiVDb0YEXkc6x3RhQdhtGGKrl5WBpEOAQZDCGd7AbO+01cvK0+aWwhFoaNmuDgCvG+ju8LIyEM5SOBoG6XB1ZQm+IviC957Xw/pmDKdy6u5+Wx1tKcE7BAyh8HnpWjY0OwQ0eEcWwQvALQG1xi5fwLojy+V8dFvm1BxaF1bdrwm2Hzs5k2bFkS75JT5rZlTvEVW5cGQTaFOpwqa5DAE1gmRGeQSTqVZ5MC5DYZk1tLKOpqeE48B1JkKWkvshJ25szgyZ1SNTyn0YhgBQ4dX+9zXy901YZg8tiyfCCCm0H1vCY5EdhcQXxHZ0KZCNoNfU1bwcXxAV1hLlq7HirKmZWBUXayLq/RyxPjT+HoGbooip8lw0O+GpDNIaQevdiZx8FNFPaHxBBCZD6pxKWWyKwU9oKntkeygVZeOhO+RkLI5C4gtytbId4UsjBWE4yLlT0viCuDkpqkW/wHjA+slSIdwCGjezVvaJbvlzukgfMNaoWIWhWv+yNpuqu9+jq2WSabICNWchFXZP9MjO5KyZUX8VV7XsfbwEbK549rTM0DbeJ78mac6E+sdBIiUvK0+h5IHvgGnggFjc+X8KMc88CfIPZx8f0MrTkI4AAAAASUVORK5CYII="
             />
-            <p><a href={`tel:${'+49-176 666551881'}`}>+49-176 666551881</a></p>
-
+            <p>
+              <a href={`tel:${"+49-176 66551881"}`}>+49-176 666551881</a>
+            </p>
           </span>
           <span className="contact-info">
             <img
               className="footerIcons"
               src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
             />
-            <p><a className="whats" href={`http://wa.me/${'+49176666551881'}`}>Open Whatsapp</a></p>
+            <p>
+              <a className="whats" href={`http://wa.me/${"+49176666551881"}`}>
+                Open Whatsapp
+              </a>
+            </p>
           </span>
         </div>
       </div>

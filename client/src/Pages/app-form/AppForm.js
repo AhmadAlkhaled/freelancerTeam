@@ -9,6 +9,8 @@ import web_app from "../../imgs/web-app.png";
 import mobile_app from "../../imgs/mobile-app.png";
 import send_icon from "../../imgs/send-icon.jpeg";
 import otherImg from "../../imgs/other-img.png";
+import PhoneInput from 'react-phone-number-input'
+
 
 const AppForm = () => {
   const [sent, setSent] = useState(false);
@@ -23,6 +25,21 @@ const AppForm = () => {
   const [formImg, setFormImg] = useState(home_page);
   const [messageError, setMessageError] = useState(false);
   const [formError, setFormError] = useState(false);
+  const [location, setLocation] = useState();
+  const [country, setCountry] = useState();
+  const getCountryCode = () => {
+    axios.get(`https://api.geoapify.com/v1/ipinfo?&apiKey=71206d06bb1f45f789da625b85b163a3`)
+      .then((res) => {
+        if (res.data) {
+          setLocation(res.data.country.iso_code)
+          setCountry(res.data.country.name)
+        }
+      })
+  };
+
+  useEffect(() => {
+    getCountryCode()
+  }, [])
 
   useEffect(() => {
     if (projectArt == "Desktop Application") {
@@ -50,7 +67,7 @@ const AppForm = () => {
     firstName: firstName,
     lastName: lastName,
     email: email,
-    phone: phone,
+    phone: phone + ' ' + country,
     status: status,
     contactArt: contactArt,
     message: message,
@@ -181,13 +198,21 @@ const AppForm = () => {
                     Phone Number <span>*</span>
                   </label>
                   <br />
-                  <input
+                  {/* <input
                     type="text"
                     required
                     placeholder="Phone Number"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                  />
+                  /> */}
+                  <div style={{ width: '100%', height: '40px', display: 'flex', alignItems: 'center' }}>
+                    <PhoneInput
+                      international
+                      // countryCallingCodeEditable={true}
+                      defaultCountry={location}
+                      value={phone}
+                      onChange={setPhone} />
+                  </div>
                 </div>
               </div>
               <label>
